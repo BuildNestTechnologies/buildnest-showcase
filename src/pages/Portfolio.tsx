@@ -31,9 +31,11 @@ const Portfolio = () => (
         {PORTFOLIO.map((p, i) => (
           <Reveal key={p.title} delay={i * 0.06}>
             <article className={`group relative h-full overflow-hidden rounded-[var(--radius)] border border-border bg-gradient-card transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/60 hover:shadow-glow-red ${i === 0 ? "lg:col-span-2" : ""}`}>
-              <div className={`relative h-44 bg-gradient-to-br ${p.accent} ${i === 0 ? "lg:h-64" : ""}`}>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(0_0%_100%/0.06),transparent_60%)]" />
-                <div className="absolute bottom-4 left-5 rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur">
+              <div className={`relative overflow-hidden ${i === 0 ? "h-56 lg:h-72" : "h-48"}`}>
+                <img src={p.image} alt={p.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div className={`absolute inset-0 bg-gradient-to-br ${p.accent} mix-blend-overlay opacity-50`} />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-5 rounded-full border border-white/10 bg-black/40 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur">
                   {p.tag}
                 </div>
               </div>
