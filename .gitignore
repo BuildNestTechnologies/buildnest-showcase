@@ -7,18 +7,46 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Dependency directories
+node_modules/
+frontend/node_modules/
+jspm_packages/
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Next.js build output
+.next/
+frontend/.next/
+out/
+build/
+dist/
+dist-ssr/
+
+# Static site generation cache
+.next-static/
+frontend/.next-static/
+
+# Environment files
+.env*.local
+.env
+
+# Vercel
+.vercel
+frontend/.vercel
+
+# Debugging
+.pnp
+.pnp.js
+coverage/
+
+# IDEs and editors
+.vscode/
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# System files
+thumbs.db
+db.lock

@@ -1,9 +1,11 @@
+"use client";
+
 import SectionTitle from "@/components/site/SectionTitle";
 import Reveal from "@/components/site/Reveal";
-import { Phone, Mail, MapPin, Send, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { toast } from "sonner";
 
-const Contact = () => {
+export default function ClientContact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Message sent successfully! We'll reply within 24 hours.");
@@ -122,39 +124,28 @@ const Contact = () => {
                     </div>
                   </a>
 
-                  <a href="mailto:hello@buildnest.tech" className="group flex items-start gap-4 rounded-xl border border-gray-800 bg-gray-900 p-5 transition hover:border-primary/50">
+                  <a href="mailto:hello@buildnest.world" className="group flex items-start gap-4 rounded-xl border border-gray-800 bg-gray-900 p-5 transition hover:border-primary/50">
                     <div className="rounded-lg bg-primary/10 p-3 text-primary">
                       <Mail className="h-6 w-6" />
                     </div>
                     <div>
                       <p className="text-sm font-medium text-gray-400">Email</p>
-                      <p className="mt-1 font-display text-lg font-semibold transition group-hover:text-primary">hello@buildnest.tech</p>
+                      <p className="mt-1 font-display text-lg font-semibold transition group-hover:text-primary">hello@buildnest.world</p>
                     </div>
                   </a>
 
-                  <div className="flex items-start gap-4 rounded-xl border border-gray-800 bg-gray-900 p-5">
+                  <address className="not-italic flex items-start gap-4 rounded-xl border border-gray-800 bg-gray-900 p-5">
                     <div className="rounded-lg bg-primary/10 p-3 text-primary">
                       <MapPin className="h-6 w-6" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-gray-400">Office</p>
-                      <p className="mt-1 font-display text-lg font-semibold">Delhi NCR, India</p>
+                      <p className="text-sm font-medium text-gray-400">Main Office</p>
+                      <p className="mt-1 font-display text-lg font-semibold leading-tight">
+                        Near Shagun Chowk, <br/>
+                        Bhiwandi, Maharashtra 421302
+                      </p>
                     </div>
-                  </div>
-                </div>
-
-                {/* Map Placeholder */}
-                <div className="mt-auto relative h-48 w-full overflow-hidden rounded-xl bg-gray-800">
-                   <img 
-                    src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" 
-                    alt="Delhi Map Placeholder" 
-                    className="absolute inset-0 h-full w-full object-cover opacity-50 grayscale"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 font-medium backdrop-blur">
-                      <MapPin className="h-4 w-4 text-primary" /> View on Google Maps
-                    </div>
-                  </div>
+                  </address>
                 </div>
 
               </div>
@@ -164,6 +155,4 @@ const Contact = () => {
       </section>
     </>
   );
-};
-
-export default Contact;
+}

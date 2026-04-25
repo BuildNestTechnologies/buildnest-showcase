@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Script from "next/script";
 import SectionTitle from "@/components/site/SectionTitle";
 import Reveal from "@/components/site/Reveal";
 import { CheckCircle2, MessageSquare, Package, Users, Receipt, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Custom Software Development for Indian Businesses | BuildNest",
+  description: "We build custom ERPs, CRMs, and internal tools. Best software agency in Mumbai & Bhiwandi.",
+};
 
 const SOFTWARE_FEATURES = [
   {
@@ -26,10 +34,20 @@ const SOFTWARE_FEATURES = [
   }
 ];
 
-const Software = () => {
+export default function Software() {
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Custom Business Software",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All"
+  };
+
   return (
     <>
-      <section className="bg-hero py-20 md:py-28">
+      <script id="software-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
+      
+      <section className="bg-hero pt-32 pb-20 md:pt-40 md:pb-28 border-b border-border">
         <div className="container-px mx-auto max-w-4xl text-center">
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
@@ -58,9 +76,11 @@ const Software = () => {
               <p className="mt-2 text-muted-foreground">Your entire business operations, streamlined.</p>
             </div>
             <div className="mt-10 overflow-hidden rounded-xl border border-border">
-              <img 
+              <Image 
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" 
                 alt="Dashboard showing connected business tools" 
+                width={1200}
+                height={600}
                 className="w-full object-cover"
               />
             </div>
@@ -69,7 +89,7 @@ const Software = () => {
       </section>
 
       {/* Features List */}
-      <section className="bg-hero py-20">
+      <section className="bg-hero py-20 border-y border-border">
         <div className="container-px mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {SOFTWARE_FEATURES.map((feature, index) => (
@@ -104,9 +124,11 @@ const Software = () => {
                 </div>
               </div>
               <div className="relative min-h-[300px]">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80" 
                   alt="Grocery store owner using an iPad" 
+                  width={800}
+                  height={600}
                   className="absolute inset-0 h-full w-full object-cover opacity-80"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-[#111214] to-transparent md:block hidden" />
@@ -117,13 +139,11 @@ const Software = () => {
         </Reveal>
 
         <div className="mt-16 text-center">
-          <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-semibold text-white shadow-soft transition hover:scale-105">
+          <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-semibold text-white shadow-soft transition hover:scale-105">
             Let's build your software <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </section>
     </>
   );
-};
-
-export default Software;
+}

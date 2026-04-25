@@ -130,7 +130,7 @@ export const PORTFOLIO = [
     title: "ChainCred",
     tag: "Blockchain Credentials",
     metric: "Tamper-proof IDs",
-    desc: "Decentralized platform for academic credentials on opBNB and BNB Greenfield — ensuring trust in education.",
+    desc: "Decentralized platform for academic credentials on opBNB and BNB Greenfieldensuring trust in education.",
     image: "https://www.devnex.online/portfolio/chaincred.jpg",
     demo: "https://chaincred-frontend.onrender.com/",
     video: "https://youtu.be/yDQA6xOlVpQ",

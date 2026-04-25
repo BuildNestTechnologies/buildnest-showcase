@@ -74,39 +74,39 @@
 
 @layer base {
   :root {
-    --background: #FFFFFF;
+    --background: #FEFCF5;
     --foreground: #1A1C1E;
-    --hero: #F9FAFB;
+    --hero: #F4F2EE;
     --card: #FFFFFF;
     --card-foreground: #1A1C1E;
     --popover: #FFFFFF;
     --popover-foreground: #1A1C1E;
-    --secondary: #F3F4F6;
+    --secondary: #F4F2EE;
     --secondary-foreground: #1A1C1E;
-    --muted: #F3F4F6;
+    --muted: #F4F2EE;
     --muted-foreground: #4B5563;
-    --accent: #F3F4F6;
+    --accent: #F4F2EE;
     --accent-foreground: #1A1C1E;
-    --border: #E5E7EB;
-    --input: #E5E7EB;
+    --border: #E6E2D8;
+    --input: #E6E2D8;
   }
   
   .dark {
-    --background: #111214;
-    --foreground: #F9FAFB;
-    --hero: #1A1C1E;
-    --card: #16181A;
-    --card-foreground: #F9FAFB;
-    --popover: #16181A;
-    --popover-foreground: #F9FAFB;
-    --secondary: #272A2D;
-    --secondary-foreground: #F9FAFB;
-    --muted: #272A2D;
-    --muted-foreground: #9CA3AF;
-    --accent: #272A2D;
-    --accent-foreground: #F9FAFB;
-    --border: #272A2D;
-    --input: #272A2D;
+    --background: #0A0B0D;
+    --foreground: #F8F9FA;
+    --hero: radial-gradient(circle at top right, #111316, #0A0B0D);
+    --card: #121418;
+    --card-foreground: #F8F9FA;
+    --popover: #121418;
+    --popover-foreground: #F8F9FA;
+    --secondary: #1A1D21;
+    --secondary-foreground: #F8F9FA;
+    --muted: #1A1D21;
+    --muted-foreground: #8B949E;
+    --accent: #1A1D21;
+    --accent-foreground: #F8F9FA;
+    --border: #21262D;
+    --input: #21262D;
   }
 }
 
@@ -119,14 +119,33 @@
   }
   body {
     @apply bg-background text-foreground font-body antialiased;
+    font-size: 17px;
+    line-height: 1.55;
     font-feature-settings: "ss01", "cv11";
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-tight text-foreground;
+    letter-spacing: 0.01em;
   }
   ::selection {
     background: rgba(251, 54, 64, 0.2);
     @apply text-foreground;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border: 3px solid var(--background);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--muted-foreground);
   }
 }
 
@@ -137,6 +156,10 @@
 
   .container-px {
     @apply px-5 sm:px-8 lg:px-12;
+  }
+
+  .bg-hero {
+    background: var(--hero);
   }
 
   /* Animated red underline for nav links */
@@ -166,5 +189,66 @@
   /* Text gradient wrapper if needed, but the prompt says mostly black headers with red accents */
   .text-gradient {
     @apply text-[#111214];
+  }
+
+  /* Grain overlay to kill digital perfection */
+  .bg-noise {
+    position: relative;
+  }
+  .bg-noise::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+    z-index: 10;
+  }
+
+  /* ADVANCED HOVER UTILITIES */
+  .hover-button-advanced {
+    @apply transition-all duration-300;
+  }
+  .hover-button-advanced:hover {
+    transform: scale(1.02);
+    filter: brightness(0.9);
+  }
+
+  .hover-card-diagonal {
+    @apply transition-all duration-300;
+  }
+  .hover-card-diagonal:hover {
+    border-color: rgba(251, 54, 64, 0.5); /* primary/50 */
+    transform: translate(-1px, -1px);
+    box-shadow: 0 10px 40px -15px rgba(251, 54, 64, 0.1);
+  }
+  .dark .hover-card-diagonal:hover {
+    box-shadow: 0 0 30px -10px rgba(251, 54, 64, 0.2);
+    background: linear-gradient(to bottom right, #121418, #16181C);
+  }
+
+  .hover-portfolio-zoom {
+    @apply relative overflow-hidden;
+  }
+  .hover-portfolio-zoom img {
+    @apply transition-transform duration-500 ease-in-out;
+  }
+  .hover-portfolio-zoom:hover img {
+    transform: scale(1.05);
+  }
+  .hover-portfolio-zoom::after {
+    content: "";
+    @apply absolute inset-0 bg-primary/0 transition-colors duration-500 pointer-events-none;
+  }
+  .hover-portfolio-zoom:hover::after {
+    @apply bg-primary/10; /* slight red tint */
+  }
+  
+  /* HIDE SCROLLBAR FOR HORIZONTAL SCROLL */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

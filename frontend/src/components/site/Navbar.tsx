@@ -1,15 +1,18 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/buildnest-logo.png";
 import { NAV_LINKS } from "@/data/site";
-
 import { ThemeToggle } from "./ThemeToggle";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -25,36 +28,36 @@ const Navbar = () => {
       }`}
     >
       <nav className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between md:h-20">
-        <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <img src={logo} alt="BuildNest Technologies" className="h-9 w-9 object-contain" />
-          <span className="font-display text-lg font-bold tracking-tight text-foreground">
+        <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
+          <Image src="/buildnest-logo.png" alt="BuildNest" width={32} height={32} className="h-8 w-8 object-contain invert dark:invert-0" />
+          <span className="font-display text-xl font-bold tracking-tight text-foreground">
             Build<span className="text-primary">Nest</span>
           </span>
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">
-          {NAV_LINKS.map((l) => (
-            <li key={l.to}>
-              <NavLink
-                to={l.to}
-                end={l.to === "/"}
-                className={({ isActive }) =>
-                  `nav-underline text-sm font-medium transition-colors ${
+          {NAV_LINKS.map((l) => {
+            const isActive = l.to === "/" ? pathname === "/" : pathname.startsWith(l.to);
+            return (
+              <li key={l.to}>
+                <Link
+                  href={l.to}
+                  className={`nav-underline text-sm font-medium transition-colors ${
                     isActive ? "active text-foreground" : "text-muted-foreground hover:text-foreground"
-                  }`
-                }
-              >
-                {l.label}
-              </NavLink>
-            </li>
-          ))}
+                  }`}
+                >
+                  {l.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         <div className="hidden items-center gap-4 md:flex">
           <ThemeToggle />
           <Link
-            to="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:scale-[1.03]"
+            href="/contact"
+            className="hover-button-advanced inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm"
           >
             Start Project
           </Link>
@@ -82,27 +85,27 @@ const Navbar = () => {
             className="border-b border-border bg-background shadow-lg md:hidden"
           >
             <ul className="container-px mx-auto flex max-w-7xl flex-col gap-1 py-4">
-              {NAV_LINKS.map((l) => (
-                <li key={l.to}>
-                  <NavLink
-                    to={l.to}
-                    end={l.to === "/"}
-                    onClick={() => setOpen(false)}
-                    className={({ isActive }) =>
-                      `block rounded-lg px-3 py-3 text-base font-medium transition ${
+              {NAV_LINKS.map((l) => {
+                const isActive = l.to === "/" ? pathname === "/" : pathname.startsWith(l.to);
+                return (
+                  <li key={l.to}>
+                    <Link
+                      href={l.to}
+                      onClick={() => setOpen(false)}
+                      className={`block rounded-lg px-3 py-3 text-base font-medium transition ${
                         isActive ? "bg-secondary text-foreground" : "text-muted-foreground hover:bg-secondary hover:text-foreground"
-                      }`
-                    }
-                  >
-                    {l.label}
-                  </NavLink>
-                </li>
-              ))}
+                      }`}
+                    >
+                      {l.label}
+                    </Link>
+                  </li>
+                );
+              })}
               <li>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   onClick={() => setOpen(false)}
-                  className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white"
+                  className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white hover-button-advanced"
                 >
                   Start Project
                 </Link>
