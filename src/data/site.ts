@@ -100,6 +100,7 @@ export const PORTFOLIO = [
     metric: "$12M assets tracked",
     desc: "A unified treasury dashboard for an Indian fintech — real-time positions, alerts, RBI-ready reports.",
     accent: "from-rose-500/30 to-orange-500/10",
+    image: "/src/assets/work-fintech.jpg",
   },
   {
     title: "EcoCommerce",
@@ -107,6 +108,7 @@ export const PORTFOLIO = [
     metric: "300% revenue lift",
     desc: "Headless commerce for a sustainable D2C brand — Shopify-grade speed at a fraction of the cost.",
     accent: "from-emerald-500/30 to-cyan-500/10",
+    image: "/src/assets/work-ecom.jpg",
   },
   {
     title: "HireIntel AI",
@@ -114,6 +116,7 @@ export const PORTFOLIO = [
     metric: "70% faster screening",
     desc: "Recruitment AI that reads JDs, ranks candidates and writes outreach — built for a Bengaluru staffing firm.",
     accent: "from-indigo-500/30 to-fuchsia-500/10",
+    image: "/src/assets/work-ai.jpg",
   },
   {
     title: "ClinicOS",
@@ -121,6 +124,7 @@ export const PORTFOLIO = [
     metric: "42 clinics live",
     desc: "Appointments, billing, prescriptions and WhatsApp reminders — one calm interface for busy clinics.",
     accent: "from-sky-500/30 to-blue-500/10",
+    image: "/src/assets/work-fintech.jpg",
   },
   {
     title: "ShopEase",
@@ -128,6 +132,7 @@ export const PORTFOLIO = [
     metric: "₹2.4Cr GMV in 6mo",
     desc: "Custom theme, checkout optimisation and a private CRM that turned cold buyers into repeat fans.",
     accent: "from-amber-500/30 to-rose-500/10",
+    image: "/src/assets/work-ecom.jpg",
   },
   {
     title: "FleetPilot",
@@ -135,6 +140,7 @@ export const PORTFOLIO = [
     metric: "1,200 vehicles tracked",
     desc: "Live GPS, fuel analytics and driver scoring for a logistics player covering five Indian states.",
     accent: "from-lime-500/30 to-emerald-500/10",
+    image: "/src/assets/work-ai.jpg",
   },
 ];
 
