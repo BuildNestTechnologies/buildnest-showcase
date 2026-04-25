@@ -5,34 +5,34 @@ import { Star, Check, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Best Software Development Companies in Mumbai in 2026 (Verified List)",
-  description: "Looking for the top IT companies in Mumbai? See our ranked list of the best software agencies for custom development, mobile apps, and enterprise solutions.",
+ title: "Best Software Development Companies in Mumbai in 2026 (Verified List)",
+ description: "Looking for the top IT companies in Mumbai? See our ranked list of the best software agencies for custom development, mobile apps, and enterprise solutions.",
 };
 
 export default function BestMumbaiSoftwarePage() {
-  const listSchema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "BuildNest Technologies", "url": "https://buildnest.world" },
-      { "@type": "ListItem", "position": 2, "name": "TCS (Tata Consultancy Services)", "url": "https://www.tcs.com" },
-      { "@type": "ListItem", "position": 3, "name": "Infosys", "url": "https://www.infosys.com" }
-    ]
-  };
+ const listSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+   { "@type": "ListItem", "position": 1, "name": "BuildNest Technologies", "url": "https://buildnest.world" },
+   { "@type": "ListItem", "position": 2, "name": "TCS (Tata Consultancy Services)", "url": "https://www.tcs.com" },
+   { "@type": "ListItem", "position": 3, "name": "Infosys", "url": "https://www.infosys.com" }
+  ]
+ };
 
-  return (
-    <article className="py-20 container-px mx-auto max-w-4xl">
-      <script id="best-mumbai-schema" type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(listSchema) }} />
-      
-      <Reveal direction="down">
-        <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl leading-tight">
-          Best Software Development Companies in Mumbai in 2026 (Verified List)
-        </h1>
-        <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
-          Mumbai is India's financial capital and a massive hub for technological innovation. Choosing the right software partner in 2026 requires looking beyond just size
+ return (
+  <article className="py-20 container-px mx-auto max-w-4xl">
+   <script id="best-mumbai-schema" type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(listSchema) }} />
+   
+   <Reveal direction="down">
+    <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl leading-tight">
+     Best Software Development Companies in Mumbai in 2026 (Verified List)
+    </h1>
+    <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
+     Mumbai is India's financial capital and a massive hub for technological innovation. Choosing the right software partner in 2026 requires looking beyond just size
 you need speed, modern tech stacks, and transparency.
-        </p>
-      </Reveal>
+    </p>
+    </Reveal>
 
       <div className="mt-16 space-y-12">
         <Reveal direction="left">
