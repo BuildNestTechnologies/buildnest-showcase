@@ -150,21 +150,21 @@ export const TESTIMONIALS = [
     role: "CTO, ShopEase",
     quote:
       "BuildNest helped us scale our online store by 300% in 6 months. They felt like an in-house team — sharp, calm, and ridiculously fast.",
-    photo: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=160&h=160&fit=crop&crop=faces",
+    photo: "/src/assets/person-1.jpg",
   },
   {
     name: "Riya Mehta",
     role: "Founder, EcoCart",
     quote:
       "We came with a messy Figma and walked away with a product. Zero upfront, zero drama, and a team that actually answers WhatsApp on Sundays.",
-    photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=160&h=160&fit=crop&crop=faces",
+    photo: "/src/assets/person-2.jpg",
   },
   {
     name: "Vikram Iyer",
     role: "COO, FleetPilot",
     quote:
       "The recruitment AI alone paid for the project in two months. They genuinely care about ROI, not just shipping a pretty dashboard.",
-    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&h=160&fit=crop&crop=faces",
+    photo: "/src/assets/person-3.jpg",
   },
 ];
 
