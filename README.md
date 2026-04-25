@@ -9,24 +9,6 @@ Premium business showcase website for BuildNest Technologies. Handcrafted in Ind
 - **Animations**: Framer Motion 12
 - **Icons**: Lucide React 1.11
 
-## 🛠️ Development
-
-### Setup
-```bash
-cd frontend
-npm install
-```
-
-### Dev Server
-```bash
-npm run dev
-```
-
-### Production Build
-```bash
-npm run build
-```
-
 ## 🏗️ Architecture
 The project follows a modular component structure:
 - `src/components/ui`: Radix-based UI primitives.
