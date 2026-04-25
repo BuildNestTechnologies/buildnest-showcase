@@ -8,6 +8,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { NoSSR } from "@/components/site/NoSSR";
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -137,6 +138,7 @@ export default function RootLayout({
      </NoSSR>
      <SiteLayout>{children}</SiteLayout>
     </Providers>
+    <SpeedInsights />
     <Script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" strategy="afterInteractive" />
     <Script id="google-analytics" strategy="afterInteractive">
      {`
