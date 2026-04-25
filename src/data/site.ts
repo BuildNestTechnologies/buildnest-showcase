@@ -1,3 +1,10 @@
+import workFintech from "@/assets/work-fintech.jpg";
+import workEcom from "@/assets/work-ecom.jpg";
+import workAi from "@/assets/work-ai.jpg";
+import person1 from "@/assets/person-1.jpg";
+import person2 from "@/assets/person-2.jpg";
+import person3 from "@/assets/person-3.jpg";
+
 export const NAV_LINKS = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
@@ -100,7 +107,7 @@ export const PORTFOLIO = [
     metric: "$12M assets tracked",
     desc: "A unified treasury dashboard for an Indian fintech — real-time positions, alerts, RBI-ready reports.",
     accent: "from-rose-500/30 to-orange-500/10",
-    image: "/src/assets/work-fintech.jpg",
+    image: workFintech,
   },
   {
     title: "EcoCommerce",
@@ -108,7 +115,7 @@ export const PORTFOLIO = [
     metric: "300% revenue lift",
     desc: "Headless commerce for a sustainable D2C brand — Shopify-grade speed at a fraction of the cost.",
     accent: "from-emerald-500/30 to-cyan-500/10",
-    image: "/src/assets/work-ecom.jpg",
+    image: workEcom,
   },
   {
     title: "HireIntel AI",
@@ -116,7 +123,7 @@ export const PORTFOLIO = [
     metric: "70% faster screening",
     desc: "Recruitment AI that reads JDs, ranks candidates and writes outreach — built for a Bengaluru staffing firm.",
     accent: "from-indigo-500/30 to-fuchsia-500/10",
-    image: "/src/assets/work-ai.jpg",
+    image: workAi,
   },
   {
     title: "ClinicOS",
@@ -124,7 +131,7 @@ export const PORTFOLIO = [
     metric: "42 clinics live",
     desc: "Appointments, billing, prescriptions and WhatsApp reminders — one calm interface for busy clinics.",
     accent: "from-sky-500/30 to-blue-500/10",
-    image: "/src/assets/work-fintech.jpg",
+    image: workFintech,
   },
   {
     title: "ShopEase",
@@ -132,7 +139,7 @@ export const PORTFOLIO = [
     metric: "₹2.4Cr GMV in 6mo",
     desc: "Custom theme, checkout optimisation and a private CRM that turned cold buyers into repeat fans.",
     accent: "from-amber-500/30 to-rose-500/10",
-    image: "/src/assets/work-ecom.jpg",
+    image: workEcom,
   },
   {
     title: "FleetPilot",
@@ -140,7 +147,7 @@ export const PORTFOLIO = [
     metric: "1,200 vehicles tracked",
     desc: "Live GPS, fuel analytics and driver scoring for a logistics player covering five Indian states.",
     accent: "from-lime-500/30 to-emerald-500/10",
-    image: "/src/assets/work-ai.jpg",
+    image: workAi,
   },
 ];
 
@@ -150,21 +157,21 @@ export const TESTIMONIALS = [
     role: "CTO, ShopEase",
     quote:
       "BuildNest helped us scale our online store by 300% in 6 months. They felt like an in-house team — sharp, calm, and ridiculously fast.",
-    photoKey: "person1" as const,
+    photo: person1,
   },
   {
     name: "Riya Mehta",
     role: "Founder, EcoCart",
     quote:
       "We came with a messy Figma and walked away with a product. Zero upfront, zero drama, and a team that actually answers WhatsApp on Sundays.",
-    photoKey: "person2" as const,
+    photo: person2,
   },
   {
     name: "Vikram Iyer",
     role: "COO, FleetPilot",
     quote:
       "The recruitment AI alone paid for the project in two months. They genuinely care about ROI, not just shipping a pretty dashboard.",
-    photoKey: "person3" as const,
+    photo: person3,
   },
 ];
 
