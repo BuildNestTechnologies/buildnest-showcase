@@ -4,8 +4,7 @@ import { Check, ShoppingCart, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Shopify Development in India 
- Complete Guide for 2026 (Pricing, Features, Alternatives)",
+  title: "Shopify Development in India — Complete Guide for 2026 (Pricing, Features, Alternatives)",
   description: "Want to start an online store in India? Learn why Shopify is the leading platform and how BuildNest Technologies can help you set up and scale your e-commerce business.",
 };
 
@@ -17,8 +16,7 @@ export default function ShopifyGuidePage() {
           <ShoppingCart className="h-4 w-4" /> E-Commerce Guide
         </div>
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl leading-tight">
-          Shopify Development in India 
- Complete Guide for 2026
+          Shopify Development in India — Complete Guide for 2026
         </h1>
         <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
           The e-commerce boom in India is just beginning. For retailers in Bhiwandi and Mumbai, Shopify provides the most reliable way to sell online, manage inventory, and integrate with Indian payment gateways.

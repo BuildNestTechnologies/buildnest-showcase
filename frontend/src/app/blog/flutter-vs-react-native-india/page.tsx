@@ -4,8 +4,7 @@ import { Check, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Flutter vs React Native for Indian Startups 
- Which Is Better in 2026?",
+  title: "Flutter vs React Native for Indian Startups — Which Is Better in 2026?",
   description: "Comparing the top two mobile app frameworks for the Indian market. Learn why BuildNest Technologies recommends Flutter for high-performance apps in Mumbai and Bhiwandi.",
 };
 
@@ -15,8 +14,7 @@ export default function FlutterVsReactNativePage() {
       <Reveal direction="down">
         <span className="text-primary font-bold uppercase tracking-widest text-xs">Technical Comparison</span>
         <h1 className="mt-4 font-display text-4xl font-bold text-foreground sm:text-5xl leading-tight">
-          Flutter vs React Native for Indian Startups 
- Which Is Better in 2026?
+          Flutter vs React Native for Indian Startups — Which Is Better in 2026?
         </h1>
         <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
           If you are building a mobile app in India today, you are likely choosing between Flutter and React Native. Both are powerful, but for businesses in Mumbai and Bhiwandi, the choice depends on your specific performance and budget needs.
@@ -27,8 +25,7 @@ export default function FlutterVsReactNativePage() {
         <div>
           <h2 className="text-2xl font-bold text-foreground mb-4">Why BuildNest Chooses Flutter for High Performance</h2>
           <p className="text-muted-foreground leading-relaxed">
-            Flutter, developed by Google, allows us to build apps that feel truly native. Unlike other frameworks, Flutter doesn't use a "bridge" to communicate with the phone's hardware
-it draws the UI directly. This results in **60 FPS animations** and a premium feel that Indian customers love.
+            Flutter, developed by Google, allows us to build apps that feel truly native. Unlike other frameworks, Flutter doesn&apos;t use a &quot;bridge&quot; to communicate with the phone&apos;s hardware — it draws the UI directly. This results in **60 FPS animations** and a premium feel that Indian customers love.
           </p>
         </div>
 
