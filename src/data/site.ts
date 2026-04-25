@@ -150,21 +150,21 @@ export const TESTIMONIALS = [
     role: "CTO, ShopEase",
     quote:
       "BuildNest helped us scale our online store by 300% in 6 months. They felt like an in-house team — sharp, calm, and ridiculously fast.",
-    photo: "/src/assets/person-1.jpg",
+    photoKey: "person1" as const,
   },
   {
     name: "Riya Mehta",
     role: "Founder, EcoCart",
     quote:
       "We came with a messy Figma and walked away with a product. Zero upfront, zero drama, and a team that actually answers WhatsApp on Sundays.",
-    photo: "/src/assets/person-2.jpg",
+    photoKey: "person2" as const,
   },
   {
     name: "Vikram Iyer",
     role: "COO, FleetPilot",
     quote:
       "The recruitment AI alone paid for the project in two months. They genuinely care about ROI, not just shipping a pretty dashboard.",
-    photo: "/src/assets/person-3.jpg",
+    photoKey: "person3" as const,
   },
 ];
 
