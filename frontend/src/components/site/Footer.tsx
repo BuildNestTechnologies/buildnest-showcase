@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Linkedin, Twitter, MapPin, Mail } from "lucide-react";
+import { Camera, Globe, Send, MapPin, Mail } from "lucide-react";
 import logo from "@/assets/buildnest-logo.png";
 
 const Footer = () => (
@@ -17,7 +17,7 @@ const Footer = () => (
           serious engineering, and a team that ships.
         </p>
         <div className="mt-6 flex items-center gap-3">
-          {[Linkedin, Instagram, Twitter].map((Icon, i) => (
+          {[Globe, Camera, Send].map((Icon, i) => (
             <a
               key={i}
               href="#"

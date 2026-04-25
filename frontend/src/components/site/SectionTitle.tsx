@@ -21,7 +21,7 @@ const SectionTitle = ({ eyebrow, title, subtitle, align = "center" }: Props) => 
         <span className="h-px w-8 bg-primary/60" /> {eyebrow}
       </div>
     )}
-    <h2 className="text-balance font-display text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
+    <h2 className="text-gradient text-balance font-display text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
       {title}
     </h2>
     {subtitle && <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">{subtitle}</p>}

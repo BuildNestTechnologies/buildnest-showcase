@@ -33,7 +33,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="mt-6 font-display text-[40px] font-bold leading-[1.02] tracking-tight text-white sm:text-5xl lg:text-[64px]"
+              className="text-gradient mt-6 font-display text-[40px] font-bold leading-[1.02] tracking-tight text-white sm:text-5xl lg:text-[64px]"
             >
               Websites, apps &{" "}
               <span className="relative inline-block">
