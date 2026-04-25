@@ -7,7 +7,7 @@ import { CheckCircle2, MessageSquare, Package, Users, Receipt, ArrowRight } from
 import Link from "next/link";
 
 export const metadata: Metadata = {
- title: "Custom Software Development for Indian Businesses | BuildNest",
+ title: "Custom Software Development for Indian Businesses | BuildNest Technologies",
  description: "We build custom ERPs, CRMs, and internal tools. Best software agency in Mumbai & Bhiwandi.",
 };
 

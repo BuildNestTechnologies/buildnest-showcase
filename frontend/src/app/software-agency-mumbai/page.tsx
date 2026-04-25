@@ -27,7 +27,7 @@ export default function MumbaiCityPage() {
     <div className="container-px mx-auto max-w-5xl text-center">
      <Reveal>
       <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl lg:text-6xl">
-       Leading Software Agency in MumbaiBuildNest Technologies
+       Leading Software Agency in Mumbai — BuildNest Technologies
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
        Providing enterprise-grade software development and high-end web solutions to Mumbai's fastest-growing companies and startups.
