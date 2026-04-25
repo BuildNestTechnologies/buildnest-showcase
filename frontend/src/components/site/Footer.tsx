@@ -7,9 +7,9 @@ const Footer = () => (
     <div className="container-px mx-auto grid max-w-7xl gap-12 py-16 md:grid-cols-4">
       <div className="md:col-span-2">
         <div className="flex items-center gap-2.5">
-          <Image src="/buildnest-logo.png" alt="BuildNest Technologies" width={40} height={40} className="h-10 w-10 object-contain" />
+          <Image src="/buildnest-logo.png" alt="BuildNest Technologies" width={160} height={56} className="h-12 w-auto object-contain" />
           <span className="font-display text-xl font-bold tracking-tight text-white">
-            Build<span className="text-primary">Nest</span>
+            Build<span className="text-primary">Nest</span> <span className="text-gray-400 font-medium text-sm">Technologies</span>
           </span>
         </div>
         <p className="mt-4 max-w-md text-sm leading-relaxed text-gray-400">

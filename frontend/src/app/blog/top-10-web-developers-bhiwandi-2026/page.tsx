@@ -21,7 +21,7 @@ export default function Top10Page() {
 
   return (
     <>
-      <script id="top-10-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <script id="top-10-schema" type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       
       <article className="mx-auto max-w-3xl px-6 py-20">
         <Reveal>

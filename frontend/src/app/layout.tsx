@@ -6,6 +6,7 @@ import SiteLayout from "@/components/site/SiteLayout";
 import LoadingScreen from "@/components/site/LoadingScreen";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
+import { NoSSR } from "@/components/site/NoSSR";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -53,9 +54,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   robots: {
     index: true,
@@ -113,17 +114,27 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Pre-hydration cleanup: strip browser extension attributes before React sees them */}
+        <script
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var a=["bis_skin_checked","bis_use","data-bis-config","data-dynamic-id"];function c(e){a.forEach(function(n){e.removeAttribute(n)})}function s(){document.querySelectorAll("[bis_skin_checked]").forEach(c)}s();if(typeof MutationObserver!=="undefined"){new MutationObserver(function(m){m.forEach(function(r){if(r.type==="attributes"&&a.indexOf(r.attributeName)>-1)r.target.removeAttribute(r.attributeName);if(r.type==="childList")r.addedNodes.forEach(function(n){if(n.nodeType===1){c(n);(n.querySelectorAll?n.querySelectorAll("[bis_skin_checked]"):[]).forEach(c)}})})}).observe(document.documentElement,{attributes:true,attributeFilter:a,childList:true,subtree:true})}})();`,
+          }}
+        />
         <script 
           id="org-schema" 
           type="application/ld+json" 
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} 
         />
       </head>
       <body className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning>
         <Providers>
-          <Toaster />
-          <Sonner />
-          <LoadingScreen />
+          <NoSSR>
+            <Toaster />
+            <Sonner />
+            <LoadingScreen />
+          </NoSSR>
           <SiteLayout>{children}</SiteLayout>
         </Providers>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" strategy="afterInteractive" />

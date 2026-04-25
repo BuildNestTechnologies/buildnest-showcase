@@ -45,7 +45,7 @@ export default function Software() {
 
   return (
     <>
-      <script id="software-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
+      <script id="software-schema" type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
       
       <section className="bg-hero pt-32 pb-20 md:pt-40 md:pb-28 border-b border-border">
         <div className="container-px mx-auto max-w-4xl text-center">

@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const LoadingScreen = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // 1 second duration
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
@@ -24,23 +24,29 @@ const LoadingScreen = () => {
           className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background"
         >
           <div className="relative flex flex-col items-center">
-            {/* Dot that expands into a line */}
+            {/* Logo scales in */}
             <motion.div
-              initial={{ width: "12px", height: "12px", borderRadius: "50%" }}
-              animate={{ width: "100px", height: "4px", borderRadius: "2px" }}
-              transition={{ delay: 0.2, duration: 0.4, ease: "anticipate" }}
-              className="bg-primary"
-            />
-            
-            {/* Text fades in */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.3 }}
-              className="absolute top-6 font-display text-xl font-bold tracking-tight text-foreground"
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.1, duration: 0.5, ease: "anticipate" }}
             >
-              Build<span className="text-primary">Nest</span>
+              <Image
+                src="/buildnest-logo.png"
+                alt="BuildNest Technologies"
+                width={120}
+                height={80}
+                className="h-16 w-auto object-contain"
+                priority
+              />
             </motion.div>
+
+            {/* Line animates under the logo */}
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{ width: "100px" }}
+              transition={{ delay: 0.4, duration: 0.4, ease: "anticipate" }}
+              className="mt-4 h-1 rounded-full bg-primary"
+            />
           </div>
         </motion.div>
       )}

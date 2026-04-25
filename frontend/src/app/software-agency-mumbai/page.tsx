@@ -21,7 +21,7 @@ export default function MumbaiCityPage() {
 
   return (
     <>
-      <script id="mumbai-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localSchema) }} />
+      <script id="mumbai-schema" type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(localSchema) }} />
       
       <section className="bg-hero pt-32 pb-20 md:pt-40 md:pb-28">
         <div className="container-px mx-auto max-w-5xl text-center">

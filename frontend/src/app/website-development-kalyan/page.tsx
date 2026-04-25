@@ -28,7 +28,7 @@ export default function KalyanPage() {
 
   return (
     <>
-      <script id="local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localSchema) }} />
+      <script id="local-schema" type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(localSchema) }} />
       
       <section className="bg-hero pt-24 pb-16 md:pt-32 md:pb-24 border-b border-border">
         <div className="container-px mx-auto max-w-7xl">

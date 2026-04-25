@@ -65,8 +65,8 @@ export default function Pricing() {
 
   return (
     <>
-      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script id="product-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script id="faq-schema" type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="product-schema" type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
 
       <section className="bg-hero pt-32 pb-20 md:pt-40 md:pb-28">
         <div className="container-px mx-auto max-w-7xl text-center">

@@ -18,7 +18,7 @@ export default function ComparisonPage() {
 
   return (
     <>
-      <script id="vs-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script id="vs-schema" type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       
       <article className="mx-auto max-w-3xl px-6 py-20">
         <Reveal>

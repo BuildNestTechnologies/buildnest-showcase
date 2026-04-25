@@ -26,12 +26,13 @@ const Navbar = () => {
       className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 ${
         scrolled ? "border-b border-border bg-background/90 backdrop-blur-xl shadow-sm" : "bg-transparent"
       }`}
+      suppressHydrationWarning
     >
       <nav className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between md:h-20">
         <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <Image src="/buildnest-logo.png" alt="BuildNest" width={32} height={32} className="h-8 w-8 object-contain invert dark:invert-0" />
-          <span className="font-display text-xl font-bold tracking-tight text-foreground">
-            Build<span className="text-primary">Nest</span>
+          <Image src="/buildnest-logo.png" alt="BuildNest Technologies" width={140} height={48} className="h-10 w-auto object-contain" priority />
+          <span className="font-display text-lg font-bold tracking-tight text-foreground">
+            Build<span className="text-primary">Nest</span> <span className="hidden sm:inline text-muted-foreground font-medium text-sm">Technologies</span>
           </span>
         </Link>
 
@@ -53,7 +54,7 @@ const Navbar = () => {
           })}
         </ul>
 
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="hidden items-center gap-4 md:flex" suppressHydrationWarning>
           <ThemeToggle />
           <Link
             href="/contact"
@@ -63,7 +64,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex items-center gap-3 md:hidden" suppressHydrationWarning>
           <ThemeToggle />
           <button
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground bg-background"

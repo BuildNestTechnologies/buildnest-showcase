@@ -22,7 +22,7 @@ export default function BestMumbaiSoftwarePage() {
 
   return (
     <article className="py-20 container-px mx-auto max-w-4xl">
-      <script id="best-mumbai-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listSchema) }} />
+      <script id="best-mumbai-schema" type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(listSchema) }} />
       
       <Reveal direction="down">
         <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl leading-tight">

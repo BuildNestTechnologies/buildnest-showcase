@@ -63,6 +63,7 @@ export default function Home() {
       <script
         id="local-business-schema"
         type="application/ld+json"
+        suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       
