@@ -1,34 +1,39 @@
-import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const LoadingScreen = () => {
-  const [show, setShow] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    const t = setTimeout(() => setShow(false), 1800);
-    return () => clearTimeout(t);
+    // The prompt explicitly requested it to disappear after 1.2 seconds
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <AnimatePresence>
-      {show && (
+      {isLoading && (
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-hero"
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white"
         >
-          <div className="relative">
-            <div className="h-16 w-16 rounded-full border-2 border-primary/20 border-t-primary animate-spin-slow" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="h-2 w-2 rounded-full bg-primary shadow-[0_0_18px_hsl(var(--primary))]" />
-            </div>
-          </div>
-          <h1 className="mt-8 font-display text-3xl font-bold tracking-tight text-white animate-brand-pulse">
+          {/* Simple red spinning circle */}
+          <div className="h-12 w-12 rounded-full border-4 border-gray-100 border-t-primary animate-spin"></div>
+          
+          {/* "BuildNest" text */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.4 }}
+            className="mt-6 font-display text-xl font-bold tracking-tight text-[#111214]"
+          >
             Build<span className="text-primary">Nest</span>
-          </h1>
-          <p className="mt-2 text-xs uppercase tracking-[0.4em] text-muted-foreground">
-            Crafting your digital nest
-          </p>
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>

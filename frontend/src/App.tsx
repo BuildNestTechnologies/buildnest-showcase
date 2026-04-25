@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { ThemeProvider } from "@/components/theme-provider";
 import LoadingScreen from "@/components/site/LoadingScreen";
 import NoiseOverlay from "@/components/site/NoiseOverlay";
 import CursorDot from "@/components/site/CursorDot";
@@ -14,6 +15,7 @@ import Services from "./pages/Services";
 import Software from "./pages/Software";
 import Pricing from "./pages/Pricing";
 import Portfolio from "./pages/Portfolio";
+import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -29,6 +31,7 @@ const AnimatedRoutes = () => {
         <Route path="/software" element={<PageTransition><Software /></PageTransition>} />
         <Route path="/pricing" element={<PageTransition><Pricing /></PageTransition>} />
         <Route path="/portfolio" element={<PageTransition><Portfolio /></PageTransition>} />
+        <Route path="/about" element={<PageTransition><About /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
         <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
       </Routes>
@@ -38,18 +41,18 @@ const AnimatedRoutes = () => {
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <LoadingScreen />
-      <NoiseOverlay />
-      <CursorDot />
-      <BrowserRouter>
-        <SiteLayout>
-          <AnimatedRoutes />
-        </SiteLayout>
-      </BrowserRouter>
-    </TooltipProvider>
+    <ThemeProvider defaultTheme="light">
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <LoadingScreen />
+        <BrowserRouter>
+          <SiteLayout>
+            <AnimatedRoutes />
+          </SiteLayout>
+        </BrowserRouter>
+      </TooltipProvider>
+    </ThemeProvider>
   </QueryClientProvider>
 );
 

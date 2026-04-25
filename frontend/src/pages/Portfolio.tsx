@@ -1,68 +1,106 @@
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowRight, ExternalLink, Play, MonitorSmartphone } from "lucide-react";
 import SectionTitle from "@/components/site/SectionTitle";
 import Reveal from "@/components/site/Reveal";
 import { PORTFOLIO } from "@/data/site";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => (
   <>
     <section className="bg-hero py-20 md:py-28">
-      <div className="container-px mx-auto max-w-7xl text-center">
+      <div className="container-px mx-auto max-w-4xl text-center">
         <Reveal>
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
-            Portfolio
+            Our Work
           </span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h1 className="mx-auto mt-5 max-w-3xl font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl md:text-[56px]">
-            Work we'd <span className="text-primary">put on a billboard</span>.
-          </h1>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <p className="mx-auto mt-5 max-w-2xl text-muted-foreground">
-            A few of the products we shipped this year. Real teams, real numbers, real results.
+          <p className="mx-auto mt-6 text-lg leading-relaxed text-muted-foreground md:text-xl">
+            We don't just build pretty websites. We build digital tools that generate leads, streamline operations, and increase revenue. Check out some of our recent work.
           </p>
         </Reveal>
       </div>
     </section>
 
     <section className="container-px mx-auto max-w-7xl py-20">
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {PORTFOLIO.map((p, i) => (
-          <Reveal key={p.title} delay={i * 0.06}>
-            <article className={`group relative h-full overflow-hidden rounded-[var(--radius)] border border-border bg-gradient-card transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/60 hover:shadow-glow-red ${i === 0 ? "lg:col-span-2" : ""}`}>
-              <div className={`relative overflow-hidden ${i === 0 ? "h-56 lg:h-72" : "h-48"}`}>
-                <img src={p.image} alt={p.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className={`absolute inset-0 bg-gradient-to-br ${p.accent} mix-blend-overlay opacity-50`} />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-5 rounded-full border border-white/10 bg-black/40 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur">
-                  {p.tag}
+      <div className="grid gap-12 lg:grid-cols-2">
+        {PORTFOLIO.map((project, i) => (
+          <Reveal key={project.title} delay={i * 0.1}>
+            <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-card shadow-card-soft transition-all duration-500 hover:-translate-y-2 hover:shadow-xl border border-border">
+              {/* Image Section (Mockup Container) */}
+              <div className="relative aspect-video w-full overflow-hidden bg-muted p-4 sm:p-8">
+                {/* Subtle laptop base mockup */}
+                <div className="relative mx-auto h-full w-full max-w-[500px] rounded-t-xl bg-card shadow-xl ring-1 ring-border">
+                  <div className="flex h-6 w-full items-center gap-1.5 border-b border-border bg-muted/50 px-3">
+                    <div className="h-2 w-2 rounded-full bg-red-400"></div>
+                    <div className="h-2 w-2 rounded-full bg-amber-400"></div>
+                    <div className="h-2 w-2 rounded-full bg-green-400"></div>
+                  </div>
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="h-[calc(100%-24px)] w-full object-cover object-top transition-transform duration-700 ease-in-out group-hover:scale-[1.02]" 
+                  />
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="font-display text-xl font-semibold text-white">{p.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{p.desc}</p>
-                <div className="mt-5 flex items-center justify-between border-t border-border pt-4">
-                  <span className="font-display text-sm font-semibold text-primary">{p.metric}</span>
-                  <ArrowRight className="h-4 w-4 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-primary" />
+              {/* Content Section */}
+                <div className="flex flex-1 flex-col p-8">
+                  <div className="flex items-center gap-3">
+                    <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                      {project.category}
+                    </span>
+                  </div>
+                  
+                  <h3 className="mt-4 font-display text-2xl font-bold text-foreground">{project.title}</h3>
+                  <p className="mt-3 flex-1 leading-relaxed text-muted-foreground">{project.desc}</p>
+                  
+                  {/* Action Links */}
+                  <div className="mt-8 flex items-center gap-4 border-t border-border pt-6">
+                    {project.demoLink && (
+                      <a 
+                        href={project.demoLink} 
+                        target="_blank" 
+                        rel="noreferrer"
+                        className="inline-flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90"
+                      >
+                        <ExternalLink className="h-4 w-4" /> Live Demo
+                      </a>
+                    )}
+                    {project.videoLink && (
+                      <a 
+                        href={project.videoLink} 
+                        target="_blank" 
+                        rel="noreferrer"
+                        className="inline-flex flex-1 items-center justify-center gap-2 rounded-lg border border-border bg-transparent px-4 py-2.5 text-sm font-semibold text-foreground transition hover:bg-accent"
+                      >
+                        <Play className="h-4 w-4" /> Watch Video
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-            </article>
-          </Reveal>
-        ))}
-      </div>
-    </section>
+            </Reveal>
+          ))}
+        </div>
+      </section>
 
-    <section className="container-px mx-auto max-w-7xl pb-24 text-center">
-      <Reveal>
-        <h3 className="mx-auto max-w-2xl font-display text-3xl font-bold text-white sm:text-4xl">
-          Want to be the <span className="text-primary">next case study</span>?
-        </h3>
-        <Link to="/contact" className="mt-7 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow-red transition hover:scale-[1.04]">
-          Start your project <ArrowRight className="h-4 w-4" />
-        </Link>
-      </Reveal>
-    </section>
+      {/* Final CTA */}
+      <section className="bg-hero py-20 text-center">
+        <div className="container-px mx-auto max-w-3xl">
+          <Reveal>
+          <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-card text-primary shadow-sm">
+            <MonitorSmartphone className="h-8 w-8" />
+          </div>
+          <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">Want to be our next success story?</h2>
+            <p className="mt-4 text-lg text-muted-foreground">Let's build something great together.</p>
+            <Link
+              to="/contact"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-semibold text-white transition hover:scale-105"
+            >
+              Start Your Project <ArrowRight className="h-5 w-5" />
+            </Link>
+          </Reveal>
+        </div>
+      </section>
   </>
 );
 

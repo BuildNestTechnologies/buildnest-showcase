@@ -5,6 +5,8 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/buildnest-logo.png";
 import { NAV_LINKS } from "@/data/site";
 
+import { ThemeToggle } from "./ThemeToggle";
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -19,13 +21,13 @@ const Navbar = () => {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 ${
-        scrolled ? "border-b border-border/60 bg-hero/85 backdrop-blur-xl" : "bg-transparent"
+        scrolled ? "border-b border-border bg-background/90 backdrop-blur-xl shadow-sm" : "bg-transparent"
       }`}
     >
       <nav className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between md:h-20">
         <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
           <img src={logo} alt="BuildNest Technologies" className="h-9 w-9 object-contain" />
-          <span className="font-display text-lg font-bold tracking-tight text-white">
+          <span className="font-display text-lg font-bold tracking-tight text-foreground">
             Build<span className="text-primary">Nest</span>
           </span>
         </Link>
@@ -38,7 +40,7 @@ const Navbar = () => {
                 end={l.to === "/"}
                 className={({ isActive }) =>
                   `nav-underline text-sm font-medium transition-colors ${
-                    isActive ? "active text-white" : "text-muted-foreground hover:text-white"
+                    isActive ? "active text-foreground" : "text-muted-foreground hover:text-foreground"
                   }`
                 }
               >
@@ -48,20 +50,26 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <Link
-          to="/contact"
-          className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow-red transition hover:scale-[1.03] md:inline-flex"
-        >
-          Start Project
-        </Link>
+        <div className="hidden items-center gap-4 md:flex">
+          <ThemeToggle />
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:scale-[1.03]"
+          >
+            Start Project
+          </Link>
+        </div>
 
-        <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-white md:hidden"
-          aria-label="Toggle menu"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <ThemeToggle />
+          <button
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground bg-background"
+            aria-label="Toggle menu"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>
@@ -71,7 +79,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
-            className="border-t border-border bg-hero md:hidden"
+            className="border-b border-border bg-background shadow-lg md:hidden"
           >
             <ul className="container-px mx-auto flex max-w-7xl flex-col gap-1 py-4">
               {NAV_LINKS.map((l) => (
@@ -82,7 +90,7 @@ const Navbar = () => {
                     onClick={() => setOpen(false)}
                     className={({ isActive }) =>
                       `block rounded-lg px-3 py-3 text-base font-medium transition ${
-                        isActive ? "bg-card text-white" : "text-muted-foreground hover:bg-card hover:text-white"
+                        isActive ? "bg-secondary text-foreground" : "text-muted-foreground hover:bg-secondary hover:text-foreground"
                       }`
                     }
                   >
@@ -94,7 +102,7 @@ const Navbar = () => {
                 <Link
                   to="/contact"
                   onClick={() => setOpen(false)}
-                  className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground"
+                  className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white"
                 >
                   Start Project
                 </Link>

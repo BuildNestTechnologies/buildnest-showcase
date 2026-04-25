@@ -1,182 +1,202 @@
-import workFintech from "@/assets/work-fintech.jpg";
-import workEcom from "@/assets/work-ecom.jpg";
-import workAi from "@/assets/work-ai.jpg";
-import person1 from "@/assets/person-1.jpg";
-import person2 from "@/assets/person-2.jpg";
-import person3 from "@/assets/person-3.jpg";
-
 export const NAV_LINKS = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
   { to: "/software", label: "Software" },
   { to: "/pricing", label: "Pricing" },
   { to: "/portfolio", label: "Portfolio" },
+  { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
+];
+
+export const SERVICES = [
+  {
+    title: "Website that works",
+    icon: "Globe",
+    desc: "Get a professional website that your customers can easily find and use.",
+  },
+  {
+    title: "Mobile app for your business",
+    icon: "Smartphone",
+    desc: "Reach more people with an app that works on iPhones and Android.",
+  },
+  {
+    title: "Custom software made simple",
+    icon: "Settings",
+    desc: "We build software that automates your daily tasks – no coding knowledge needed.",
+  },
+  {
+    title: "We take care of everything",
+    icon: "LifeBuoy",
+    desc: "Hosting, updates, support – you focus on your business.",
+  },
+];
+
+export const HOW_IT_WORKS = [
+  {
+    step: "01",
+    title: "Tell us your idea",
+    desc: "We start with a simple phone or email conversation to understand your business.",
+  },
+  {
+    step: "02",
+    title: "We design & build",
+    desc: "We get to work. You see previews regularly so you know exactly what you're getting.",
+  },
+  {
+    step: "03",
+    title: "Launch & grow",
+    desc: "We launch your project, train your team, and stay available for support.",
+  },
 ];
 
 export const PRICING = [
   {
     name: "Starter",
     price: "₹7,999",
-    tagline: "Perfect for a clean, fast launch.",
+    tagline: "Good for small businesses / just getting online.",
     features: [
-      "Fixed pages (up to 5)",
-      "No admin panel",
-      "Developer edits only",
-      "No e-commerce",
-      "Mobile responsive",
-      "Basic SEO setup",
+      "Up to 5 pages (Home, About, Services, Contact, Blog)",
+      "We make changes for you (no confusing dashboard)",
+      "Mobile friendly",
+      "No online store",
+      "1 year free hosting & support",
     ],
-    highlight: false,
+    popular: false,
   },
   {
     name: "Business",
     price: "₹15,999",
-    tagline: "For growing brands that need control.",
+    tagline: "Best for service businesses wanting more control.",
     features: [
-      "Dynamic pages",
-      "Full admin panel",
-      "Owner editable content",
-      "Blog / CMS included",
-      "No cart / payments",
-      "Advanced SEO + analytics",
+      "Unlimited pages",
+      "Easy admin panel (you can edit text/images yourself)",
+      "Contact forms & Google Maps",
+      "No payment system",
+      "1 year free hosting & support",
     ],
-    highlight: true,
+    popular: true,
   },
   {
     name: "E-Commerce",
     price: "₹23,999",
-    tagline: "Sell online with a proper store.",
+    tagline: "For selling products online.",
     features: [
       "Full online store",
-      "Payments + cart + inventory",
-      "Advanced admin",
-      "Order & customer management",
-      "Coupons + shipping rules",
-      "Marketing integrations",
+      "Easy product upload",
+      "Payment gateway (Razorpay / PhonePe)",
+      "Order & inventory management",
+      "1 year free hosting & support",
     ],
-    highlight: false,
+    popular: false,
   },
   {
-    name: "Enterprise / Software",
+    name: "Enterprise",
     price: "Custom",
-    tagline: "ERP, CRM, AI tools — built end to end.",
+    tagline: "For large or unique needs.",
     features: [
-      "Unlimited pages & modules",
-      "AI & automation",
-      "Dedicated team",
-      "24/7 support & SLA",
-      "Custom integrations",
-      "Cloud architecture",
+      "Custom software & internal tools",
+      "AI integration (chatbots, automations)",
+      "Dedicated development team",
+      "High-scale server architecture",
+      "24/7 priority support",
     ],
-    highlight: false,
-  },
-];
-
-export const SERVICES = [
-  {
-    title: "Web Development",
-    desc: "Marketing sites, dashboards & SaaS UIs in Next.js and React — fast, accessible, conversion-focused.",
-    icon: "globe",
-    stack: ["Next.js", "React", "TypeScript", "Tailwind"],
-  },
-  {
-    title: "Mobile Apps",
-    desc: "Cross-platform apps in Flutter that ship to iOS and Android from one elegant codebase.",
-    icon: "phone",
-    stack: ["Flutter", "Dart", "Firebase", "REST"],
-  },
-  {
-    title: "Custom Software",
-    desc: "ERP, CRM, inventory and SaaS platforms engineered with Node.js, Python and modern cloud.",
-    icon: "code",
-    stack: ["Node.js", "Python", "Postgres", "AWS"],
-  },
-  {
-    title: "Automation & Bots",
-    desc: "WhatsApp bots, GPT-powered assistants, scraping pipelines, internal tools that reclaim hours.",
-    icon: "bot",
-    stack: ["GPT-4", "n8n", "Python", "Webhooks"],
-  },
-];
-
-export const PORTFOLIO = [
-  {
-    title: "Fintech Dashboard",
-    tag: "Next.js + Python",
-    metric: "$12M assets tracked",
-    desc: "A unified treasury dashboard for an Indian fintech — real-time positions, alerts, RBI-ready reports.",
-    accent: "from-rose-500/30 to-orange-500/10",
-    image: workFintech,
-  },
-  {
-    title: "EcoCommerce",
-    tag: "Full-stack store",
-    metric: "300% revenue lift",
-    desc: "Headless commerce for a sustainable D2C brand — Shopify-grade speed at a fraction of the cost.",
-    accent: "from-emerald-500/30 to-cyan-500/10",
-    image: workEcom,
-  },
-  {
-    title: "HireIntel AI",
-    tag: "GPT-4 Integration",
-    metric: "70% faster screening",
-    desc: "Recruitment AI that reads JDs, ranks candidates and writes outreach — built for a Bengaluru staffing firm.",
-    accent: "from-indigo-500/30 to-fuchsia-500/10",
-    image: workAi,
-  },
-  {
-    title: "ClinicOS",
-    tag: "Healthcare SaaS",
-    metric: "42 clinics live",
-    desc: "Appointments, billing, prescriptions and WhatsApp reminders — one calm interface for busy clinics.",
-    accent: "from-sky-500/30 to-blue-500/10",
-    image: workFintech,
-  },
-  {
-    title: "ShopEase",
-    tag: "Shopify + Custom",
-    metric: "₹2.4Cr GMV in 6mo",
-    desc: "Custom theme, checkout optimisation and a private CRM that turned cold buyers into repeat fans.",
-    accent: "from-amber-500/30 to-rose-500/10",
-    image: workEcom,
-  },
-  {
-    title: "FleetPilot",
-    tag: "IoT + React",
-    metric: "1,200 vehicles tracked",
-    desc: "Live GPS, fuel analytics and driver scoring for a logistics player covering five Indian states.",
-    accent: "from-lime-500/30 to-emerald-500/10",
-    image: workAi,
+    popular: false,
   },
 ];
 
 export const TESTIMONIALS = [
   {
-    name: "Ankit Sharma",
-    role: "CTO, ShopEase",
-    quote:
-      "BuildNest helped us scale our online store by 300% in 6 months. They felt like an in-house team — sharp, calm, and ridiculously fast.",
-    photo: person1,
+    quote: "They made my restaurant website – now I get 50+ orders online daily! Everything is smooth and my customers love it.",
+    name: "Rajesh Sharma",
+    role: "Restaurant Owner",
+    image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=150&h=150",
   },
   {
-    name: "Riya Mehta",
-    role: "Founder, EcoCart",
-    quote:
-      "We came with a messy Figma and walked away with a product. Zero upfront, zero drama, and a team that actually answers WhatsApp on Sundays.",
-    photo: person2,
+    quote: "We needed a custom inventory system but had zero tech knowledge. BuildNest made it so simple to use. Waste is down 40%.",
+    name: "Anita Desai",
+    role: "Grocery Store Manager",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150",
   },
   {
-    name: "Vikram Iyer",
-    role: "COO, FleetPilot",
-    quote:
-      "The recruitment AI alone paid for the project in two months. They genuinely care about ROI, not just shipping a pretty dashboard.",
-    photo: person3,
+    quote: "Professional, transparent, and they actually answer the phone. The mobile app they built transformed our delivery business.",
+    name: "Vikram Singh",
+    role: "Logistics Director",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150",
   },
 ];
 
-export const TRUSTED_LOGOS = ["Figma", "Google", "Amazon", "Razorpay", "Stripe", "Notion"];
+export const PORTFOLIO = [
+  {
+    title: "ChainCred",
+    tag: "Blockchain Credentials",
+    metric: "Tamper-proof IDs",
+    desc: "Decentralized platform for academic credentials on opBNB and BNB Greenfield — ensuring trust in education.",
+    image: "https://www.devnex.online/portfolio/chaincred.jpg",
+    demo: "https://chaincred-frontend.onrender.com/",
+    video: "https://youtu.be/yDQA6xOlVpQ",
+  },
+  {
+    title: "LMS.PRO",
+    tag: "Learning Management",
+    metric: "Full Course Lifecycle",
+    desc: "Comprehensive role-based Learning Management System for tracking student progress and content delivery.",
+    image: "https://www.devnex.online/portfolio/lms.jpg",
+    demo: "https://drive.google.com/file/d/1qvPDDLiiIyelbemzLILsv4_5IpctHzu8/view",
+  },
+  {
+    title: "DevNex UI",
+    tag: "Theme Playground",
+    metric: "Real-time Theming",
+    desc: "Interactive UI theme playground allowing real-time experimentation with fonts, colors, and styles.",
+    image: "https://www.devnex.online/portfolio/devnex_ui.jpg",
+    demo: "https://daizy-ui-team.vercel.app/",
+  },
+  {
+    title: "CliniScan AI",
+    tag: "Medical Image AI",
+    metric: "Automated Diagnostics",
+    desc: "Deep learning system for detecting lung abnormalities in X-rays using EfficientNet and object detection.",
+    image: "https://www.devnex.online/portfolio/cliniscan.jpg",
+    demo: "https://yashpatil045-cliniscan.streamlit.app/",
+    video: "https://lnkd.in/d9-SUmST",
+  },
+  {
+    title: "GateSmart",
+    tag: "GATE CS Learning",
+    metric: "Adaptive Learning",
+    desc: "Full-stack prep platform with AI tutor and adaptive revision planning for competitive CS exams.",
+    image: "https://www.devnex.online/portfolio/gatesmart.jpg",
+    demo: "https://gate-smart-five.vercel.app/",
+  },
+  {
+    title: "StudyGenie",
+    tag: "AI Study Coach",
+    metric: "Smart Planning",
+    desc: "Smart study planner with AI doubt resolution, auto-generated quizzes, and seamless calendar integration.",
+    image: "https://www.devnex.online/portfolio/studygenie.jpg",
+    demo: "https://drive.google.com/file/d/1_uqKrzMfySO8i8ScGuIPSrG1CIl2XJJP/view",
+  },
+];
 
-export const TECH_STACK = [
-  "React", "Next.js", "Flutter", "Node.js", "Python", "Go", "PostgreSQL", "AWS", "Docker", "Kubernetes", "GPT-4", "TypeScript",
+export const TEAM = [
+  {
+    name: "Arjun Mehta",
+    role: "Founder & Lead Developer",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400",
+  },
+  {
+    name: "Priya Sharma",
+    role: "Head of Design",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400",
+  },
+  {
+    name: "Rohan Patel",
+    role: "Project Manager",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&h=400",
+  },
+  {
+    name: "Kavya Iyer",
+    role: "Customer Success",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=400",
+  },
 ];

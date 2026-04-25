@@ -1,102 +1,120 @@
-import { Link } from "react-router-dom";
-import { ArrowRight, Globe, Smartphone, Bot, Code2, Compass, Pencil, Hammer, Rocket, Headphones } from "lucide-react";
 import SectionTitle from "@/components/site/SectionTitle";
 import Reveal from "@/components/site/Reveal";
-import { SERVICES } from "@/data/site";
+import { Globe, Smartphone, Settings, Zap, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const ICONS = { globe: Globe, phone: Smartphone, code: Code2, bot: Bot } as const;
-const PROCESS = [
-  { icon: Compass, title: "Discover", desc: "Workshops to nail the why, the who and the what." },
-  { icon: Pencil, title: "Design", desc: "Wireframes → high-fidelity UI you'd be proud to ship." },
-  { icon: Hammer, title: "Build", desc: "Modular engineering, weekly demos, no nasty surprises." },
-  { icon: Rocket, title: "Launch", desc: "Performance-tuned deploys with monitoring on day one." },
-  { icon: Headphones, title: "Support", desc: "Ongoing care plans — we don't ghost after handover." },
+const SERVICES_DETAILED = [
+  {
+    id: "web",
+    title: "Websites that work",
+    icon: Globe,
+    desc: "We don't just build websites; we build 24/7 sales machines. Whether you need a simple online presence for your local shop or a complex e-commerce store, we make it fast, secure, and easy for your customers to use.",
+    features: ["Mobile-friendly design", "SEO optimized for Google", "E-commerce & payments ready", "Easy for you to update"],
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: "app",
+    title: "Mobile apps for your business",
+    icon: Smartphone,
+    desc: "Reach your customers wherever they are. We build beautiful, fast-loading apps for both iPhones and Androids. From food delivery to fitness tracking, we bring your idea to life in the app store.",
+    features: ["iOS and Android support", "Push notifications", "Offline capabilities", "App store submission handled"],
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: "software",
+    title: "Custom software made simple",
+    icon: Settings,
+    desc: "Stop running your business on messy spreadsheets. We build custom dashboards, CRMs, and inventory systems tailored exactly to how your team works.",
+    features: ["Customer Relationship Management (CRM)", "Inventory tracking", "Employee portals", "Data security & backups"],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: "automation",
+    title: "Business Automation & AI",
+    icon: Zap,
+    desc: "Save hundreds of hours by automating repetitive tasks. We set up smart systems that send emails, generate invoices, and answer common customer questions using AI.",
+    features: ["Automated invoicing & emails", "AI Chatbots for customer support", "WhatsApp business integration", "Connecting different tools together"],
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+  }
 ];
 
-const Services = () => (
-  <>
-    <section className="bg-hero py-20 md:py-28">
-      <div className="container-px mx-auto max-w-7xl text-center">
-        <Reveal>
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
-            Services
-          </span>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <h1 className="mx-auto mt-5 max-w-3xl font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl md:text-[56px]">
-            Web. Apps. <span className="text-primary">Software.</span> Done right, done together.
-          </h1>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <p className="mx-auto mt-5 max-w-2xl text-muted-foreground">
-            One senior team for design, engineering and growth. We bring the rigor of a product studio with the
-            speed and price of a boutique agency.
-          </p>
-        </Reveal>
-      </div>
-    </section>
+const Services = () => {
+  return (
+    <>
+      <section className="bg-hero py-20 md:py-28">
+        <div className="container-px mx-auto max-w-4xl text-center">
+          <Reveal>
+            <SectionTitle
+              title="What we do"
+              subtitle="Services"
+              centered
+            />
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mx-auto mt-6 text-lg leading-relaxed text-muted-foreground md:text-xl">
+              We provide everything your business needs to succeed online. No technical jargon, just solutions that make you money and save you time.
+            </p>
+          </Reveal>
+        </div>
+      </section>
 
-    <section className="container-px mx-auto max-w-7xl py-20">
-      <div className="grid gap-5 md:grid-cols-2">
-        {SERVICES.map((s, i) => {
-          const Icon = ICONS[s.icon as keyof typeof ICONS] ?? Globe;
-          return (
-            <Reveal key={s.title} delay={i * 0.08}>
-              <div className="group relative h-full rounded-[var(--radius)] border border-border bg-gradient-card p-8 shadow-card-soft transition hover:-translate-y-1.5 hover:border-primary/60 hover:shadow-glow-red">
-                <div className="flex items-start gap-5">
-                  <div className="inline-flex h-14 w-14 flex-none items-center justify-center rounded-2xl bg-primary/10 text-primary ring-1 ring-primary/20">
-                    <Icon className="h-6 w-6" />
+      <section className="container-px mx-auto max-w-7xl py-20">
+        <div className="space-y-24 md:space-y-32">
+          {SERVICES_DETAILED.map((service, index) => (
+            <div key={service.id} className={`flex flex-col items-center gap-12 lg:flex-row ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
+              <div className="w-full lg:w-1/2">
+                <Reveal>
+                  <div className="overflow-hidden rounded-2xl shadow-card-soft">
+                    <img src={service.image} alt={service.title} className="h-[350px] w-full object-cover md:h-[450px]" />
                   </div>
-                  <div>
-                    <h3 className="font-display text-2xl font-semibold text-white">{s.title}</h3>
-                    <p className="mt-2 text-muted-foreground">{s.desc}</p>
-                    <div className="mt-5 flex flex-wrap gap-1.5">
-                      {s.stack.map((t) => (
-                        <span key={t} className="rounded-full border border-border bg-background/60 px-2.5 py-1 text-[11px] font-medium text-muted-foreground">{t}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                </Reveal>
               </div>
-            </Reveal>
-          );
-        })}
-      </div>
-    </section>
+              <div className="w-full lg:w-1/2 lg:px-8">
+                <Reveal delay={0.1}>
+                  <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <service.icon className="h-6 w-6" />
+                  </div>
+                  <h2 className="mt-6 font-display text-3xl font-bold text-foreground">{service.title}</h2>
+                  <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{service.desc}</p>
+                  
+                  <ul className="mt-8 space-y-4">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-start gap-3 text-foreground">
+                        <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-primary" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-    <section className="bg-hero py-20 md:py-28">
-      <div className="container-px mx-auto max-w-7xl">
-        <SectionTitle eyebrow="Our process" title={<>Calm, predictable, <span className="text-primary">on time</span>.</>} />
-        <div className="grid gap-5 md:grid-cols-3 lg:grid-cols-5">
-          {PROCESS.map((p, i) => (
-            <Reveal key={p.title} delay={i * 0.06}>
-              <div className="rounded-[var(--radius)] border border-border bg-gradient-card p-6 transition hover:border-primary/50">
-                <div className="flex items-center gap-3">
-                  <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <p.icon className="h-4 w-4" />
+                  <div className="mt-10">
+                    <Link to="/contact" className="inline-flex items-center gap-2 font-semibold text-primary hover:underline">
+                      Discuss this service <ArrowRight className="h-4 w-4" />
+                    </Link>
                   </div>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">0{i + 1}</span>
-                </div>
-                <h4 className="mt-4 font-display text-lg font-semibold text-white">{p.title}</h4>
-                <p className="mt-1.5 text-sm text-muted-foreground">{p.desc}</p>
+                </Reveal>
               </div>
-            </Reveal>
+            </div>
           ))}
         </div>
-      </div>
-    </section>
-
-    <section className="container-px mx-auto max-w-7xl py-20 text-center">
-      <Reveal>
-        <h3 className="mx-auto max-w-2xl font-display text-3xl font-bold text-white sm:text-4xl">
-          Ready to put a senior team on your <span className="text-primary">product</span>?
-        </h3>
-        <Link to="/contact" className="mt-7 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow-red transition hover:scale-[1.04]">
-          Book a free consult <ArrowRight className="h-4 w-4" />
-        </Link>
-      </Reveal>
-    </section>
-  </>
-);
+      </section>
+      
+      {/* CTA */}
+      <section className="bg-hero py-24 text-center">
+        <div className="container-px mx-auto max-w-3xl">
+          <Reveal>
+            <h2 className="font-display text-3xl font-bold text-foreground">Not sure what you need?</h2>
+            <p className="mt-4 text-muted-foreground">That's completely fine. We offer a free 30-minute consultation to understand your business and recommend the best path forward.</p>
+            <Link
+              to="/contact"
+              className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 font-semibold text-white transition hover:scale-105"
+            >
+              Book a Free Consultation
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+    </>
+  );
+};
 
 export default Services;

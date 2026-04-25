@@ -1,134 +1,129 @@
-import { Link } from "react-router-dom";
-import { ArrowRight, Database, Brain, ShoppingCart, Users, Layers, Activity } from "lucide-react";
 import SectionTitle from "@/components/site/SectionTitle";
 import Reveal from "@/components/site/Reveal";
+import { CheckCircle2, MessageSquare, Package, Users, Receipt, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const CAPS = [
-  { icon: Users, title: "CRM platforms", desc: "Pipelines, workflows and reporting tuned to how your team really sells." },
-  { icon: Database, title: "ERP & inventory", desc: "Stock, billing, vendors and procurement on one calm dashboard." },
-  { icon: Brain, title: "AI tools & chatbots", desc: "GPT-4 powered assistants, summarizers and recommenders." },
-  { icon: ShoppingCart, title: "SaaS platforms", desc: "Multi-tenant products with billing, roles and analytics baked in." },
-  { icon: Layers, title: "Internal tools", desc: "Admin panels and ops dashboards that replace 10 spreadsheets." },
-  { icon: Activity, title: "Data pipelines", desc: "ETL, dashboards and alerts so leaders see what matters in real time." },
+const SOFTWARE_FEATURES = [
+  {
+    icon: Users,
+    title: "Manage your customers (CRM)",
+    desc: "Keep track of every conversation, lead, and sale in one simple dashboard. Never lose a customer's phone number again."
+  },
+  {
+    icon: Package,
+    title: "Track stock automatically (Inventory)",
+    desc: "Know exactly what's on your shelves without counting. Get alerts when you are running low on popular items."
+  },
+  {
+    icon: Receipt,
+    title: "Handle bills, GST, accounts (ERP)",
+    desc: "Generate professional invoices in seconds, track expenses, and have your tax reports ready with a single click."
+  },
+  {
+    icon: MessageSquare,
+    title: "Chatbot that answers questions (AI)",
+    desc: "An intelligent assistant on your website or WhatsApp that answers customer queries 24/7, even while you sleep."
+  }
 ];
 
-const STACK = ["Node.js", "Python", "Go", "PostgreSQL", "AWS", "Docker", "Kubernetes", "Redis", "GPT-4"];
-
-const Software = () => (
-  <>
-    <section className="bg-hero py-20 md:py-28">
-      <div className="container-px mx-auto max-w-7xl text-center">
-        <Reveal>
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
-            Custom software
-          </span>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <h1 className="mx-auto mt-5 max-w-3xl font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl md:text-[56px]">
-            The internal tool you've been <span className="text-primary">dreaming about</span> — built for real.
-          </h1>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <p className="mx-auto mt-5 max-w-2xl text-muted-foreground">
-            ERP, CRM, inventory systems, AI chatbots and SaaS platforms — engineered around your workflow, not
-            forced into someone else's template.
-          </p>
-        </Reveal>
-      </div>
-    </section>
-
-    <section className="container-px mx-auto max-w-7xl py-20">
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {CAPS.map((c, i) => (
-          <Reveal key={c.title} delay={i * 0.06}>
-            <div className="group h-full rounded-[var(--radius)] border border-border bg-gradient-card p-6 transition hover:-translate-y-1 hover:border-primary/60 hover:shadow-glow-red">
-              <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary ring-1 ring-primary/20">
-                <c.icon className="h-5 w-5" />
-              </div>
-              <h3 className="mt-5 font-display text-lg font-semibold text-white">{c.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{c.desc}</p>
-            </div>
-          </Reveal>
-        ))}
-      </div>
-    </section>
-
-    <section className="bg-hero py-20">
-      <div className="container-px mx-auto max-w-7xl">
-        <SectionTitle eyebrow="Tech stack" title={<>Modern, boring, <span className="text-primary">battle-tested</span>.</>} />
-        <div className="flex flex-wrap justify-center gap-3">
-          {STACK.map((t) => (
-            <span key={t} className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground transition hover:border-primary hover:text-primary">
-              {t}
+const Software = () => {
+  return (
+    <>
+      <section className="bg-hero py-20 md:py-28">
+        <div className="container-px mx-auto max-w-4xl text-center">
+          <Reveal>
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
+              Custom Software
             </span>
-          ))}
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h1 className="mt-6 font-display text-4xl font-bold text-foreground sm:text-5xl md:text-[56px]">
+              Software that solves your daily problems – <span className="text-primary">no tech degree required.</span>
+            </h1>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="mx-auto mt-6 text-lg leading-relaxed text-muted-foreground md:text-xl">
+              We build custom internal tools designed specifically for how your team works. Say goodbye to messy spreadsheets and expensive subscriptions that don't quite fit your needs.
+            </p>
+          </Reveal>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section className="container-px mx-auto max-w-7xl py-20">
-      <Reveal>
-        <div className="relative overflow-hidden rounded-[calc(var(--radius)+8px)] border border-border bg-gradient-card p-8 md:p-14">
-          <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-primary/15 blur-3xl" />
-          <div className="relative grid items-center gap-10 md:grid-cols-2">
-            <div>
-              <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-primary">Case study</span>
-              <h3 className="mt-3 font-display text-3xl font-bold leading-tight text-white sm:text-4xl">
-                Recruitment AI that screens <span className="text-primary">70% faster</span>.
-              </h3>
-              <p className="mt-4 max-w-lg text-muted-foreground">
-                We built HireIntel — a GPT-4 powered platform that reads JDs, ranks 1,000s of candidates and writes
-                personalised outreach. The team now spends time on conversations, not CVs.
-              </p>
-              <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
-                <li>• 70% reduction in time-to-shortlist</li>
-                <li>• 3.4k candidates moved through pipeline / month</li>
-                <li>• 6-week build, weekly demo cadence</li>
-              </ul>
-              <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:scale-[1.03]">
-                Get a free consultation <ArrowRight className="h-4 w-4" />
-              </Link>
+      {/* The "How it connects" Diagram */}
+      <section className="container-px mx-auto max-w-7xl py-20">
+        <Reveal>
+          <div className="rounded-2xl border border-border bg-card p-8 shadow-card-soft md:p-12">
+            <div className="text-center">
+              <h2 className="font-display text-2xl font-bold text-foreground">Everything connected in one place</h2>
+              <p className="mt-2 text-muted-foreground">Your entire business operations, streamlined.</p>
             </div>
+            <div className="mt-10 overflow-hidden rounded-xl border border-border">
+              <img 
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" 
+                alt="Dashboard showing connected business tools" 
+                className="w-full object-cover"
+              />
+            </div>
+          </div>
+        </Reveal>
+      </section>
 
-            {/* SVG dashboard mock */}
-            <div className="rounded-2xl border border-border bg-hero/80 p-5 shadow-soft">
-              <div className="flex items-center gap-1.5">
-                <span className="h-2.5 w-2.5 rounded-full bg-primary/70" />
-                <span className="h-2.5 w-2.5 rounded-full bg-muted" />
-                <span className="h-2.5 w-2.5 rounded-full bg-muted" />
-                <span className="ml-3 text-xs text-muted-foreground">hireintel.ai</span>
-              </div>
-              <div className="mt-4 grid grid-cols-3 gap-3">
-                {[
-                  { l: "Sourced", v: "12,488" },
-                  { l: "Shortlisted", v: "1,204" },
-                  { l: "Hired", v: "142" },
-                ].map((m) => (
-                  <div key={m.l} className="rounded-lg bg-card p-3">
-                    <div className="text-[10px] uppercase text-muted-foreground">{m.l}</div>
-                    <div className="mt-1 font-display text-xl font-bold text-white">{m.v}</div>
+      {/* Features List */}
+      <section className="bg-hero py-20">
+        <div className="container-px mx-auto max-w-7xl">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {SOFTWARE_FEATURES.map((feature, index) => (
+              <Reveal key={index} delay={index * 0.1}>
+                <div className="rounded-xl bg-card p-6 shadow-sm border border-border">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <feature.icon className="h-6 w-6" />
                   </div>
-                ))}
+                  <h3 className="mt-4 font-display text-lg font-bold text-foreground">{feature.title}</h3>
+                  <p className="mt-2 text-muted-foreground">{feature.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Study Highlight */}
+      <section className="container-px mx-auto max-w-5xl py-20 md:py-28">
+        <Reveal>
+          <div className="overflow-hidden rounded-2xl bg-[#111214] text-white shadow-2xl">
+            <div className="grid md:grid-cols-2">
+              <div className="p-10 md:p-16 flex flex-col justify-center">
+                <span className="text-xs font-bold uppercase tracking-wider text-primary">Client Success Story</span>
+                <h2 className="mt-4 font-display text-3xl font-bold">Local Grocery Store Automation</h2>
+                <p className="mt-6 text-gray-400 leading-relaxed">
+                  "We built a stock management app for a local grocery store. Before us, they used pen and paper, losing thousands of rupees to expired goods."
+                </p>
+                <div className="mt-8 flex items-center gap-4 border-l-4 border-primary pl-4">
+                  <div className="font-display text-4xl font-bold text-white">40%</div>
+                  <div className="text-sm font-medium text-gray-400">Reduction in<br/>food waste</div>
+                </div>
               </div>
-              <div className="mt-3 rounded-lg bg-card p-4">
-                <div className="text-[10px] uppercase text-muted-foreground">Pipeline velocity</div>
-                <svg viewBox="0 0 200 60" className="mt-2 w-full">
-                  <defs>
-                    <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
-                      <stop offset="0%" stopColor="hsl(356 96% 60% / 0.55)" />
-                      <stop offset="100%" stopColor="hsl(356 96% 60% / 0)" />
-                    </linearGradient>
-                  </defs>
-                  <path d="M0,50 L20,40 L40,42 L60,30 L80,28 L100,18 L120,22 L140,12 L160,16 L180,8 L200,4 L200,60 L0,60 Z" fill="url(#g)" />
-                  <path d="M0,50 L20,40 L40,42 L60,30 L80,28 L100,18 L120,22 L140,12 L160,16 L180,8 L200,4" fill="none" stroke="hsl(var(--primary))" strokeWidth="1.5" />
-                </svg>
+              <div className="relative min-h-[300px]">
+                <img 
+                  src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80" 
+                  alt="Grocery store owner using an iPad" 
+                  className="absolute inset-0 h-full w-full object-cover opacity-80"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#111214] to-transparent md:block hidden" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#111214] to-transparent md:hidden block" />
               </div>
             </div>
           </div>
+        </Reveal>
+
+        <div className="mt-16 text-center">
+          <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-semibold text-white shadow-soft transition hover:scale-105">
+            Let's build your software <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
-      </Reveal>
-    </section>
-  </>
-);
+      </section>
+    </>
+  );
+};
 
 export default Software;

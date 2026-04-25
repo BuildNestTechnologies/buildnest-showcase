@@ -1,124 +1,168 @@
-import { useState, FormEvent } from "react";
-import { Mail, MapPin, Phone, ArrowRight } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+import SectionTitle from "@/components/site/SectionTitle";
 import Reveal from "@/components/site/Reveal";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
-} from "@/components/ui/select";
+import { Phone, Mail, MapPin, Send, Clock } from "lucide-react";
+import { toast } from "sonner";
 
 const Contact = () => {
-  const [loading, setLoading] = useState(false);
-  const [projectType, setProjectType] = useState("");
-
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      toast({
-        title: "We've got your message",
-        description: "A senior engineer will reach out within one working day.",
-      });
-      (e.target as HTMLFormElement).reset();
-      setProjectType("");
-    }, 800);
+    toast.success("Message sent successfully! We'll reply within 24 hours.");
   };
 
   return (
-    <section className="bg-hero">
-      <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
-        <div className="grid gap-12 lg:grid-cols-2">
+    <>
+      <section className="bg-hero py-20 md:py-28">
+        <div className="container-px mx-auto max-w-4xl text-center">
           <Reveal>
-            <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
-                Contact
-              </span>
-              <h1 className="mt-5 font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl md:text-[56px]">
-                Let's build your <span className="text-primary">digital nest</span>.
-              </h1>
-              <p className="mt-5 max-w-md text-muted-foreground">
-                Tell us about your project. We'll come back within a working day with a clear plan, timeline and quote.
-              </p>
-
-              <ul className="mt-10 space-y-5 text-sm">
-                <li className="flex items-center gap-4">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary ring-1 ring-primary/20"><Mail className="h-4 w-4" /></span>
-                  <div>
-                    <div className="text-xs uppercase tracking-wider text-muted-foreground">Email</div>
-                    <div className="font-medium text-white">hello@buildnest.tech</div>
-                  </div>
-                </li>
-                <li className="flex items-center gap-4">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary ring-1 ring-primary/20"><Phone className="h-4 w-4" /></span>
-                  <div>
-                    <div className="text-xs uppercase tracking-wider text-muted-foreground">WhatsApp</div>
-                    <div className="font-medium text-white">+91 98765 43210</div>
-                  </div>
-                </li>
-                <li className="flex items-center gap-4">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary ring-1 ring-primary/20"><MapPin className="h-4 w-4" /></span>
-                  <div>
-                    <div className="text-xs uppercase tracking-wider text-muted-foreground">Where</div>
-                    <div className="font-medium text-white">Bengaluru · Mumbai · Remote</div>
-                  </div>
-                </li>
-              </ul>
-
-              <div className="mt-10 rounded-[var(--radius)] border border-border bg-gradient-card p-6">
-                <p className="text-sm italic text-foreground">
-                  "BuildNest helped us scale our online store by 300% in 6 months."
-                </p>
-                <p className="mt-3 text-xs text-muted-foreground">— Ankit Sharma, CTO of ShopEase</p>
-              </div>
-            </div>
+            <SectionTitle
+              title="Let's build something together"
+              subtitle="Contact Us"
+              centered
+            />
           </Reveal>
-
-          <Reveal delay={0.15}>
-            <form onSubmit={onSubmit} className="rounded-[calc(var(--radius)+8px)] border border-border bg-gradient-card p-7 shadow-card-soft md:p-9">
-              <div className="grid gap-5 sm:grid-cols-2">
-                <div>
-                  <Label htmlFor="name" className="text-white">Name</Label>
-                  <Input id="name" required placeholder="Riya Mehta" className="mt-2 border-border bg-background/40" />
-                </div>
-                <div>
-                  <Label htmlFor="email" className="text-white">Email</Label>
-                  <Input id="email" type="email" required placeholder="you@company.com" className="mt-2 border-border bg-background/40" />
-                </div>
-              </div>
-              <div className="mt-5">
-                <Label className="text-white">Project type</Label>
-                <Select value={projectType} onValueChange={setProjectType} required>
-                  <SelectTrigger className="mt-2 border-border bg-background/40 text-foreground">
-                    <SelectValue placeholder="Select what you need" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="website">Website</SelectItem>
-                    <SelectItem value="app">Mobile app</SelectItem>
-                    <SelectItem value="software">Custom software</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="mt-5">
-                <Label htmlFor="message" className="text-white">Message</Label>
-                <Textarea id="message" required rows={5} placeholder="Tell us a little about your project, timeline and goals." className="mt-2 border-border bg-background/40" />
-              </div>
-              <button
-                type="submit"
-                disabled={loading}
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow-red transition hover:scale-[1.02] disabled:opacity-70"
-              >
-                {loading ? "Sending..." : <>Send message <ArrowRight className="h-4 w-4" /></>}
-              </button>
-              <p className="mt-3 text-center text-xs text-muted-foreground">We reply within one working day. Promise.</p>
-            </form>
+          <Reveal delay={0.1}>
+            <p className="mx-auto mt-6 text-lg leading-relaxed text-muted-foreground md:text-xl">
+              Have a project in mind or just need some honest advice? Drop us a message. We usually reply within 24 hours.
+            </p>
           </Reveal>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="container-px mx-auto max-w-7xl py-12 md:py-20">
+        <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
+          {/* Contact Form */}
+          <div className="lg:col-span-3">
+            <Reveal>
+              <div className="rounded-2xl border border-border bg-card p-8 shadow-card-soft md:p-12">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid gap-6 md:grid-cols-2">
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="text-sm font-medium text-foreground">
+                        Full Name
+                      </label>
+                      <input
+                        id="name"
+                        required
+                        className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-1 focus:ring-primary"
+                        placeholder="John Doe"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="text-sm font-medium text-foreground">
+                        Email Address
+                      </label>
+                      <input
+                        id="email"
+                        type="email"
+                        required
+                        className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-1 focus:ring-primary"
+                        placeholder="john@company.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="subject" className="text-sm font-medium text-foreground">
+                      What do you need help with?
+                    </label>
+                    <select
+                      id="subject"
+                      required
+                      className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-1 focus:ring-primary"
+                    >
+                      <option value="">Select a service...</option>
+                      <option value="website">New Website</option>
+                      <option value="app">Mobile App</option>
+                      <option value="software">Custom Software / Dashboard</option>
+                      <option value="other">Other Inquiry</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="text-sm font-medium text-foreground">
+                      Tell us about your project
+                    </label>
+                    <textarea
+                      id="message"
+                      required
+                      rows={5}
+                      className="w-full resize-none rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-1 focus:ring-primary"
+                      placeholder="I'm looking to build..."
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 font-semibold text-white shadow-soft transition hover:bg-primary/90"
+                  >
+                    Send Message <Send className="h-4 w-4" />
+                  </button>
+                </form>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Contact Info Sidebar */}
+          <div className="lg:col-span-2">
+            <Reveal delay={0.1}>
+              <div className="flex h-full flex-col gap-8 rounded-2xl bg-[#111214] p-8 text-white shadow-lg md:p-10">
+                <div>
+                  <h2 className="font-display text-2xl font-bold">Contact Information</h2>
+                  <p className="mt-2 text-gray-400">Prefer to talk right now? Give us a call.</p>
+                </div>
+
+                <div className="flex flex-col gap-6">
+                  <a href="tel:+919876543210" className="group flex items-start gap-4 rounded-xl border border-gray-800 bg-gray-900 p-5 transition hover:border-primary/50">
+                    <div className="rounded-lg bg-primary/10 p-3 text-primary">
+                      <Phone className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-gray-400">Phone</p>
+                      <p className="mt-1 font-display text-lg font-semibold transition group-hover:text-primary">+91 98765 43210</p>
+                    </div>
+                  </a>
+
+                  <a href="mailto:hello@buildnest.tech" className="group flex items-start gap-4 rounded-xl border border-gray-800 bg-gray-900 p-5 transition hover:border-primary/50">
+                    <div className="rounded-lg bg-primary/10 p-3 text-primary">
+                      <Mail className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-gray-400">Email</p>
+                      <p className="mt-1 font-display text-lg font-semibold transition group-hover:text-primary">hello@buildnest.tech</p>
+                    </div>
+                  </a>
+
+                  <div className="flex items-start gap-4 rounded-xl border border-gray-800 bg-gray-900 p-5">
+                    <div className="rounded-lg bg-primary/10 p-3 text-primary">
+                      <MapPin className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-gray-400">Office</p>
+                      <p className="mt-1 font-display text-lg font-semibold">Delhi NCR, India</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Map Placeholder */}
+                <div className="mt-auto relative h-48 w-full overflow-hidden rounded-xl bg-gray-800">
+                   <img 
+                    src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" 
+                    alt="Delhi Map Placeholder" 
+                    className="absolute inset-0 h-full w-full object-cover opacity-50 grayscale"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 font-medium backdrop-blur">
+                      <MapPin className="h-4 w-4 text-primary" /> View on Google Maps
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
