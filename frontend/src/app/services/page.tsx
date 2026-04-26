@@ -3,9 +3,12 @@ import Link from "next/link";
 import Reveal from "@/components/site/Reveal";
 import { Globe, Smartphone, Settings, ShoppingCart, ShieldCheck, Palette } from "lucide-react";
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
- title: "Web Development Services in Bhiwandi & Mumbai | BuildNest Technologies",
- description: "Web development & software services for businesses in Bhiwandi & Mumbai. We build high-performance websites, mobile apps, and e-commerce solutions.",
+ title: "Web Development & Software Services in Bhiwandi & Mumbai | BuildNest",
+ description: "Web development & software services for businesses in Bhiwandi & Mumbai. High-performance websites, mobile apps, and e-commerce solutions. Serving all of India.",
+ alternates: { canonical: "https://buildnest.world/services" },
 };
 
 export default function Services() {

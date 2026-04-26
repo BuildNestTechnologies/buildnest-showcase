@@ -8,8 +8,9 @@ import { PORTFOLIO } from "@/data/site";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
- title: "BuildNest Technologies | India's Premier Website & Software Agency",
- description: "India's leading website development company. Zero upfront fees. Custom software, mobile apps, e-commerce. Professional digital solutions nationwide. Plans from ₹7,999.",
+ title: "BuildNest Technologies | #1 Website & Software Agency in Bhiwandi & Mumbai",
+ description: "Bhiwandi's #1 website & software development company. Zero upfront fees. Custom websites, mobile apps, e-commerce & software for businesses in Mumbai, Thane & India. Plans from ₹7,999.",
+ alternates: { canonical: "https://buildnest.world" },
 };
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
   "name": "BuildNest Technologies",
   "image": "https://buildnest.world/buildnest-logo.png",
   "url": "https://buildnest.world",
-  "telephone": "+919284470352",
+  "telephone": "+91 92844 70352",
   "priceRange": "₹₹",
   "currenciesAccepted": "INR",
   "paymentAccepted": "Cash, Credit Card, UPI, Bank Transfer, EMI",
@@ -256,8 +257,8 @@ export default function Home() {
           </li>
          ))}
         </ul>
-        <Link href="/pricing" className="mt-8 block w-full rounded-xl bg-primary/10 py-3 text-center text-sm font-bold text-primary transition hover:bg-primary hover:text-white">
-         Learn More
+        <Link href="/pricing" aria-label={`View ${p.plan} website plan pricing details`} className="mt-8 block w-full rounded-xl bg-primary/10 py-3 text-center text-sm font-bold text-primary transition hover:bg-primary hover:text-white">
+         View {p.plan} Plan Details
         </Link>
        </div>
       </Reveal>

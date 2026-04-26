@@ -1,10 +1,13 @@
 User-agent: *
 Allow: /
-Allow: /blog/
-Allow: /website-development-bhiwandi
-Allow: /software-agency-mumbai
-Allow: /website-development-kalyan
-Allow: /app-development-thane
-Allow: /website-development-navi-mumbai
+Disallow: /api/
+Disallow: /_next/
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
 
 Sitemap: https://buildnest.world/sitemap.xml
+Host: https://buildnest.world

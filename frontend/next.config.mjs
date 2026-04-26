@@ -5,6 +5,7 @@ const nextConfig = {
     return [{
       source: '/(.*)',
       headers: [
+        { key: 'X-Robots-Tag', value: 'index, follow' },
         { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
         { key: 'X-Content-Type-Options', value: 'nosniff' },
         { key: 'X-Frame-Options', value: 'DENY' },

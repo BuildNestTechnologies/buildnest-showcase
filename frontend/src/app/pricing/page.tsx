@@ -4,9 +4,12 @@ import Script from "next/script";
 import Reveal from "@/components/site/Reveal";
 import { Check, Info } from "lucide-react";
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
- title: "Website Development Prices in Bhiwandi & Mumbai | BuildNest Technologies",
- description: "Affordable website development pricing for Bhiwandi & Mumbai businesses. Plans from ₹7,999. Zero upfront payment. Professional SEO included.",
+ title: "Website Development Prices in India – Bhiwandi & Mumbai | BuildNest Technologies",
+ description: "Affordable website development pricing for businesses in Bhiwandi & Mumbai. Plans from ₹7,999. Zero upfront payment. Professional SEO included on every project.",
+ alternates: { canonical: "https://buildnest.world/pricing" },
 };
 
 export default function Pricing() {
