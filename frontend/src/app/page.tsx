@@ -8,7 +8,7 @@ import { PORTFOLIO } from "@/data/site";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
- title: "BuildNest Technologies | #1 Website & Software Agency in Bhiwandi & Mumbai",
+ title: "BuildNest Technologies | #1 Website Development Company in Bhiwandi & Mumbai",
  description: "Bhiwandi's #1 website development company. Zero upfront fees. Custom software, mobile apps, e-commerce. Serving Mumbai, Thane & Navi Mumbai. Plans from ₹7,999.",
 };
 
@@ -257,7 +257,7 @@ export default function Home() {
          ))}
         </ul>
         <Link href="/pricing" className="mt-8 block w-full rounded-xl bg-primary/10 py-3 text-center text-sm font-bold text-primary transition hover:bg-primary hover:text-white">
-         Learn More
+         View Website Pricing Plans
         </Link>
        </div>
       </Reveal>

@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   images: ["/og-image.png"],
  },
  alternates: {
-  canonical: "/",
+  canonical: "https://buildnest.world",
  },
  icons: {
   icon: "/favicon.png",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   },
  },
  verification: {
-  google: 'YOUR_GSC_CODE',
+  google: '84c67e27f56554f5',
   other: { 'msvalidate.01': 'YOUR_BING_CODE' },
  },
 };
