@@ -390,6 +390,30 @@ export default function Home() {
     />
    </section>
 
+   {/* 9.5 TRUST SIGNALS / SECURITY */}
+   <section className="py-12 bg-card border-t border-border">
+    <div className="container-px mx-auto max-w-7xl">
+     <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all">
+      <div className="flex items-center gap-2">
+       <ShieldCheck className="h-6 w-6 text-primary" />
+       <span className="text-xs font-bold uppercase tracking-widest">SSL Secured</span>
+      </div>
+      <div className="flex items-center gap-2">
+       <Check className="h-6 w-6 text-primary" />
+       <span className="text-xs font-bold uppercase tracking-widest">Verified Business</span>
+      </div>
+      <div className="flex items-center gap-2">
+       <ShieldCheck className="h-6 w-6 text-primary" />
+       <span className="text-xs font-bold uppercase tracking-widest">Privacy Protected</span>
+      </div>
+      <div className="flex items-center gap-2">
+       <Check className="h-6 w-6 text-primary" />
+       <span className="text-xs font-bold uppercase tracking-widest">256-bit Encryption</span>
+      </div>
+     </div>
+    </div>
+   </section>
+
    {/* 10. CTA SECTION */}
    <section className="container-px mx-auto max-w-4xl py-20 md:py-28">
     <Reveal direction="down">

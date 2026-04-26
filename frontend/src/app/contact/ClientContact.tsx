@@ -99,6 +99,9 @@ export default function ClientContact() {
          >
           Send Message <Send className="h-4 w-4" />
          </button>
+         <p className="text-[10px] text-center text-muted-foreground mt-4">
+          By submitting this form, you agree to our <a href="/privacy-policy" className="underline">Privacy Policy</a> and <a href="/terms" className="underline">Terms of Service</a>. We protect your data with 256-bit SSL encryption.
+         </p>
         </form>
        </div>
       </Reveal>
@@ -114,13 +117,13 @@ export default function ClientContact() {
         </div>
 
         <div className="flex flex-col gap-6">
-         <a href="tel:+919876543210" className="group flex items-start gap-4 rounded-xl border border-gray-800 bg-gray-900 p-5 transition hover:border-primary/50">
+         <a href="tel:+919284470352" className="group flex items-start gap-4 rounded-xl border border-gray-800 bg-gray-900 p-5 transition hover:border-primary/50">
           <div className="rounded-lg bg-primary/10 p-3 text-primary">
            <Phone className="h-6 w-6" />
           </div>
           <div>
            <p className="text-sm font-medium text-gray-400">Phone</p>
-           <p className="mt-1 font-display text-lg font-semibold transition group-hover:text-primary">+91 98765 43210</p>
+           <p className="mt-1 font-display text-lg font-semibold transition group-hover:text-primary">+91 92844 70352</p>
           </div>
          </a>
 

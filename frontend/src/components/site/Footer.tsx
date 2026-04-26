@@ -61,10 +61,12 @@ const Footer = () => (
 
   <div className="border-t border-gray-800">
    <div className="container-px mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 py-6 text-xs text-gray-400 md:flex-row">
-    <div className="flex items-center gap-4">
-     <p>© {new Date().getFullYear()} BuildNest Technologies. All rights reserved.</p>
-     <Link href="/blog" className="hover:text-gray-300 transition-colors">Resources</Link>
-    </div>
+     <div className="flex items-center gap-4">
+      <p>© {new Date().getFullYear()} BuildNest Technologies.</p>
+      <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy</Link>
+      <Link href="/terms" className="hover:text-gray-300 transition-colors">Terms</Link>
+      <Link href="/blog" className="hover:text-gray-300 transition-colors">Resources</Link>
+     </div>
     <p className="font-hand text-base text-primary [transform:rotate(-2deg)]">
      handcrafted in India ✦
     </p>

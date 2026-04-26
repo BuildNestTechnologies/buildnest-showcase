@@ -87,14 +87,14 @@ const orgSchema = {
  "foundingDate": "2022",
  "address": {
   "@type": "PostalAddress",
-  "streetAddress": "YOUR STREET ADDRESS",
+  "streetAddress": "Near Shagun Chowk",
   "addressLocality": "Bhiwandi",
   "addressRegion": "Maharashtra",
   "postalCode": "421302",
   "addressCountry": "IN"
  },
  "geo": { "@type": "GeoCoordinates", "latitude": "19.3002", "longitude": "73.0580" },
- "telephone": "+91-9876543210",
+ "telephone": "+91-9284470352",
  "email": "hello@buildnest.world",
  "sameAs": [
   "https://www.linkedin.com/company/buildnest-technologies",
