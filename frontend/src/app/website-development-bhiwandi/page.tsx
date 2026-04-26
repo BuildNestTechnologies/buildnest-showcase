@@ -82,7 +82,7 @@ export default function BhiwandiCityPage() {
        We are located in Bhiwandi. Invite us for a coffee at Shagun Chowk to discuss your project.
       </p>
       <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-       <a href="tel:+919876543210" className="flex items-center gap-2 px-8 py-3 bg-primary text-white rounded-full font-bold">
+       <a href="tel:+919284470352" className="flex items-center gap-2 px-8 py-3 bg-primary text-white rounded-full font-bold">
         <Phone className="h-4 w-4" /> Call Now
        </a>
        <Link href="/contact" className="flex items-center gap-2 px-8 py-3 bg-card border border-border rounded-full font-bold">

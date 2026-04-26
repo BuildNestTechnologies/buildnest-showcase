@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Camera, Globe, Send, MapPin, Mail } from "lucide-react";
+import { Camera, Globe, Send, MapPin, Mail, Phone } from "lucide-react";
 
 const Footer = () => (
  <footer className="relative bg-[#111214] text-white">
@@ -13,19 +13,27 @@ const Footer = () => (
      </span>
     </div>
     <p className="mt-4 max-w-md text-sm leading-relaxed text-gray-400">
-     BuildNest Technologies is Bhiwandi's #1 website development company. We build websites & apps that grow your business – without the tech headache. Zero upfront fees, serious engineering, and a team that ships.
+     BuildNest Technologies is a premier website and software development agency. We build high-performance digital solutions that grow your business – without the tech headache. Zero upfront fees, serious engineering, and a team that ships.
     </p>
     <div className="mt-6 flex items-center gap-3">
-     {[Globe, Camera, Send].map((Icon, i) => (
       <a
-       key={i}
-       href="#"
-       aria-label="social"
+       href="https://www.instagram.com/buildnest_technologies/"
+       target="_blank"
+       rel="noreferrer"
+       aria-label="instagram"
        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-800 text-gray-400 transition hover:border-primary hover:text-primary"
       >
-       <Icon className="h-4 w-4" />
+       <Camera className="h-4 w-4" />
       </a>
-     ))}
+      <a
+       href="https://www.linkedin.com/company/buildnest-technologies"
+       target="_blank"
+       rel="noreferrer"
+       aria-label="linkedin"
+       className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-800 text-gray-400 transition hover:border-primary hover:text-primary"
+      >
+       <Globe className="h-4 w-4" />
+      </a>
     </div>
    </div>
 
@@ -44,8 +52,9 @@ const Footer = () => (
     <h4 className="text-sm font-semibold uppercase tracking-wider text-white">Reach us</h4>
     <ul className="mt-4 space-y-3 text-sm text-gray-400">
      <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Form</Link></li>
-     <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-primary" /> hello@buildnest.world</li>
-     <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-primary" /> Bhiwandi & Mumbai, Maharashtra</li>
+     <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-primary" /> buildnest.co.team@gmail.com</li>
+     <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4 text-primary" /> +91 92844 70352</li>
+     <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-primary" /> Serving Clients Nationwide</li>
     </ul>
    </div>
   </div>

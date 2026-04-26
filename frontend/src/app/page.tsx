@@ -8,8 +8,8 @@ import { PORTFOLIO } from "@/data/site";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
- title: "BuildNest Technologies | #1 Website & Software Agency in Bhiwandi & Mumbai",
- description: "Bhiwandi's #1 website development company. Zero upfront fees. Custom software, mobile apps, e-commerce. Serving Mumbai, Thane & Navi Mumbai. Plans from ₹7,999.",
+ title: "BuildNest Technologies | India's Premier Website & Software Agency",
+ description: "India's leading website development company. Zero upfront fees. Custom software, mobile apps, e-commerce. Professional digital solutions nationwide. Plans from ₹7,999.",
 };
 
 export default function Home() {
@@ -74,13 +74,13 @@ export default function Home() {
       <Reveal direction="diagonal-right">
        <h1 className="font-display text-[30px] font-bold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-[45px]">
         BuildNest Technologies
-        <br />#1 Website & Software Agency in Bhiwandi & Mumbai
+        <br />India's Premier Website & Software Development Agency
        </h1>
       </Reveal>
 
       <Reveal delay={0.1} direction="left">
        <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
-        We build high-performance websites, mobile apps, and custom software for local businesses in Bhiwandi and Mumbai. Zero upfront payment. Professional SEO included.
+        We build high-performance websites, mobile apps, and custom software for businesses nationwide. Zero upfront payment. Professional SEO included.
        </p>
       </Reveal>
 
@@ -93,7 +93,7 @@ export default function Home() {
          Get Free Quote <ArrowRight className="h-5 w-5" />
         </Link>
         <a
-         href="tel:+919876543210"
+         href="tel:+919284470352"
          className="hover-button-advanced inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-8 py-4 text-base font-semibold text-foreground hover:bg-accent"
         >
          <Phone className="h-5 w-5" /> Call for Consultation
@@ -163,7 +163,7 @@ export default function Home() {
     <Reveal direction="diagonal-right">
      <div className="text-left mb-16">
       <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs">Our Expertise</span>
-      <h2 className="mt-4 font-display text-3xl font-bold text-foreground sm:text-4xl">Comprehensive Digital Services in Bhiwandi & Mumbai</h2>
+      <h2 className="mt-4 font-display text-3xl font-bold text-foreground sm:text-4xl">Comprehensive Digital Services</h2>
      </div>
     </Reveal>
 
@@ -232,7 +232,7 @@ export default function Home() {
    {/* 5. PRICING PREVIEW */}
    <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
     <div className="text-center mb-16">
-     <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">Transparent Pricing for Bhiwandi & Mumbai</h2>
+     <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">Transparent Pricing for Your Business</h2>
      <p className="mt-4 text-muted-foreground">Professional digital solutions that fit your budget.</p>
     </div>
 
@@ -341,13 +341,13 @@ export default function Home() {
      <div className="rounded-3xl bg-primary p-10 text-center text-white md:p-16 shadow-2xl">
       <h2 className="font-display text-3xl font-bold sm:text-4xl">Ready to Start Your Digital Journey?</h2>
       <p className="mx-auto mt-6 max-w-xl text-white/80 text-lg">
-       Get a custom, SEO-optimized website or software built by the #1 agency in Bhiwandi. No upfront fees.
+       Get a custom, SEO-optimized website or software built by the #1 agency. No upfront fees.
       </p>
       <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
        <Link href="/contact" className="flex items-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-primary transition hover:scale-105">
         Get a Free Quote Now
        </Link>
-       <a href="tel:+919876543210" className="flex items-center gap-2 rounded-full border-2 border-white/30 bg-transparent px-8 py-4 font-bold text-white transition hover:bg-white/10">
+       <a href="tel:+919284470352" className="flex items-center gap-2 rounded-full border-2 border-white/30 bg-transparent px-8 py-4 font-bold text-white transition hover:bg-white/10">
         <Phone className="h-5 w-5" /> Speak with Our Team
        </a>
       </div>
