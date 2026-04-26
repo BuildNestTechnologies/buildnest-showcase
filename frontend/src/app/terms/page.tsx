@@ -1,65 +1,88 @@
 import type { Metadata } from "next";
 import Reveal from "@/components/site/Reveal";
+import { FileText, Scale, Gavel, Award, AlertCircle, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
  title: "Terms of Service | BuildNest Technologies",
  description: "Read our terms of service to understand the agreement between you and BuildNest Technologies.",
- robots: "noindex, follow",
+ robots: "index, follow",
 };
 
 export default function TermsOfService() {
+ const terms = [
+  {
+   title: "1. Agreement",
+   icon: <Scale className="h-6 w-6 text-primary" />,
+   content: "By using buildnest.world, you agree to these Terms of Service. If you do not agree, please do not use our services."
+  },
+  {
+   title: "2. Service Model",
+   icon: <Award className="h-6 w-6 text-primary" />,
+   content: "BuildNest Technologies operates on a performance-first model. Our 'Zero Upfront' offering is a show of good faith to our clients. Project ownership transfers only upon final settlement."
+  },
+  {
+   title: "3. Usage Policy",
+   icon: <AlertCircle className="h-6 w-6 text-primary" />,
+   content: "You agree not to use our code, designs, or services for illegal activities. We reserve the right to suspend services for violations."
+  },
+  {
+   title: "4. IP Rights",
+   icon: <FileText className="h-6 w-6 text-primary" />,
+   content: "All source code, design assets, and content created during the project are protected under Indian Intellectual Property laws until full project payout."
+  },
+  {
+   title: "5. Governing Law",
+   icon: <Gavel className="h-6 w-6 text-primary" />,
+   content: "These terms are governed by the laws of Maharashtra, India. Any disputes shall be handled within the jurisdiction of Mumbai/Bhiwandi courts."
+  }
+ ];
+
  return (
   <main className="pt-32 pb-20 md:pt-40">
-   <article className="container-px mx-auto max-w-4xl prose prose-lg dark:prose-invert">
+   <div className="container-px mx-auto max-w-4xl">
     <Reveal>
-     <h1 className="font-display text-4xl font-bold text-foreground mb-8">Terms of Service</h1>
-     <p className="text-muted-foreground">Last Updated: April 26, 2026</p>
+     <div className="text-center mb-16">
+      <h1 className="font-display text-4xl font-bold text-foreground sm:text-5xl lg:text-6xl mb-6">
+       Terms of Service
+      </h1>
+      <p className="text-muted-foreground text-lg italic">
+       Transparent agreements for high-performance results. Last Updated: April 26, 2026.
+      </p>
+     </div>
     </Reveal>
 
-    <div className="mt-12 space-y-12 text-muted-foreground leading-relaxed">
-     <section>
-      <h2 className="text-2xl font-bold text-foreground">1. Agreement to Terms</h2>
-      <p>
-       By accessing our website at <strong>buildnest.world</strong>, you agree to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.
-      </p>
-     </section>
-
-     <section>
-      <h2 className="text-2xl font-bold text-foreground">2. Service Model</h2>
-      <p>
-       <strong>BuildNest Technologies</strong> provides website development, software engineering, and mobile app services. Our unique "Zero Upfront" model means we start work before initial payment. However, ownership of the code and assets is only transferred to the client upon full payment of the agreed project fee.
-      </p>
-     </section>
-
-     <section>
-      <h2 className="text-2xl font-bold text-foreground">3. Intellectual Property</h2>
-      <p>
-       Unless otherwise stated, all materials on this website and all work produced during a project remain the intellectual property of BuildNest Technologies until final delivery and payment.
-      </p>
-     </section>
-
-     <section>
-      <h2 className="text-2xl font-bold text-foreground">4. User Obligations</h2>
-      <p>
-       Users agree not to use our services for any illegal purposes or to attempt to gain unauthorized access to our systems. We reserve the right to terminate service for any user who violates these terms.
-      </p>
-     </section>
-
-     <section>
-      <h2 className="text-2xl font-bold text-foreground">5. Limitation of Liability</h2>
-      <p>
-       In no event shall BuildNest Technologies be liable for any damages (including, without limitation, damages for loss of data or profit) arising out of the use or inability to use the materials on our website.
-      </p>
-     </section>
-
-     <section>
-      <h2 className="text-2xl font-bold text-foreground">6. Governing Law</h2>
-      <p>
-       These terms and conditions are governed by and construed in accordance with the laws of <strong>India</strong> and you irrevocably submit to the exclusive jurisdiction of the courts in the State of <strong>Maharashtra</strong>.
-      </p>
-     </section>
+    <div className="grid gap-6">
+     {terms.map((t, i) => (
+      <Reveal key={i} delay={i * 0.1} direction="up">
+       <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+        <div className="flex items-center gap-4 mb-4">
+         <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+          {t.icon}
+         </div>
+         <h2 className="text-2xl font-bold text-foreground">{t.title}</h2>
+        </div>
+        <p className="text-muted-foreground leading-relaxed">
+         {t.content}
+        </p>
+       </div>
+      </Reveal>
+     ))}
     </div>
-   </article>
+
+    <Reveal delay={0.6}>
+     <div className="mt-16 text-center">
+      <p className="text-muted-foreground mb-6">
+       Need a custom contract for your enterprise project?
+      </p>
+      <a 
+       href="mailto:hello@buildnest.world" 
+       className="inline-flex items-center gap-2 font-bold text-primary hover:underline"
+      >
+       <Mail className="h-4 w-4" /> Reach out to our legal team
+      </a>
+     </div>
+    </Reveal>
+   </div>
   </main>
  );
 }
