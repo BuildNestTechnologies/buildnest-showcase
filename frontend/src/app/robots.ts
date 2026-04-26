@@ -8,16 +8,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/', '/_next/'],
       },
-      {
-        userAgent: 'Googlebot',
-        allow: '/',
-      },
-      {
-        userAgent: 'Bingbot',
-        allow: '/',
-      },
     ],
     sitemap: 'https://buildnest.world/sitemap.xml',
-    host: 'https://buildnest.world',
   };
 }

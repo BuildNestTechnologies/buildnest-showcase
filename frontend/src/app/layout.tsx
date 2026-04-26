@@ -97,7 +97,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "YOUR_GSC_CODE",
+    google: "fb0XZFZ8wj7c__pWRhVaAYdMMOUdqhjT9KML1c3Zbs0",
     other: { "msvalidate.01": "6FA7C110DDBF31E2515A02C9F0D99F51" },
   },
 };
