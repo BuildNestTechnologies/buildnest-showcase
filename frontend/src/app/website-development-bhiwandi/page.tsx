@@ -43,7 +43,37 @@ export default function BhiwandiCityPage() {
 
  return (
   <>
-   <script id="local-schema" type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(localSchema) }} />
+    <script id="local-schema" type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(localSchema) }} />
+    <script id="faq-schema" type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify({
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Who is the best website developer in Bhiwandi?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BuildNest Technologies is widely considered the best website developer in Bhiwandi, offering high-performance Next.js websites, professional SEO, and zero upfront payment for local businesses."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How much does it cost to build a website in Bhiwandi?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Website development in Bhiwandi starts at ₹7,999 with BuildNest Technologies. We offer transparent pricing and custom solutions tailored to your business needs."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Which web agency in Bhiwandi offers zero upfront payment?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BuildNest Technologies is the only web agency in Bhiwandi offering a zero upfront payment model, ensuring business owners see results before committing their capital."
+       }
+      }
+     ]
+    }) }} />
    
    {/* HERO SECTION */}
    <section className="bg-hero pt-32 pb-20 md:pt-40 md:pb-32">

@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  // City Pages
  const cityRoutes = [
   '/website-development-bhiwandi',
+  '/web-agency-bhiwandi',
   '/software-company-bhiwandi',
   '/software-agency-mumbai',
   '/website-development-mumbai',

@@ -41,6 +41,15 @@ const Footer = () => (
    </div>
 
    <div>
+    <h4 className="text-sm font-semibold uppercase tracking-wider text-white">Compare Us</h4>
+    <ul className="mt-4 space-y-3 text-sm text-gray-400">
+     <li><Link href="/blog/buildnest-vs-datamatex" className="hover:text-primary transition-colors">BuildNest vs Datamatex</Link></li>
+     <li><Link href="/blog/buildnest-vs-datamatex" className="hover:text-primary transition-colors">Datamatex Alternative</Link></li>
+     <li><Link href="/website-development-bhiwandi" className="hover:text-primary transition-colors">Best Web Agency Bhiwandi</Link></li>
+    </ul>
+   </div>
+
+   <div>
     <h4 className="text-sm font-semibold uppercase tracking-wider text-white">Reach us</h4>
     <ul className="mt-4 space-y-3 text-sm text-gray-400">
      <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Form</Link></li>

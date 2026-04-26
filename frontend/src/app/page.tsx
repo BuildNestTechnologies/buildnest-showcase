@@ -229,6 +229,61 @@ export default function Home() {
     </div>
    </section>
 
+   {/* 4.5 COMPETITOR COMPARISON (SEO BOOSTER) */}
+   <section className="py-20 bg-card/50 overflow-hidden">
+    <div className="container-px mx-auto max-w-7xl">
+     <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <Reveal direction="left">
+       <div>
+        <span className="text-primary font-bold uppercase tracking-widest text-xs">The Modern Choice</span>
+        <h2 className="mt-4 font-display text-3xl font-bold text-foreground sm:text-4xl">BuildNest vs Datamatex: Why Modern Tech Wins</h2>
+        <p className="mt-6 text-muted-foreground leading-relaxed">
+         Many Bhiwandi businesses are moving away from legacy agencies like <strong>Datamatex</strong> or <strong>Datamatex Technologies</strong> to embrace the high-speed engineering of BuildNest. While traditional <strong>web agencies in Bhiwandi</strong> rely on outdated PHP/WordPress templates, we build statically-generated Next.js sites that load in milliseconds.
+        </p>
+        <div className="mt-8 space-y-4">
+         <div className="flex items-center gap-3 font-medium text-foreground">
+          <Check className="h-5 w-5 text-primary" /> Next.js 15 vs Legacy WordPress
+         </div>
+         <div className="flex items-center gap-3 font-medium text-foreground">
+          <Check className="h-5 w-5 text-primary" /> Zero Upfront vs 50% Advance
+         </div>
+         <div className="flex items-center gap-3 font-medium text-foreground">
+          <Check className="h-5 w-5 text-primary" /> Google Lighthouse 100 vs Performance Lag
+         </div>
+        </div>
+        <div className="mt-10">
+         <Link href="/blog/buildnest-vs-datamatex" className="text-primary font-bold inline-flex items-center gap-2 hover:underline">
+          Read the Full Technical Comparison <ArrowRight className="h-4 w-4" />
+         </Link>
+        </div>
+       </div>
+      </Reveal>
+      <Reveal direction="right" delay={0.2}>
+       <div className="relative p-8 rounded-3xl border border-border bg-card shadow-2xl">
+        <div className="flex items-center justify-between mb-8">
+         <div className="font-bold text-lg">Performance Score</div>
+         <div className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">BuildNest Advantage</div>
+        </div>
+        <div className="space-y-6">
+         <div>
+          <div className="flex justify-between text-sm mb-2 font-medium"><span>BuildNest Technologies</span><span>100/100</span></div>
+          <div className="h-3 w-full bg-secondary rounded-full overflow-hidden">
+           <div className="h-full bg-primary w-full" />
+          </div>
+         </div>
+         <div className="opacity-50">
+          <div className="flex justify-between text-sm mb-2 font-medium"><span>Typical Bhiwandi Agency</span><span>42/100</span></div>
+          <div className="h-3 w-full bg-secondary rounded-full overflow-hidden">
+           <div className="h-full bg-foreground/20 w-[42%]" />
+          </div>
+         </div>
+        </div>
+       </div>
+      </Reveal>
+     </div>
+    </div>
+   </section>
+
    {/* 5. PRICING PREVIEW */}
    <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
     <div className="text-center mb-16">

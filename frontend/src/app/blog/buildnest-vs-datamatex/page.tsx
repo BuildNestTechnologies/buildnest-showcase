@@ -75,7 +75,7 @@ export default function ComparisonPage() {
       At <strong>BuildNest Technologies</strong>, we use a "Headless" approach. We leverage <strong>Next.js</strong> (the same framework used by Netflix and TikTok) and <strong>React</strong>. The benefits are night and day:
      </p>
      <ul className="list-disc pl-6 space-y-2">
-      <li><strong>Lightning Speed:</strong> Our sites are statically generated, meaning they load instantly (usually <1s).</li>
+       <li><strong>Lightning Speed:</strong> Our sites are statically generated, meaning they load instantly (usually &lt;1s).</li>
       <li><strong>SEO Supremacy:</strong> Next.js is built for SEO, giving you an immediate advantage in Google rankings.</li>
       <li><strong>Scale:</strong> Whether you have 100 visitors or 1,000,000, our serverless architecture scales effortlessly.</li>
      </ul>
