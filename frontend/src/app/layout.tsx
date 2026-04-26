@@ -54,9 +54,9 @@ export const metadata: Metadata = {
   canonical: "https://buildnest.world",
  },
  icons: {
-  icon: "/favicon.png",
-  shortcut: "/favicon.png",
-  apple: "/favicon.png",
+  icon: "/buildnest-logo.png",
+  shortcut: "/buildnest-logo.png",
+  apple: "/buildnest-logo.png",
  },
  robots: {
   index: true,
