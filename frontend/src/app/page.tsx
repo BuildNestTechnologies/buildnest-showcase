@@ -93,7 +93,7 @@ export default function Home() {
          Get Free Quote <ArrowRight className="h-5 w-5" />
         </Link>
         <a
-         href="tel:+919876543210"
+         href="tel:+919284470352"
          className="hover-button-advanced inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-8 py-4 text-base font-semibold text-foreground hover:bg-accent"
         >
          <Phone className="h-5 w-5" /> Call for Consultation
@@ -473,7 +473,7 @@ export default function Home() {
        <Link href="/contact" className="flex items-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-primary transition hover:scale-105">
         Get a Free Quote Now
        </Link>
-       <a href="tel:+919876543210" className="flex items-center gap-2 rounded-full border-2 border-white/30 bg-transparent px-8 py-4 font-bold text-white transition hover:bg-white/10">
+       <a href="tel:+919284470352" className="flex items-center gap-2 rounded-full border-2 border-white/30 bg-transparent px-8 py-4 font-bold text-white transition hover:bg-white/10">
         <Phone className="h-5 w-5" /> Speak with Our Team
        </a>
       </div>

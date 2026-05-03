@@ -45,7 +45,7 @@ export default function ThaneCityPage() {
      <div className="rounded-3xl bg-secondary p-10 text-center border border-border">
       <h2 className="text-2xl font-bold">Ready to build your app in Thane?</h2>
       <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-       <a href="tel:+919876543210" className="flex items-center gap-2 px-8 py-3 bg-primary text-white rounded-full font-bold">
+       <a href="tel:+919284470352" className="flex items-center gap-2 px-8 py-3 bg-primary text-white rounded-full font-bold">
         <Phone className="h-4 w-4" /> Call Thane Office
        </a>
        <Link href="/contact" className="flex items-center gap-2 px-8 py-3 bg-card border border-border rounded-full font-bold">

@@ -74,7 +74,8 @@ export default function MumbaiCityPage() {
          alt="Premium software development in Mumbai - BuildNest Technologies" 
          width={800} 
          height={600} 
-         className="w-full h-auto"
+         className="w-full"
+          style={{ height: 'auto' }}
         />
        </div>
       </div>

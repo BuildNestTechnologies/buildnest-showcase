@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Facebook, Twitter, Linkedin, MapPin, Mail } from "lucide-react";
+import { Instagram, Facebook, MapPin, Mail } from "lucide-react";
 
-const Footer = () => (
+const Footer = () => {
+ return (
  <footer className="relative bg-[#111214] text-white">
   <div className="container-px mx-auto grid max-w-7xl gap-12 py-16 md:grid-cols-4">
    <div className="md:col-span-2">
@@ -19,6 +20,7 @@ const Footer = () => (
     <div className="mt-6 flex items-center gap-4">
      {[
       { logo: "instagram", href: "https://www.instagram.com/buildnest_technologies/", label: "Instagram", color: "#E4405F" },
+      { logo: "whatsapp", href: "https://wa.me/919284470352", label: "WhatsApp", color: "#25D366" },
       { logo: "facebook", href: "https://facebook.com/buildnestworld", label: "Facebook", color: "#1877F2" },
       // { logo: "linkedin", href: "#", label: "Linkedin", color: "#0A66C2" },
       // { logo: "x", href: "#", label: "Twitter", color: "#FFFFFF" }
@@ -90,12 +92,10 @@ const Footer = () => (
       <Link href="/terms" className="hover:text-gray-300 transition-colors">Terms</Link>
       <Link href="/blog" className="hover:text-gray-300 transition-colors">Resources</Link>
      </div>
-    <p className="font-hand text-base text-primary [transform:rotate(-2deg)]">
-     handcrafted in India ✦
-    </p>
+    </div>
    </div>
-  </div>
- </footer>
-);
+  </footer>
+ );
+};
 
 export default Footer;
