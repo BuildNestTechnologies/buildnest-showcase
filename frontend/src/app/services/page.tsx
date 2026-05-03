@@ -115,7 +115,7 @@ export default function Services() {
     <div className="container-px mx-auto max-w-4xl text-center text-muted-foreground italic leading-relaxed">
      <Reveal>
       <p>
-       BuildNest Technologies is a leading <strong>website development company in Bhiwandi</strong> offering <strong>custom software development</strong>, <strong>mobile app development</strong>, and <strong>e-commerce website design</strong> for businesses across <strong>Mumbai</strong>, <strong>Thane</strong>, and <strong>Navi Mumbai</strong>. Founded in 2022, we have delivered over 500 digital projects across India using modern technologies including React, Next.js, Flutter, and Node.js. Our zero upfront payment model makes professional website development accessible to every businessfrom small shops in Bhiwandi to enterprise clients across Maharashtra. Contact us today for a free consultation at buildnest.world.
+       BuildNest Technologies is a leading <strong>website development company in Bhiwandi</strong> offering <strong>custom software development</strong>, <strong>mobile app development</strong>, and <strong>e-commerce website design</strong> for businesses across <strong>Mumbai</strong>, <strong>Thane</strong>, and <strong>Navi Mumbai</strong>. Founded in 2022, we have delivered over 500 digital projects across India using modern technologies including React, Next.js, Flutter, and Node.js. Our flexible payment model makes professional website development accessible to every businessfrom small shops in Bhiwandi to enterprise clients across Maharashtra. Contact us today for a free consultation at buildnest.world.
       </p>
      </Reveal>
     </div>

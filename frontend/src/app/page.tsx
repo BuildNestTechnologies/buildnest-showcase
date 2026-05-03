@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
  title: "BuildNest Technologies | #1 Website Development Company in Bhiwandi & Mumbai",
- description: "Bhiwandi's #1 website development company. Zero upfront fees. Custom software, mobile apps, e-commerce. Serving Mumbai, Thane & Navi Mumbai. Plans from ₹7,999.",
+ description: "Bhiwandi's #1 website development company. Custom software, mobile apps, e-commerce. Serving Mumbai, Thane & Navi Mumbai. Plans from ₹7,999.",
 };
 
 export default function Home() {
@@ -80,7 +80,7 @@ export default function Home() {
 
       <Reveal delay={0.1} direction="left">
        <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
-        We build high-performance websites, mobile apps, and custom software for local businesses in Bhiwandi and Mumbai. Zero upfront payment. Professional SEO included.
+        We build high-performance websites, mobile apps, and custom software for local businesses in Bhiwandi and Mumbai. Professional SEO included.
        </p>
       </Reveal>
 
@@ -146,8 +146,8 @@ export default function Home() {
         <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Starting Price</p>
        </div>
        <div className="text-center md:text-left">
-        <p className="text-2xl font-bold text-foreground">Zero</p>
-        <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Upfront Cost</p>
+        <p className="text-2xl font-bold text-foreground">Best</p>
+        <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Quality Service</p>
        </div>
        <div className="text-center md:text-left">
         <p className="text-2xl font-bold text-foreground">2022</p>
@@ -223,7 +223,7 @@ export default function Home() {
     <div className="container-px mx-auto max-w-4xl text-center">
      <Reveal>
       <p className="text-lg leading-relaxed text-muted-foreground italic">
-       BuildNest Technologies is a leading <strong>website development company in Bhiwandi</strong> offering <strong>custom software development</strong>, <strong>mobile app development</strong>, and <strong>e-commerce website design</strong> for businesses across <strong>Mumbai</strong>, <strong>Thane</strong>, and <strong>Navi Mumbai</strong>. Founded in 2022, we have delivered over 500 digital projects across India using modern technologies including React, Next.js, Flutter, and Node.js. Our zero upfront payment model makes professional website development accessible to every businessfrom small shops in Bhiwandi to enterprise clients across Maharashtra. Contact us today for a free consultation at buildnest.world.
+       BuildNest Technologies is a leading <strong>website development company in Bhiwandi</strong> offering <strong>custom software development</strong>, <strong>mobile app development</strong>, and <strong>e-commerce website design</strong> for businesses across <strong>Mumbai</strong>, <strong>Thane</strong>, and <strong>Navi Mumbai</strong>. Founded in 2022, we have delivered over 500 digital projects across India using modern technologies including React, Next.js, Flutter, and Node.js. Our flexible payment model makes professional website development accessible to every businessfrom small shops in Bhiwandi to enterprise clients across Maharashtra. Contact us today for a free consultation at buildnest.world.
       </p>
      </Reveal>
     </div>
@@ -245,7 +245,7 @@ export default function Home() {
           <Check className="h-5 w-5 text-primary" /> Next.js 15 vs Legacy WordPress
          </div>
          <div className="flex items-center gap-3 font-medium text-foreground">
-          <Check className="h-5 w-5 text-primary" /> Zero Upfront vs 50% Advance
+          <Check className="h-5 w-5 text-primary" /> Transparent vs Hidden Costs
          </div>
          <div className="flex items-center gap-3 font-medium text-foreground">
           <Check className="h-5 w-5 text-primary" /> Google Lighthouse 100 vs Performance Lag
@@ -332,7 +332,7 @@ export default function Home() {
      {[
       { name: "Rahul S.", location: "Bhiwandi", text: "BuildNest is the best website development company in Bhiwandi. They built my textile business site in 10 days." },
       { name: "Meera K.", location: "Mumbai", text: "Needed a software agency in Mumbai for my salon's booking system. Their Next.js solution is lightning fast." },
-      { name: "Arjun P.", location: "Thane", text: "Zero upfront was what sold me. They actually deliver quality before asking for a single rupee." }
+      { name: "Arjun P.", location: "Thane", text: "The quality of work was what sold me. They actually deliver quality results for every project." }
      ].map((t, idx) => (
       <Reveal key={idx} delay={idx * 0.1}>
        <div className="rounded-2xl border border-border bg-card p-8 shadow-sm italic text-muted-foreground leading-relaxed">
@@ -420,7 +420,7 @@ export default function Home() {
      <div className="rounded-3xl bg-primary p-10 text-center text-white md:p-16 shadow-2xl">
       <h2 className="font-display text-3xl font-bold sm:text-4xl">Ready to Start Your Digital Journey?</h2>
       <p className="mx-auto mt-6 max-w-xl text-white/80 text-lg">
-       Get a custom, SEO-optimized website or software built by the #1 agency in Bhiwandi. No upfront fees.
+       Get a custom, SEO-optimized website or software built by the #1 agency in Bhiwandi. Start your project today.
       </p>
       <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
        <Link href="/contact" className="flex items-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-primary transition hover:scale-105">

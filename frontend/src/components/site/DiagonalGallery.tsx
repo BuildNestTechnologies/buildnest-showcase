@@ -70,6 +70,7 @@ export default function DiagonalGallery() {
         src={item.image} 
         alt={item.title} 
         fill
+        sizes="(max-width: 768px) 300px, (max-width: 1200px) 450px, 450px"
         className="object-cover opacity-60 transition duration-700 group-hover:scale-110 group-hover:opacity-100" 
        />
        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 flex flex-col justify-end p-6">
@@ -88,6 +89,7 @@ export default function DiagonalGallery() {
         src={item.image} 
         alt={item.title} 
         fill
+        sizes="(max-width: 768px) 300px, (max-width: 1200px) 450px, 450px"
         className="object-cover opacity-60 transition duration-700 group-hover:scale-110 group-hover:opacity-100" 
        />
        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 flex flex-col justify-end p-6">

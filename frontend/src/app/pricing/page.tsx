@@ -6,7 +6,7 @@ import { Check, Info } from "lucide-react";
 
 export const metadata: Metadata = {
  title: "Website Development Prices in Bhiwandi & Mumbai | BuildNest Technologies",
- description: "Affordable website development pricing for Bhiwandi & Mumbai businesses. Plans from ₹7,999. Zero upfront payment. Professional SEO included.",
+ description: "Affordable website development pricing for Bhiwandi & Mumbai businesses. Plans from ₹7,999. Professional SEO included.",
 };
 
 export default function Pricing() {
@@ -16,8 +16,8 @@ export default function Pricing() {
   "mainEntity": [
    { "@type": "Question", "name": "How much does a website cost in Bhiwandi?",
     "acceptedAnswer": { "@type": "Answer", "text": "A professional business website in Bhiwandi starts at ₹7,999 with BuildNest Technologies. This includes up to 5 pages, mobile-responsive design, basic SEO setup, contact form, and 3 months of free support. E-commerce websites start at ₹18,999." }},
-   { "@type": "Question", "name": "What is BuildNest's zero upfront payment model?",
-    "acceptedAnswer": { "@type": "Answer", "text": "You pay nothing until you see and approve the initial design. Once satisfied, you make the first payment. This eliminates all risk for the client." }},
+   { "@type": "Question", "name": "What is the website development process at BuildNest?",
+    "acceptedAnswer": { "@type": "Answer", "text": "Our process is simple: (1) Discovery & Strategy, (2) Design & Prototyping, (3) Development & SEO, (4) Quality Check & Deployment. We keep you involved at every stage to ensure the final product meets your business goals." }},
    { "@type": "Question", "name": "Do I need a GST number to get a website built?",
     "acceptedAnswer": { "@type": "Answer", "text": "No. We work with individuals, small businesses, and registered companies. GST invoices are provided for registered businesses on request." }},
    { "@type": "Question", "name": "How long does it take to build a website in Mumbai or Bhiwandi?",
@@ -33,7 +33,7 @@ export default function Pricing() {
    { "@type": "Question", "name": "Where is BuildNest Technologies located?",
     "acceptedAnswer": { "@type": "Answer", "text": "Bhiwandi, Maharashtra. We serve Bhiwandi, Mumbai, Thane, Navi Mumbai, and clients across India remotely." }},
    { "@type": "Question", "name": "How is BuildNest different from other agencies in Mumbai?",
-    "acceptedAnswer": { "@type": "Answer", "text": "Three differences: (1) Zero upfront payment. (2) Modern stackNext.js, React, Flutter. (3) SEO-first development on every project." }},
+    "acceptedAnswer": { "@type": "Answer", "text": "Three differences: (1) Quality & Performance. (2) Modern stackNext.js, React, Flutter. (3) SEO-first development on every project." }},
    { "@type": "Question", "name": "Can I get a website made for under ₹10,000?",
     "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our Starter plan at ₹7,999 delivers a professional 5-page website with SEO, contact form, and mobile-responsive design." }},
    { "@type": "Question", "name": "Do you work with clients outside Bhiwandi and Mumbai?",
@@ -75,7 +75,7 @@ export default function Pricing() {
        Affordable Website Development Pricing for Bhiwandi & Mumbai Businesses
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-       Professional digital solutions starting at ₹7,999. Zero upfront fees. No hidden costs.
+       Professional digital solutions starting at ₹7,999. Transparent pricing. No hidden costs.
       </p>
      </Reveal>
     </div>

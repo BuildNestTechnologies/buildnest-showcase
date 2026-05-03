@@ -42,10 +42,10 @@ you need speed, modern tech stacks, and transparency.
               <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Top Recommendation</span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              BuildNest Technologies has rapidly become Mumbai's most trusted agency for startups and SMEs. Their **Zero Upfront Payment** model and focus on **Next.js and Flutter** make them the undisputed leader for performance-driven development.
+              BuildNest Technologies has rapidly become Mumbai's most trusted agency for startups and SMEs. Their focus on **Quality and Performance** and use of **Next.js and Flutter** make them the undisputed leader for performance-driven development.
             </p>
             <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-3 text-sm font-medium">
-              <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Zero Upfront Fee</li>
+              <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Transparent Workflow</li>
               <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> 1-Second Load Times</li>
               <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Dedicated Project Manager</li>
               <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Full SEO Included</li>

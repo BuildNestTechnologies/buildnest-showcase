@@ -114,7 +114,7 @@ export default function MumbaiCityPage() {
         Most <strong>web development agencies in Mumbai</strong> focus on aesthetics alone. At BuildNest, we focus on <strong>Performance, SEO, and User Psychology</strong>. A beautiful website that doesn't load in under 2 seconds or doesn't rank for your primary keywords is a wasted investment.
        </p>
        <p className="mt-4">
-        We are also one of the few agencies in Mumbai offering a <strong>Zero Upfront Payment</strong> model for verified businesses. This eliminates the risk for entrepreneurs and allows us to prove our quality through delivery before you commit your capital.
+        We are also one of the few agencies in Mumbai offering a <strong>Trust-Based Delivery</strong> model for verified businesses. This eliminates the risk for entrepreneurs and allows us to prove our quality through delivery.
        </p>
 
        <div className="my-16 grid gap-8 sm:grid-cols-3">
@@ -267,7 +267,7 @@ export default function MumbaiCityPage() {
      <Reveal direction="up">
       <h2 className="font-display text-3xl font-bold sm:text-4xl">Ready to take Mumbai by storm?</h2>
       <p className="mt-6 text-lg text-muted-foreground">
-       Partner with Mumbai's most innovative <strong>software agency</strong>. Let's build something extraordinary together. No upfront fees for qualified projects.
+       Partner with Mumbai's most innovative <strong>software agency</strong>. Let's build something extraordinary together. Transparent pricing for qualified projects.
       </p>
       <div className="mt-10">
        <Link href="/contact" className="hover-button-advanced inline-flex items-center justify-center gap-2 rounded-full bg-primary px-12 py-5 text-lg font-bold text-white">

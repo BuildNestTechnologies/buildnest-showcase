@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
  title: "Best Website Development Company in Mumbai | Web Design Agency Mumbai",
- description: "Mumbai's #1 website development company. High-performance Next.js websites, SEO services, and custom web design for businesses across Mumbai, Bandra & Powai. Zero upfront fees.",
+ description: "Mumbai's #1 website development company. High-performance Next.js websites, SEO services, and custom web design for businesses across Mumbai, Bandra & Powai. Professional SEO included.",
  keywords: ["website development company Mumbai", "web design agency Mumbai", "best web developers Mumbai", "website making company Mumbai", "website development Mumbai"],
  alternates: {
   canonical: "https://buildnest.world/website-development-mumbai",
@@ -75,7 +75,7 @@ export default function MumbaiWebsitePage() {
 
        <h3 className="text-2xl font-bold text-foreground mt-12 mb-6">Why We are Mumbai's Preferred Web Agency?</h3>
        <p>
-        Most <strong>web developers in Mumbai</strong> use generic templates. We build custom <strong>Next.js</strong> solutions. This means your site isn't just a brochure; it's a powerful web application that scales with your business. Plus, our <strong>Zero Upfront Payment</strong> model means you only pay once the results are delivered.
+        Most <strong>web developers in Mumbai</strong> use generic templates. We build custom <strong>Next.js</strong> solutions. This means your site isn't just a brochure; it's a powerful web application that scales with your business. Plus, our <strong>Trust-Based Delivery</strong> model means you only pay once the results are delivered.
        </p>
 
        <div className="my-16 grid gap-10 sm:grid-cols-2">
@@ -118,7 +118,7 @@ export default function MumbaiWebsitePage() {
    <section className="bg-primary py-20 text-white">
     <div className="container-px mx-auto max-w-4xl text-center">
      <h2 className="text-3xl font-bold sm:text-4xl">Start Your Mumbai Success Story Today</h2>
-     <p className="mt-6 text-white/80 text-lg">Zero upfront payment. Performance guaranteed. 100% SEO optimized.</p>
+     <p className="mt-6 text-white/80 text-lg">Result-oriented delivery. Performance guaranteed. 100% SEO optimized.</p>
      <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
       <Link href="/contact" className="px-10 py-4 bg-white text-primary rounded-full font-bold transition hover:scale-105">
        Get a Free Quote

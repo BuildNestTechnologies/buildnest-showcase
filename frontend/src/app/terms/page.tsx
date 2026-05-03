@@ -18,7 +18,7 @@ export default function TermsOfService() {
   {
    title: "2. Service Model",
    icon: <Award className="h-6 w-6 text-primary" />,
-   content: "BuildNest Technologies operates on a performance-first model. Our 'Zero Upfront' offering is a show of good faith to our clients. Project ownership transfers only upon final settlement."
+   content: "BuildNest Technologies operates on a performance-first model. Our 'Result-Oriented' offering is a show of good faith to our clients. Project ownership transfers only upon final settlement."
   },
   {
    title: "3. Usage Policy",

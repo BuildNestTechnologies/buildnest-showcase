@@ -66,7 +66,7 @@ export default function ShopifyGuidePage() {
 
    <div className="mt-20 text-center">
     <h2 className="text-2xl font-bold text-foreground">Launch Your Store in 14 Days</h2>
-    <p className="mt-4 text-muted-foreground">Our Shopify plans start from ₹18,999. No upfront fees.</p>
+    <p className="mt-4 text-muted-foreground">Our Shopify plans start from ₹18,999 with complete setup.</p>
     <Link href="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 font-bold text-white shadow-xl transition hover:scale-105">
      Talk to a Shopify Expert <ArrowRight className="h-5 w-5" />
     </Link>

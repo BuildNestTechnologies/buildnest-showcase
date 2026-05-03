@@ -44,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   '/blog/buildnest-vs-datamatex',
   '/blog/top-10-web-developers-bhiwandi-2026',
   '/blog/cost-of-website-india-2026',
-  '/blog/zero-upfront-website-development-india',
+  '/blog/trust-based-website-development-india',
   '/blog/react-vs-wordpress-2026',
   '/blog/why-bhiwandi-businesses-choose-react',
   '/blog/best-software-companies-mumbai-2026',

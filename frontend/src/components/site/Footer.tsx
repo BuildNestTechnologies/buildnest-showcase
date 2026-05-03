@@ -13,7 +13,7 @@ const Footer = () => (
      </span>
     </div>
     <p className="mt-4 max-w-md text-sm leading-relaxed text-gray-400">
-     BuildNest Technologies is Bhiwandi's #1 website development company. We build websites & apps that grow your business – without the tech headache. Zero upfront fees, serious engineering, and a team that ships.
+     BuildNest Technologies is Bhiwandi's #1 website development company. We build websites & apps that grow your business – without the tech headache. Professional engineering, quality design, and a team that ships.
     </p>
     <div className="mt-6 flex items-center gap-3">
      {[Globe, Camera, Send].map((Icon, i) => (

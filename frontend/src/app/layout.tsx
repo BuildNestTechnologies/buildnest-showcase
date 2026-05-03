@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const siteConfig = {
  name: "BuildNest Technologies",
  url: "https://buildnest.world",
- description: "Bhiwandi's #1 Website & Software Development Agency. Zero upfront fees, professional SEO, and high-performance digital solutions for businesses in Mumbai, Thane & Kalyan.",
+ description: "Bhiwandi's #1 Website & Software Development Agency. Professional SEO and high-performance digital solutions for businesses in Mumbai, Thane & Kalyan.",
  keywords: ["website development bhiwandi", "software company mumbai", "web agency kalyan", "next.js developer india", "flutter app development mumbai", "seo services bhiwandi"],
 };
 

@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
  title: "Website Development in Kalyan | #1 Web Design Company Kalyan",
- description: "Looking for a website developer in Kalyan? BuildNest Technologies builds high-performance, SEO-ready websites for Kalyan businesses with zero upfront fees.",
+ description: "Looking for a website developer in Kalyan? BuildNest Technologies builds high-performance, SEO-ready websites for Kalyan businesses with professional support.",
 };
 
 export default function KalyanPage() {
@@ -39,7 +39,7 @@ export default function KalyanPage() {
      </Reveal>
      <Reveal delay={0.1} direction="left">
       <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-       Serving Kalyan East, Khadakpada, and the entire Kalyan-Dombivli region. We build modern, lightning-fast websites and custom software with <strong>Zero Upfront Cost</strong>.
+       Serving Kalyan East, Khadakpada, and the entire Kalyan-Dombivli region. We build modern, lightning-fast websites and custom software with a <strong>Trust-Based Delivery</strong> model.
       </p>
      </Reveal>
      <Reveal delay={0.2} direction="up">
@@ -75,7 +75,7 @@ export default function KalyanPage() {
         {[
          "Hyper-local SEO targeting Kalyan customers",
          "Next.js tech for 1-second load times",
-         "Zero Upfront - pay after you see the result",
+         "Trust-Based Model - pay after milestones",
          "Dedicated support for Kalyan-based clients"
         ].map(item => (
          <li key={item} className="flex items-center gap-3 font-medium text-foreground">

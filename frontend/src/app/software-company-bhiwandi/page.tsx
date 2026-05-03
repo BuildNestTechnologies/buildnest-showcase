@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
  title: "Best Software Company in Bhiwandi | Software Development Bhiwandi",
- description: "Bhiwandi's #1 software company specializing in custom ERP, CRM, and warehouse management software. Serving MIDC Bhiwandi, Narpoli, and Mumbai. Zero upfront fees.",
+ description: "Bhiwandi's #1 software company specializing in custom ERP, CRM, and warehouse management software. Serving MIDC Bhiwandi, Narpoli, and Mumbai. Professional SEO included.",
  keywords: ["software company in Bhiwandi", "software development Bhiwandi", "custom software Bhiwandi", "best software agency Bhiwandi", "IT company Bhiwandi"],
  alternates: {
   canonical: "https://buildnest.world/software-company-bhiwandi",
@@ -91,9 +91,9 @@ export default function BhiwandiSoftwarePage() {
         Most <strong>IT companies in Bhiwandi</strong> are just resellers. We are <strong>creators</strong>. We build everything from scratch using modern frameworks like <strong>Next.js and Node.js</strong>. This ensures your software is lightning fast, secure, and works perfectly on mobile devices.
        </p>
        
-       <h3 className="text-2xl font-bold text-foreground mt-12 mb-6">Zero Upfront, Results First</h3>
+       <h3 className="text-2xl font-bold text-foreground mt-12 mb-6">Result Oriented, Performance First</h3>
        <p>
-        We are proud to offer a <strong>Zero Upfront Payment</strong> model to our fellow Bhiwandi entrepreneurs. We start development immediately and only bill you once you see a working demo of your custom software. No other <strong>software agency in Bhiwandi</strong> offers this level of transparency and trust.
+        We are proud to offer a <strong>Result-Oriented Delivery</strong> model to our fellow Bhiwandi entrepreneurs. We start development immediately and only bill you once you see a working demo of your custom software. No other <strong>software agency in Bhiwandi</strong> offers this level of transparency and trust.
        </p>
       </div>
      </Reveal>

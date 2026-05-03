@@ -45,7 +45,7 @@ export default function WebAgencyBhiwandi() {
          <h4 className="font-bold text-foreground">BuildNest Advantage</h4>
          <ul className="mt-4 space-y-2 text-sm">
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-primary" /> Next.js & React (Ultra Fast)</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-primary" /> Zero Upfront Payment</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-primary" /> Result-Oriented Model</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-primary" /> 100/100 SEO Score</li>
          </ul>
         </div>
@@ -77,7 +77,7 @@ export default function WebAgencyBhiwandi() {
    <section className="py-24 bg-primary text-white mt-20">
     <div className="container-px mx-auto max-w-4xl text-center">
      <h2 className="text-3xl font-bold sm:text-4xl">Ready to work with the #1 Web Agency in Bhiwandi?</h2>
-     <p className="mt-6 text-white/80 text-lg">Experience the BuildNest difference. Zero upfront fees. Professional results.</p>
+     <p className="mt-6 text-white/80 text-lg">Experience the BuildNest difference. Professional results guaranteed.</p>
      <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
       <Link href="/contact" className="px-10 py-4 bg-white text-primary rounded-full font-bold transition hover:scale-105">
        Start Your Project

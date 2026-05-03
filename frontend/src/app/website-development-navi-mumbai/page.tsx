@@ -33,7 +33,7 @@ export default function NaviMumbaiCityPage() {
         From the IT hubs of <strong>Mahape</strong> and <strong>Airoli</strong> to the commercial centers of <strong>Vashi</strong> and <strong>Belapur</strong>, BuildNest Technologies provides the technical edge Navi Mumbai businesses need.
        </p>
        <p className="mt-4">
-        We specialize in SEO-optimized websites that don't just look good but rank on the first page of Google. Our zero upfront model ensures that every business in Kharghar and Nerul can afford a world-class digital presence.
+        We specialize in SEO-optimized websites that don't just look good but rank on the first page of Google. Our transparent pricing ensures that every business in Kharghar and Nerul can afford a world-class digital presence.
        </p>
       </div>
      </Reveal>
