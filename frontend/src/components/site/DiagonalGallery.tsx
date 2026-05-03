@@ -41,6 +41,7 @@ export default function DiagonalGallery() {
   <div 
    ref={containerRef} 
    className="relative overflow-hidden bg-[#0A0A0B] py-32 sm:py-40 border-y border-white/5"
+   style={{ position: 'relative' }}
   >
    <div className="absolute inset-0 bg-noise opacity-20 mix-blend-screen pointer-events-none" />
    
@@ -68,10 +69,8 @@ export default function DiagonalGallery() {
        <Image 
         src={item.image} 
         alt={item.title} 
-        width={450}
-        height={300}
+        fill
         className="object-cover opacity-60 transition duration-700 group-hover:scale-110 group-hover:opacity-100" 
-        style={{ width: '100%', height: '100%' }}
        />
        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 flex flex-col justify-end p-6">
         <span className="text-primary text-xs font-bold uppercase tracking-widest mb-1">{item.tag}</span>
@@ -88,10 +87,8 @@ export default function DiagonalGallery() {
        <Image 
         src={item.image} 
         alt={item.title} 
-        width={450}
-        height={300}
+        fill
         className="object-cover opacity-60 transition duration-700 group-hover:scale-110 group-hover:opacity-100" 
-        style={{ width: '100%', height: '100%' }}
        />
        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 flex flex-col justify-end p-6">
         <span className="text-primary text-xs font-bold uppercase tracking-widest mb-1">{item.tag}</span>

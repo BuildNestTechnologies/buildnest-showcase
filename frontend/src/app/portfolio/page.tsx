@@ -47,6 +47,7 @@ export default function Portfolio() {
            width={500}
            height={350}
            className="w-full object-cover object-top transition duration-500 ease-in-out" 
+           style={{ height: 'auto' }}
           />
          </div>
         </div>

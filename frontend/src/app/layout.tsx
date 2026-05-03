@@ -112,7 +112,7 @@ export default function RootLayout({
  children: React.ReactNode;
 }>) {
  return (
-  <html lang="en" suppressHydrationWarning>
+  <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
    <head>
     {/* Pre-hydration cleanup: strip browser extension attributes before React sees them */}
     <script
