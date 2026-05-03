@@ -82,6 +82,36 @@ export default function MumbaiCityPage() {
     </div>
    </section>
 
+   {/* TECH STACK LOGOS */}
+   <section className="bg-muted/10 py-16 border-y border-border overflow-hidden">
+    <div className="container-px mx-auto max-w-7xl text-center">
+     <Reveal direction="up">
+      <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground mb-10">Our Technology Stack ✦ Global Standards</p>
+      <div className="flex flex-wrap items-center justify-center gap-x-16 gap-y-10 opacity-50 grayscale transition-all duration-500 hover:grayscale-0 hover:opacity-100">
+       {[
+        { name: "Next.js", logo: "nextdotjs", color: "ffffff" },
+        { name: "React", logo: "react", color: "61DAFB" },
+        { name: "Node.js", logo: "nodedotjs", color: "339933" },
+        { name: "Flutter", logo: "flutter", color: "02569B" },
+        { name: "Tailwind", logo: "tailwindcss", color: "06B6D4" },
+        { name: "MongoDB", logo: "mongodb", color: "47A248" },
+        { name: "Shopify", logo: "shopify", color: "7AB55C" },
+        { name: "Razorpay", logo: "razorpay", color: "008ECC" }
+       ].map((tech) => (
+        <img
+         key={tech.name}
+         src={`https://cdn.simpleicons.org/${tech.logo}/${tech.color}`}
+         alt={tech.name}
+         title={tech.name}
+         className="h-7 w-auto md:h-9"
+         loading="lazy"
+        />
+       ))}
+      </div>
+     </Reveal>
+    </div>
+   </section>
+
    {/* MAIN CONTENT AREA */}
    <section className="py-24 border-t border-border">
     <div className="container-px mx-auto max-w-4xl">
@@ -234,7 +264,7 @@ export default function MumbaiCityPage() {
          <div className="mt-1 text-primary"><Globe className="h-6 w-6" /></div>
          <div>
           <h4 className="font-bold">Corporate Email</h4>
-          <p className="text-sm text-muted-foreground mt-1">mumbai@buildnest.world</p>
+          <p className="text-sm text-muted-foreground mt-1">buildnest.co.team@gmail.com</p>
          </div>
         </div>
        </div>

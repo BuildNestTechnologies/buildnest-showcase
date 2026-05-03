@@ -95,15 +95,13 @@ const orgSchema = {
  },
  "geo": { "@type": "GeoCoordinates", "latitude": "19.3002", "longitude": "73.0580" },
  "telephone": "+91-9284470352",
- "email": "hello@buildnest.world",
- "sameAs": [
-  "https://www.linkedin.com/company/buildnest-technologies",
-  "https://www.instagram.com/buildnestworld",
-  "https://twitter.com/buildnestworld",
-  "https://www.youtube.com/@buildnestworld",
-  "https://www.indiamart.com/buildnest-technologies",
-  "https://clutch.co/profile/buildnest-technologies"
- ]
+ "email": "buildnest.co.team@gmail.com",
+  "sameAs": [
+   "https://www.instagram.com/buildnest_technologies/",
+   "https://facebook.com/buildnestworld"
+   // "https://www.linkedin.com/company/buildnest-technologies",
+   // "https://twitter.com/buildnestworld"
+  ]
 };
 
 export default function RootLayout({

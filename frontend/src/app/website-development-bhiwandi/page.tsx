@@ -266,7 +266,7 @@ export default function BhiwandiCityPage() {
          <div className="mt-1 text-primary"><Globe className="h-6 w-6" /></div>
          <div>
           <h4 className="font-bold">Email</h4>
-          <p className="text-sm text-muted-foreground mt-1">hello@buildnest.world</p>
+          <p className="text-sm text-muted-foreground mt-1">buildnest.co.team@gmail.com</p>
          </div>
         </div>
        </div>

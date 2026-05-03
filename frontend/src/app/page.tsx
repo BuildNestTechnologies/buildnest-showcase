@@ -135,8 +135,22 @@ export default function Home() {
         </div>
         <p className="text-sm font-medium">4.9/5 Rating from 500+ Clients</p>
        </div>
-      </div>
-      <div className="grid grid-cols-2 gap-8 md:flex md:gap-12">
+       <div className="flex flex-wrap items-center justify-center gap-8 opacity-30 grayscale invert dark:invert-0">
+        {[
+          { name: "Google", logo: "google" },
+          { name: "Amazon", logo: "amazon" },
+          { name: "Meta", logo: "meta" },
+          { name: "Microsoft", logo: "microsoft" }
+        ].map((brand) => (
+          <img
+            key={brand.name}
+            src={`https://cdn.simpleicons.org/${brand.logo}/ffffff`}
+            alt={brand.name}
+            className="h-6 w-auto"
+          />
+        ))}
+       </div>
+
        <div className="text-center md:text-left">
         <p className="text-2xl font-bold text-foreground">500+</p>
         <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Websites Built</p>
@@ -155,6 +169,39 @@ export default function Home() {
        </div>
       </div>
      </div>
+    </div>
+   </section>
+
+   {/* 2.5 TECH STACK LOGOS */}
+   <section className="bg-muted/10 py-16 border-b border-border overflow-hidden">
+    <div className="container-px mx-auto max-w-7xl text-center">
+     <Reveal direction="up">
+      <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground mb-10">Modern Tech Stack ✦ Enterprise Performance</p>
+      <div className="flex flex-wrap items-center justify-center gap-x-16 gap-y-12 opacity-60 grayscale transition-all duration-500 hover:grayscale-0 hover:opacity-100">
+       {[
+        { name: "Next.js", logo: "nextdotjs", color: "ffffff" },
+        { name: "React", logo: "react", color: "61DAFB" },
+        { name: "Node.js", logo: "nodedotjs", color: "339933" },
+        { name: "Flutter", logo: "flutter", color: "02569B" },
+        { name: "Tailwind", logo: "tailwindcss", color: "06B6D4" },
+        { name: "MongoDB", logo: "mongodb", color: "47A248" },
+        { name: "Shopify", logo: "shopify", color: "7AB55C" },
+        { name: "Razorpay", logo: "razorpay", color: "008ECC" },
+        { name: "PostgreSQL", logo: "postgresql", color: "4169E1" },
+        { name: "Google Cloud", logo: "googlecloud", color: "4285F4" }
+       ].map((tech) => (
+        <div key={tech.name} className="group relative">
+         <img
+          src={`https://cdn.simpleicons.org/${tech.logo}/${tech.color}`}
+          alt={tech.name}
+          title={tech.name}
+          className="h-7 w-auto md:h-10 transition-transform duration-300 group-hover:scale-125"
+          loading="lazy"
+         />
+        </div>
+       ))}
+      </div>
+     </Reveal>
     </div>
    </section>
 

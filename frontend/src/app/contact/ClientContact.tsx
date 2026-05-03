@@ -127,13 +127,13 @@ export default function ClientContact() {
           </div>
          </a>
 
-         <a href="mailto:hello@buildnest.world" className="group flex items-start gap-4 rounded-xl border border-gray-800 bg-gray-900 p-5 transition hover:border-primary/50">
+         <a href="mailto:buildnest.co.team@gmail.com" className="group flex items-start gap-4 rounded-xl border border-gray-800 bg-gray-900 p-5 transition hover:border-primary/50">
           <div className="rounded-lg bg-primary/10 p-3 text-primary">
            <Mail className="h-6 w-6" />
           </div>
           <div>
            <p className="text-sm font-medium text-gray-400">Email</p>
-           <p className="mt-1 font-display text-lg font-semibold transition group-hover:text-primary">hello@buildnest.world</p>
+           <p className="mt-1 font-display text-lg font-semibold transition group-hover:text-primary">buildnest.co.team@gmail.com</p>
           </div>
          </a>
 

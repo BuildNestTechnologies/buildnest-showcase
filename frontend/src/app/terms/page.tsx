@@ -75,7 +75,7 @@ export default function TermsOfService() {
        Need a custom contract for your enterprise project?
       </p>
       <a 
-       href="mailto:hello@buildnest.world" 
+       href="mailto:buildnest.co.team@gmail.com" 
        className="inline-flex items-center gap-2 font-bold text-primary hover:underline"
       >
        <Mail className="h-4 w-4" /> Reach out to our legal team

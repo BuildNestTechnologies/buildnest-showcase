@@ -1,6 +1,7 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Camera, Globe, Send, MapPin, Mail } from "lucide-react";
+import { Instagram, Facebook, Twitter, Linkedin, MapPin, Mail } from "lucide-react";
 
 const Footer = () => (
  <footer className="relative bg-[#111214] text-white">
@@ -15,15 +16,37 @@ const Footer = () => (
     <p className="mt-4 max-w-md text-sm leading-relaxed text-gray-400">
      BuildNest Technologies is Bhiwandi's #1 website development company. We build websites & apps that grow your business – without the tech headache. Professional engineering, quality design, and a team that ships.
     </p>
-    <div className="mt-6 flex items-center gap-3">
-     {[Globe, Camera, Send].map((Icon, i) => (
+    <div className="mt-6 flex items-center gap-4">
+     {[
+      { logo: "instagram", href: "https://www.instagram.com/buildnest_technologies/", label: "Instagram", color: "#E4405F" },
+      { logo: "facebook", href: "https://facebook.com/buildnestworld", label: "Facebook", color: "#1877F2" },
+      // { logo: "linkedin", href: "#", label: "Linkedin", color: "#0A66C2" },
+      // { logo: "x", href: "#", label: "Twitter", color: "#FFFFFF" }
+     ].map((social, i) => (
       <a
        key={i}
-       href="#"
-       aria-label="social"
-       className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-800 text-gray-400 transition hover:border-primary hover:text-primary"
+       href={social.href}
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label={social.label}
+       className="group transition-transform hover:scale-110"
       >
-       <Icon className="h-4 w-4" />
+       <img
+        src={`https://cdn.simpleicons.org/${social.logo}/9ca3af`}
+        alt={social.label}
+        className="h-5 w-5 transition-all duration-300 group-hover:brightness-110 group-hover:filter group-hover:grayscale-0"
+        style={{ 
+          filter: 'grayscale(100%)',
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.filter = 'grayscale(0%)';
+          e.currentTarget.src = `https://cdn.simpleicons.org/${social.logo}/${social.color.replace('#', '')}`;
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.filter = 'grayscale(100%)';
+          e.currentTarget.src = `https://cdn.simpleicons.org/${social.logo}/9ca3af`;
+        }}
+       />
       </a>
      ))}
     </div>
@@ -53,7 +76,7 @@ const Footer = () => (
     <h4 className="text-sm font-semibold uppercase tracking-wider text-white">Reach us</h4>
     <ul className="mt-4 space-y-3 text-sm text-gray-400">
      <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Form</Link></li>
-     <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-primary" /> hello@buildnest.world</li>
+     <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-primary" /> buildnest.co.team@gmail.com</li>
      <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-primary" /> Bhiwandi & Mumbai, Maharashtra</li>
     </ul>
    </div>

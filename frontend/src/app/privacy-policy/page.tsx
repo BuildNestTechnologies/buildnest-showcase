@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
   {
    title: "5. Your Rights",
    icon: <FileText className="h-6 w-6 text-primary" />,
-   content: "You have the right to request access to, correction of, or deletion of your personal data. Contact us at hello@buildnest.world to exercise these rights."
+   content: "You have the right to request access to, correction of, or deletion of your personal data. Contact us at buildnest.co.team@gmail.com to exercise these rights."
   }
  ];
 
@@ -77,7 +77,7 @@ export default function PrivacyPolicy() {
        If you have any concerns about how we handle your data, our team is here to help.
       </p>
       <a 
-       href="mailto:hello@buildnest.world" 
+       href="mailto:buildnest.co.team@gmail.com" 
        className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 font-bold text-white transition hover:scale-105"
       >
        Contact Privacy Team
