@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import Reveal from "@/components/site/Reveal";
-import { Check, Info } from "lucide-react";
+import { Check, Info, X } from "lucide-react";
 
 export const metadata: Metadata = {
  title: "Website Development Prices in Bhiwandi & Mumbai | BuildNest Technologies",
@@ -81,75 +81,96 @@ export default function Pricing() {
     </div>
    </section>
 
-   {/* PRICING TABLE (ACCESSIBLE & SEO FRIENDLY) */}
-   <section className="container-px mx-auto max-w-7xl py-12 md:py-20">
-    <Reveal direction="up">
-     <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
-      <table className="w-full text-left border-collapse">
-       <thead>
-        <tr className="bg-secondary/50 border-b border-border">
-         <th className="p-6 font-display font-bold">Plan Name</th>
-         <th className="p-6 font-display font-bold">Price (INR)</th>
-         <th className="p-6 font-display font-bold">Pages</th>
-         <th className="p-6 font-display font-bold">SEO</th>
-         <th className="p-6 font-display font-bold">Best For</th>
-         <th className="p-6"></th>
-        </tr>
-       </thead>
-       <tbody className="divide-y divide-border">
+    {/* REDESIGNED PRICING SECTION */}
+    <section className="container-px mx-auto max-w-7xl py-12 md:py-24">
+      <div className="grid gap-8 md:grid-cols-3">
         {[
-         { name: "Starter", price: "₹7,999", pages: "5 Pages", seo: "Basic", for: "Small shops Bhiwandi", href: "/contact" },
-         { name: "Business", price: "₹12,999", pages: "10 Pages", seo: "Advanced", for: "Growing companies Mumbai", href: "/contact" },
-         { name: "E-Commerce", price: "₹18,999", pages: "Unlimited", seo: "Full", for: "Online stores India", href: "/contact" },
-         { name: "Enterprise", price: "Custom", pages: "Unlimited", seo: "Full + Ongoing", for: "SaaS / Large Business", href: "/contact" }
-        ].map((row, i) => (
-         <tr key={i} className="hover:bg-accent/5 transition-colors">
-          <td className="p-6 font-bold">{row.name}</td>
-          <td className="p-6 text-primary font-bold">{row.price}</td>
-          <td className="p-6 text-sm text-muted-foreground">{row.pages}</td>
-          <td className="p-6 text-sm text-muted-foreground">{row.seo}</td>
-          <td className="p-6 text-sm text-muted-foreground">{row.for}</td>
-          <td className="p-6">
-           <Link href={row.href} className="inline-flex px-4 py-2 bg-primary text-white text-xs font-bold rounded-lg hover:scale-105 transition-transform">Get Quote</Link>
-          </td>
-         </tr>
-        ))}
-       </tbody>
-      </table>
-     </div>
-    </Reveal>
-   </section>
+          {
+            name: "Starter",
+            price: "7,999",
+            features: [
+              { label: "Purpose", value: "Information", active: true },
+              { label: "Pages", value: "Fixed", active: true },
+              { label: "Admin Panel", value: "No", active: false },
+              { label: "Content Edit", value: "Developer", active: true },
+              { label: "Payments", value: "No", active: false },
+              { label: "Cart", value: "No", active: false },
+              { label: "Orders", value: "No", active: false },
+              { label: "Inventory", value: "No", active: false },
+              { label: "Best For", value: "Small Business", active: true },
+              { label: "Bot", value: "Yes", active: true },
+            ],
+          },
+          {
+            name: "Business",
+            price: "15,999",
+            features: [
+              { label: "Purpose", value: "Enquiries", active: true },
+              { label: "Pages", value: "Dynamic", active: true },
+              { label: "Admin Panel", value: "Yes", active: true },
+              { label: "Content Edit", value: "Owner", active: true },
+              { label: "Payments", value: "No", active: false },
+              { label: "Cart", value: "No", active: false },
+              { label: "Orders", value: "No", active: false },
+              { label: "Inventory", value: "No", active: false },
+              { label: "Best For", value: "Services", active: true },
+              { label: "Bot", value: "Yes", active: true },
+            ],
+          },
+          {
+            name: "E-Commerce",
+            price: "23,999",
+            features: [
+              { label: "Purpose", value: "Selling", active: true },
+              { label: "Pages", value: "Products", active: true },
+              { label: "Admin Panel", value: "Full", active: true },
+              { label: "Content Edit", value: "Owner", active: true },
+              { label: "Payments", value: "Yes", active: true },
+              { label: "Cart", value: "Yes", active: true },
+              { label: "Orders", value: "Yes", active: true },
+              { label: "Inventory", value: "Yes", active: true },
+              { label: "Best For", value: "Online Store", active: true },
+              { label: "Bot", value: "Yes", active: true },
+            ],
+          },
+        ].map((p, idx) => (
+          <Reveal key={p.name} delay={idx * 0.1} direction="up">
+            <div className="flex flex-col h-full rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5">
+              <h3 className="text-2xl font-bold font-display text-foreground mb-8 text-center">{p.name}</h3>
+              
+              <div className="mb-10 rounded-2xl bg-muted/30 border border-primary/20 py-8 text-center">
+                <span className="text-4xl font-bold text-foreground">₹{p.price}</span>
+              </div>
 
-   {/* PLAN COMPARISON CARDS */}
-   <section className="container-px mx-auto max-w-7xl py-12">
-    <div className="grid gap-8 md:grid-cols-3">
-     {[
-      { plan: "Starter", price: "7,999", features: ["5-page business website", "Mobile responsive design", "Basic SEO setup", "Contact form", "3 months support"] },
-      { plan: "Business", price: "12,999", features: ["10-page business website", "Google Business optimization", "Custom lead-gen form", "Advanced SEO markup", "6 months support"] },
-      { plan: "E-Commerce", price: "18,999", features: ["Full online store", "Payment gateway integration", "Inventory management", "Full product SEO", "12 months support"] },
-     ].map((p, idx) => (
-      <Reveal key={idx} delay={idx * 0.1} direction="up">
-       <div className="flex flex-col h-full rounded-2xl border border-border bg-card p-8 hover:shadow-lg transition-shadow">
-        <h3 className="text-xl font-bold">{p.plan} Website</h3>
-        <div className="mt-4 mb-8">
-         <span className="text-4xl font-bold text-foreground">₹{p.price}</span>
-         <span className="text-muted-foreground text-sm">/flat-fee</span>
-        </div>
-        <ul className="space-y-4 mb-10 flex-1">
-         {p.features.map(f => (
-          <li key={f} className="flex items-center gap-3 text-sm text-muted-foreground">
-           <Check className="h-4 w-4 text-primary" /> {f}
-          </li>
-         ))}
-        </ul>
-        <Link href="/contact" className="block w-full py-3 bg-secondary text-foreground text-center font-bold rounded-xl hover:bg-primary hover:text-white transition-colors">
-         Select {p.plan}
-        </Link>
-       </div>
-      </Reveal>
-     ))}
-    </div>
-   </section>
+              <div className="flex-1 space-y-5">
+                {p.features.map((f, fIdx) => (
+                  <div key={fIdx} className="flex items-center justify-between text-sm">
+                    <div className="flex items-center gap-3">
+                      <div className={`flex h-5 w-5 items-center justify-center rounded-full ${f.active ? 'bg-primary/20 text-primary' : 'bg-muted text-muted-foreground/50'}`}>
+                        {f.active ? <Check className="h-3 w-3 stroke-[3]" /> : <X className="h-3 w-3" />}
+                      </div>
+                      <span className="text-muted-foreground font-medium">{f.label}:</span>
+                    </div>
+                    <span className={`font-bold ${f.active ? 'text-foreground' : 'text-muted-foreground/60'}`}>{f.value}</span>
+                  </div>
+                ))}
+              </div>
+
+              <Link 
+                href="/contact" 
+                className={`mt-10 block w-full py-4 text-center font-bold rounded-2xl transition-all duration-300 border-2 ${
+                  p.name === 'Business' 
+                  ? 'bg-primary border-primary text-white hover:bg-primary/90' 
+                  : 'border-primary/30 text-primary hover:bg-primary hover:text-white'
+                }`}
+              >
+                Choose {p.name}
+              </Link>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </section>
 
    {/* FAQ SECTION */}
    <section className="py-20 bg-hero border-t border-border">
