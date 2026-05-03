@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowRight, ExternalLink, Play, MonitorSmartphone } from "lucide-react";
+import { ArrowRight, ExternalLink, Play, MonitorSmartphone, Code } from "lucide-react";
 import SectionTitle from "@/components/site/SectionTitle";
 import Reveal from "@/components/site/Reveal";
 import { PORTFOLIO } from "@/data/site";
@@ -58,30 +58,48 @@ export default function Portfolio() {
           </span>
          </div>
          
-         <h3 className="mt-4 font-display text-2xl font-bold text-foreground">{project.title}</h3>
-         <p className="mt-3 leading-relaxed text-muted-foreground">{project.desc}</p>
-         
-         <div className="mt-8 flex flex-wrap items-center gap-4 border-t border-border pt-6">
-          {project.demoLink && (
-           <a 
-            href={project.demoLink} 
-            target="_blank" 
-            rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90"
-           >
-            <ExternalLink className="h-4 w-4" /> Live Demo
-           </a>
-          )}
-          {project.videoLink && (
-           <a 
-            href={project.videoLink} 
-            target="_blank" 
-            rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-transparent px-4 py-2.5 text-sm font-semibold text-foreground transition hover:bg-accent"
-           >
-            <Play className="h-4 w-4" /> Watch Video
-           </a>
-          )}
+          <h3 className="mt-4 font-display text-2xl font-bold text-foreground">{project.title}</h3>
+          <p className="mt-3 leading-relaxed text-muted-foreground">{project.desc}</p>
+          
+          <div className="mt-4 flex flex-wrap gap-2">
+            {project.tech?.map((item) => (
+              <span key={item} className="rounded-md bg-muted px-2 py-1 text-[10px] font-medium text-muted-foreground uppercase tracking-tight">
+                {item}
+              </span>
+            ))}
+          </div>
+          
+          <div className="mt-8 flex flex-wrap items-center gap-4 border-t border-border pt-6">
+           {project.demoLink && (
+            <a 
+             href={project.demoLink} 
+             target="_blank" 
+             rel="noreferrer"
+             className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-primary/90"
+            >
+             <ExternalLink className="h-4 w-4" /> Live Demo
+            </a>
+           )}
+           {project.videoLink && (
+            <a 
+             href={project.videoLink} 
+             target="_blank" 
+             rel="noreferrer"
+             className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-transparent px-4 py-2.5 text-sm font-semibold text-foreground transition hover:bg-accent"
+            >
+             <Play className="h-4 w-4" /> Watch Video
+            </a>
+           )}
+           {project.githubLink && (
+            <a 
+             href={project.githubLink} 
+             target="_blank" 
+             rel="noreferrer"
+             className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-transparent px-4 py-2.5 text-sm font-semibold text-foreground transition hover:bg-accent"
+            >
+             <Code className="h-4 w-4" /> GitHub
+            </a>
+           )}
          </div>
         </div>
        </div>

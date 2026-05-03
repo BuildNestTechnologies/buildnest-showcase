@@ -74,7 +74,7 @@ export default function DiagonalGallery() {
         className="object-cover opacity-60 transition duration-700 group-hover:scale-110 group-hover:opacity-100" 
        />
        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 flex flex-col justify-end p-6">
-        <span className="text-primary text-xs font-bold uppercase tracking-widest mb-1">{item.tag}</span>
+        <span className="text-primary text-xs font-bold uppercase tracking-widest mb-1">{item.category}</span>
         <p className="text-white font-bold text-lg">{item.title}</p>
        </div>
       </div>
@@ -93,7 +93,7 @@ export default function DiagonalGallery() {
         className="object-cover opacity-60 transition duration-700 group-hover:scale-110 group-hover:opacity-100" 
        />
        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 flex flex-col justify-end p-6">
-        <span className="text-primary text-xs font-bold uppercase tracking-widest mb-1">{item.tag}</span>
+        <span className="text-primary text-xs font-bold uppercase tracking-widest mb-1">{item.category}</span>
         <p className="text-white font-bold text-lg">{item.title}</p>
        </div>
       </div>
