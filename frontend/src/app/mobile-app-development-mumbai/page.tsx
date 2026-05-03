@@ -55,7 +55,7 @@ export default function MumbaiAppPage() {
    <section className="py-24 border-t border-border">
     <div className="container-px mx-auto max-w-4xl">
      <Reveal direction="up">
-      <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
+      <div className="prose prose-neutral dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
        <h2 className="text-3xl font-bold text-foreground mb-8">Transforming Your Idea into a High-Performance Mobile App</h2>
        <p>
         In a city that never stops, your app needs to be fast, reliable, and intuitive. As a leading <strong>mobile app development company in Mumbai</strong>, <strong>BuildNest Technologies</strong> specializes in creating cross-platform applications that deliver native-level performance.

@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 
 const POSTS = [
  {
-  title: "BuildNest vs Datamatex: Which is better for Bhiwandi Businesses?",
-  slug: "buildnest-vs-datamatex",
+  title: "BuildNest vs Traditional Agencies: Which is better for Bhiwandi Businesses?",
+  slug: "buildnest-vs-traditional-agencies",
   desc: "A detailed comparison of Mumbai's leading web agencies.",
   category: "Comparison"
  },

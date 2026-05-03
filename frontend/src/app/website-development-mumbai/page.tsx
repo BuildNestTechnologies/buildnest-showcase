@@ -55,7 +55,7 @@ export default function MumbaiWebsitePage() {
    <section className="py-24 border-t border-border">
     <div className="container-px mx-auto max-w-4xl">
      <Reveal direction="up">
-      <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
+      <div className="prose prose-neutral dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
        <h2 className="text-3xl font-bold text-foreground mb-8">Elevate Your Mumbai Brand with Performance-First Web Design</h2>
        <p>
         In the fast-paced economy of <strong>Mumbai</strong>, your website is your 24/7 salesperson. If it's slow, outdated, or doesn't rank for <strong>website development company in Mumbai</strong>, you are losing millions in potential revenue. At <strong>BuildNest Technologies</strong>, we specialize in high-speed, SEO-optimized web platforms that help Mumbai businesses outperform their competition.

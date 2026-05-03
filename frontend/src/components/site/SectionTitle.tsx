@@ -8,9 +8,12 @@ interface Props {
  title: ReactNode;
  subtitle?: string;
  align?: "left" | "center";
+ centered?: boolean;
+ gradient?: boolean;
+ dark?: boolean;
 }
 
-const SectionTitle = ({ eyebrow, title, subtitle, align = "center", centered = false, gradient = false }: any) => (
+const SectionTitle = ({ eyebrow, title, subtitle, align = "center", centered = false, gradient = false, dark = false }: Props) => (
  <motion.div
   initial={{ opacity: 0, y: 24 }}
   whileInView={{ opacity: 1, y: 0 }}
@@ -23,10 +26,14 @@ const SectionTitle = ({ eyebrow, title, subtitle, align = "center", centered = f
     <span className="h-px w-8 bg-primary/60" /> {eyebrow}
    </div>
   )}
-  <h2 className={`text-balance font-display text-3xl font-bold leading-tight sm:text-4xl md:text-5xl ${gradient ? "text-transparent bg-clip-text bg-gradient-to-r from-[#111214] to-gray-500" : "text-[#111214]"}`}>
+  <h2 className={`text-balance font-display text-3xl font-bold leading-tight sm:text-4xl md:text-5xl ${
+    gradient 
+      ? "text-transparent bg-clip-text bg-gradient-to-r from-foreground to-muted-foreground" 
+      : (dark ? "text-white" : "text-foreground")
+  }`}>
    {title}
   </h2>
-  {subtitle && <p className="mt-5 text-base leading-relaxed text-gray-600 sm:text-lg">{subtitle}</p>}
+  {subtitle && <p className={`mt-5 text-base leading-relaxed sm:text-lg ${dark ? "text-white/60" : "text-muted-foreground"}`}>{subtitle}</p>}
  </motion.div>
 );
 

@@ -11,9 +11,9 @@ export default function TrustBasedPage() {
   <article className="mx-auto max-w-3xl px-6 py-20">
    <Reveal>
     <h1 className="font-display text-4xl font-bold">Why Trust-Based Development is the Future of Web Development in India</h1>
-    <p className="mt-6 text-gray-600">Traditional agencies demand 50% advance before they even start. We prioritize building a relationship first. Here is why we changed the model for our Bhiwandi clients.</p>
-    <div className="mt-12 prose prose-gray max-w-none">
-     <p>We believe in our work. That is why we focus on delivering value before demanding high upfront costs. You only pay when you see the roadmap and initial progress that satisfies your business needs. This model has made us the <strong>#1 website development company in Bhiwandi</strong> because it builds instant trust with local business owners.</p>
+    <p className="mt-6 text-muted-foreground">Traditional agencies demand commitments before they even start. We prioritize building a relationship first. Here is why we changed the model for our Bhiwandi clients.</p>
+    <div className="mt-12 prose prose-neutral dark:prose-invert max-w-none">
+     <p>We believe in our work. That is why we focus on delivering value throughout the development lifecycle. You only pay when you see the roadmap and initial progress that satisfies your business needs. This model has made us the <strong>#1 website development company in Bhiwandi</strong> because it builds instant trust with local business owners.</p>
     </div>
    </Reveal>
   </article>

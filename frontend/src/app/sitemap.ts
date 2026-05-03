@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
  // Dark Funnel Pages (Included in sitemap, not in nav)
  const darkFunnelRoutes = [
-  '/blog/buildnest-vs-datamatex',
+  '/blog/buildnest-vs-traditional-agencies',
   '/blog/top-10-web-developers-bhiwandi-2026',
   '/blog/cost-of-website-india-2026',
   '/blog/trust-based-website-development-india',

@@ -11,8 +11,8 @@ export default function ReactVsWordPressPage() {
   <article className="mx-auto max-w-3xl px-6 py-20">
    <Reveal>
     <h1 className="font-display text-4xl font-bold">React (Next.js) vs WordPress in 2026: The Honest Truth</h1>
-    <p className="mt-6 text-gray-600">WordPress is old. React is the future. If you want a website that ranks #1 in Mumbai, you need speed.</p>
-    <div className="mt-12 prose prose-gray max-w-none">
+    <p className="mt-6 text-muted-foreground">WordPress is old. React is the future. If you want a website that ranks #1 in Mumbai, you need speed.</p>
+    <div className="mt-12 prose prose-neutral dark:prose-invert max-w-none">
      <p>At <strong>BuildNest Technologies</strong>, we moved away from WordPress years ago. Next.js allows us to build websites that load in under 1 second, giving you a massive advantage in <strong>Google search rankings in Bhiwandi</strong>. WordPress sites are often bloated and slow, which hurts your SEO.</p>
     </div>
    </Reveal>

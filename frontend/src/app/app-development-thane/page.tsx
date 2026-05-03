@@ -27,7 +27,7 @@ export default function ThaneCityPage() {
    <section className="py-20 border-t border-border">
     <div className="container-px mx-auto max-w-4xl">
      <Reveal direction="up">
-      <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
+      <div className="prose prose-neutral dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
        <h2 className="text-2xl font-bold text-foreground mb-6">Thane's Most Reliable Tech Partner</h2>
        <p>
         From the corporate hubs of <strong>Wagle Estate</strong> and <strong>Hiranandani Estate</strong> to the retail centers on <strong>Ghodbunder Road</strong>, BuildNest Technologies provides top-tier app development services.

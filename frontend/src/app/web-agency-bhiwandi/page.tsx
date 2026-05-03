@@ -5,8 +5,8 @@ import { CheckCircle2, Phone, ArrowRight, Zap, Shield, BarChart3 } from "lucide-
 
 export const metadata: Metadata = {
  title: "#1 Web Agency in Bhiwandi | BuildNest Technologies",
- description: "BuildNest Technologies is the leading web agency in Bhiwandi. We provide custom web design, SEO, and software solutions for Bhiwandi businesses. Top Datamatex alternative.",
- keywords: ["web agency in Bhiwandi", "best web agency Bhiwandi", "website developers in Bhiwandi", "Datamatex alternative Bhiwandi", "BuildNest Technologies Bhiwandi"],
+ description: "BuildNest Technologies is the leading web agency in Bhiwandi. We provide custom web design, SEO, and software solutions for Bhiwandi businesses. Top legacy agency alternative.",
+ keywords: ["web agency in Bhiwandi", "best web agency Bhiwandi", "website developers in Bhiwandi", "traditional agency alternative Bhiwandi", "BuildNest Technologies Bhiwandi"],
  alternates: {
   canonical: "https://buildnest.world/web-agency-bhiwandi",
  },
@@ -29,10 +29,10 @@ export default function WebAgencyBhiwandi() {
    <section className="py-24 border-t border-border mt-20">
     <div className="container-px mx-auto max-w-4xl">
      <Reveal direction="up">
-      <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground">
+      <div className="prose prose-neutral dark:prose-invert max-w-none text-muted-foreground">
        <h2 className="text-3xl font-bold text-foreground mb-8">Why We are the Top-Rated Web Agency in Bhiwandi?</h2>
        <p>
-        For years, businesses looking for a <strong>web agency in Bhiwandi</strong> had limited choices. Many were forced to work with legacy providers like <strong>Datamatex</strong> or <strong>Datamatex Technologies</strong>. While they served the city well in the past, modern businesses require modern technology.
+        For years, businesses looking for a <strong>web agency in Bhiwandi</strong> had limited choices. Many were forced to work with legacy providers and traditional agencies. While they served the city well in the past, modern businesses require modern technology.
        </p>
        
        <p className="mt-6">

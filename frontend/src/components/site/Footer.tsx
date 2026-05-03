@@ -21,7 +21,7 @@ const Footer = () => {
      {[
       { logo: "instagram", href: "https://www.instagram.com/buildnest_technologies/", label: "Instagram", color: "#E4405F" },
       { logo: "whatsapp", href: "https://wa.me/919284470352", label: "WhatsApp", color: "#25D366" },
-      { logo: "facebook", href: "https://facebook.com/buildnestworld", label: "Facebook", color: "#1877F2" },
+      // { logo: "facebook", href: "https://facebook.com/buildnestworld", label: "Facebook", color: "#1877F2" },
       // { logo: "linkedin", href: "#", label: "Linkedin", color: "#0A66C2" },
       // { logo: "x", href: "#", label: "Twitter", color: "#FFFFFF" }
      ].map((social, i) => (
@@ -68,8 +68,8 @@ const Footer = () => {
    <div>
     <h4 className="text-sm font-semibold uppercase tracking-wider text-white">Compare Us</h4>
     <ul className="mt-4 space-y-3 text-sm text-gray-400">
-     <li><Link href="/blog/buildnest-vs-datamatex" className="hover:text-primary transition-colors">BuildNest vs Datamatex</Link></li>
-     <li><Link href="/blog/buildnest-vs-datamatex" className="hover:text-primary transition-colors">Datamatex Alternative</Link></li>
+     <li><Link href="/blog/buildnest-vs-traditional-agencies" className="hover:text-primary transition-colors">BuildNest vs Traditional Agencies</Link></li>
+     <li><Link href="/blog/buildnest-vs-traditional-agencies" className="hover:text-primary transition-colors">Legacy Agency Alternative</Link></li>
      <li><Link href="/website-development-bhiwandi" className="hover:text-primary transition-colors">Best Web Agency Bhiwandi</Link></li>
     </ul>
    </div>

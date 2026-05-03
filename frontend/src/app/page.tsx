@@ -283,24 +283,33 @@ export default function Home() {
       <Reveal direction="left">
        <div>
         <span className="text-primary font-bold uppercase tracking-widest text-xs">The Modern Choice</span>
-        <h2 className="mt-4 font-display text-3xl font-bold text-foreground sm:text-4xl">BuildNest vs Datamatex: Why Modern Tech Wins</h2>
+        <h2 className="mt-4 font-display text-3xl font-bold text-foreground sm:text-4xl">BuildNest vs Traditional Agencies: Why Modern Tech Wins</h2>
         <p className="mt-6 text-muted-foreground leading-relaxed">
-         Many Bhiwandi businesses are moving away from legacy agencies like <strong>Datamatex</strong> or <strong>Datamatex Technologies</strong> to embrace the high-speed engineering of BuildNest. While traditional <strong>web agencies in Bhiwandi</strong> rely on outdated PHP/WordPress templates, we build statically-generated Next.js sites that load in milliseconds.
+         Many Bhiwandi businesses are moving away from legacy agencies and traditional providers to embrace the high-speed engineering of BuildNest. While traditional <strong>web agencies in Bhiwandi</strong> rely on outdated PHP/WordPress templates, we build statically-generated Next.js sites that load in milliseconds.
         </p>
-        <div className="mt-8 space-y-4">
-         <div className="flex items-center gap-3 font-medium text-foreground">
-          <Check className="h-5 w-5 text-primary" /> Next.js 15 vs Legacy WordPress
-         </div>
-         <div className="flex items-center gap-3 font-medium text-foreground">
-          <Check className="h-5 w-5 text-primary" /> Transparent vs Hidden Costs
-         </div>
-         <div className="flex items-center gap-3 font-medium text-foreground">
-          <Check className="h-5 w-5 text-primary" /> Google Lighthouse 100 vs Performance Lag
-         </div>
+        <div className="mt-8 grid gap-6">
+         {[
+          { item: "Technology Stack", buildnest: "Next.js, React, Node.js", others: "WordPress, PHP, Templates" },
+          { item: "Loading Speed", buildnest: "Under 1 Second (Ultra Fast)", others: "3-5 Seconds (Slow)" },
+          { item: "Development Model", buildnest: "Result-Oriented Delivery", others: "50% Advance Required" },
+          { item: "SEO Integration", buildnest: "Deep Technical Schema", others: "Basic Meta Tags" },
+          { item: "Scalability", buildnest: "Cloud-Native Infrastructure", others: "Shared Server Limitations" }
+         ].map((row, i) => (
+          <div key={i} className="grid grid-cols-2 border-b border-border pb-4 items-center">
+           <div className="flex flex-col">
+            <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mb-1">{row.item}</span>
+            <span className="text-sm font-bold text-primary">{row.buildnest}</span>
+           </div>
+           <div className="flex flex-col text-right opacity-40">
+            <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-widest mb-1">Traditional</span>
+            <span className="text-xs line-through">{row.others}</span>
+           </div>
+          </div>
+         ))}
         </div>
-        <div className="mt-10">
-         <Link href="/blog/buildnest-vs-datamatex" className="text-primary font-bold inline-flex items-center gap-2 hover:underline">
-          Read the Full Technical Comparison <ArrowRight className="h-4 w-4" />
+        <div className="mt-8">
+         <Link href="/blog/buildnest-vs-traditional-agencies" className="text-primary font-bold inline-flex items-center gap-2 hover:underline">
+          Read Full Comparison <ArrowRight className="h-4 w-4" />
          </Link>
         </div>
        </div>

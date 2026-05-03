@@ -50,7 +50,7 @@ export default function DiagonalGallery() {
      <h2 className="font-display text-4xl md:text-6xl font-bold text-white tracking-tight">
       Real Work for <span className="text-primary">Real Businesses</span>
      </h2>
-     <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+     <p className="mt-6 text-white/60 max-w-2xl mx-auto text-lg leading-relaxed">
       From e-commerce stores in Bhiwandi to enterprise software in Mumbai. We build digital products that drive growth.
      </p>
      <div className="mt-10">

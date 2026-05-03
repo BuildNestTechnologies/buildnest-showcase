@@ -118,7 +118,7 @@ export default function BhiwandiCityPage() {
    <section className="py-24 border-t border-border">
     <div className="container-px mx-auto max-w-4xl">
      <Reveal direction="up">
-      <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
+      <div className="prose prose-neutral dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
        <h2 className="text-3xl font-bold text-foreground mb-8">Why Businesses in Bhiwandi Choose BuildNest?</h2>
        <p>
         Finding a reliable <strong>website development company in Bhiwandi</strong> used to be a challenge. Most local business owners had to deal with slow-loading templates or unreliable freelancers from Mumbai. <strong>BuildNest Technologies</strong> changed that by bringing world-class engineering (React, Next.js, Flutter) right to the heart of Bhiwandi.

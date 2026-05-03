@@ -26,7 +26,7 @@ export default function About() {
     <div className="container-px mx-auto max-w-5xl">
      <Reveal direction="up">
       <h2 className="text-3xl font-bold mb-8">Our Mission</h2>
-      <div className="prose prose-lg dark:prose-invert text-muted-foreground">
+      <div className="prose prose-neutral dark:prose-invert text-muted-foreground">
        <p>
         At BuildNest Technologies, our mission is simple: level the playing field. For too long, only large corporations could afford high-end, custom-built software and lightning-fast websites. 
        </p>

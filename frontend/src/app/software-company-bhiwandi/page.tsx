@@ -56,7 +56,7 @@ export default function BhiwandiSoftwarePage() {
    <section className="py-24 border-t border-border">
     <div className="container-px mx-auto max-w-4xl">
      <Reveal direction="up">
-      <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
+      <div className="prose prose-neutral dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
        <h2 className="text-3xl font-bold text-foreground mb-8">Modernizing Bhiwandi's Industrial & Commercial Landscape</h2>
        <p>
         Bhiwandi is a hub of industry and logistics. Yet, many businesses still rely on manual registers or outdated spreadsheets. As the leading <strong>software company in Bhiwandi</strong>, <strong>BuildNest Technologies</strong> is here to change that. We bring enterprise-grade software development to local businesses in <strong>Narpoli, Shagun Chowk, and Anjurphata</strong>.

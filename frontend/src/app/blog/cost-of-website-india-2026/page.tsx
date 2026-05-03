@@ -11,15 +11,15 @@ export default function CostGuidePage() {
   <article className="mx-auto max-w-3xl px-6 py-20">
    <Reveal>
     <h1 className="font-display text-4xl font-bold leading-tight">Cost of Website Development in India (2026 Pricing)</h1>
-    <p className="mt-6 text-gray-600">The most common question we get in Bhiwandi is: "What is the actual cost of a website?" In this guide, we break down every rupee.</p>
+    <p className="mt-6 text-muted-foreground">The most common question we get in Bhiwandi is: "What is the actual cost of a website?" In this guide, we break down every rupee.</p>
    </Reveal>
 
-   <div className="mt-12 prose prose-lg prose-gray max-w-none">
+   <div className="mt-12 prose prose-neutral dark:prose-invert max-w-none">
     <h2 className="text-2xl font-bold mt-12 mb-6">Average Pricing Breakdown</h2>
-    <div className="overflow-x-auto rounded-xl border border-gray-100 bg-white">
+    <div className="overflow-x-auto rounded-xl border border-border bg-card">
      <table className="w-full text-left border-collapse">
       <thead>
-       <tr className="bg-gray-50 border-b">
+       <tr className="bg-muted border-b border-border">
         <th className="p-4 font-bold">Type of Website</th>
         <th className="p-4 font-bold">Price Range (INR)</th>
        </tr>

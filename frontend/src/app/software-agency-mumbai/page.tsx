@@ -117,7 +117,7 @@ export default function MumbaiCityPage() {
    <section className="py-24 border-t border-border">
     <div className="container-px mx-auto max-w-4xl">
      <Reveal direction="up">
-      <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
+      <div className="prose prose-neutral dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
        <h2 className="text-3xl font-bold text-foreground mb-8">Mumbai's Choice for Next-Gen Digital Solutions</h2>
        <p>
         Mumbai is the financial and tech capital of India, and the competition here is fierce. To stand out, your business needs more than just a website; it needs a technological edge. <strong>BuildNest Technologies</strong> provides that edge as a leading <strong>software company in Mumbai</strong>, specializing in high-conversion web platforms and enterprise-grade software.
