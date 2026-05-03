@@ -35,7 +35,7 @@ export default function BlogLayout({
       <Link href="/contact" className="rounded-full bg-primary px-8 py-3 font-bold text-white shadow-lg transition hover:scale-105">
        Contact BuildNest Today
       </Link>
-      <a href="tel:+919876543210" className="flex items-center gap-2 font-bold text-black hover:text-primary transition-colors">
+      <a href="tel:+919284470352" className="flex items-center gap-2 font-bold text-black hover:text-primary transition-colors">
        <Phone className="h-4 w-4" /> Speak with an Expert
       </a>
      </div>

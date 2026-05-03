@@ -105,7 +105,8 @@ export default function BhiwandiCityPage() {
          alt="Website development office serving Bhiwandi" 
          width={800} 
          height={600} 
-         className="w-full h-auto"
+         className="w-full"
+          style={{ height: 'auto' }}
         />
        </div>
       </div>

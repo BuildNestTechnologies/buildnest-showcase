@@ -82,6 +82,7 @@ export default function Software() {
         width={1200}
         height={600}
         className="w-full object-cover"
+        style={{ height: 'auto' }}
        />
       </div>
      </div>
