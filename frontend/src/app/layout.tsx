@@ -71,7 +71,7 @@ export const metadata: Metadata = {
  },
  verification: {
   google: '84c67e27f56554f5',
-  other: { 'msvalidate.01': 'YOUR_BING_CODE' },
+  other: { 'msvalidate.01': '6FA7C110DDBF31E2515A02C9F0D99F51' },
  },
 };
 
