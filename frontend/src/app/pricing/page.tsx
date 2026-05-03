@@ -82,8 +82,8 @@ export default function Pricing() {
    </section>
 
     {/* REDESIGNED PRICING SECTION */}
-    <section className="container-px mx-auto max-w-7xl py-12 md:py-24">
-      <div className="grid gap-8 md:grid-cols-3">
+    <section className="container-px mx-auto max-w-7xl py-12 md:py-16">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {[
           {
             name: "Starter",
@@ -133,21 +133,47 @@ export default function Pricing() {
               { label: "Bot", value: "Yes", active: true },
             ],
           },
+          {
+            name: "Custom",
+            tag: "Enterprise",
+            price: "Contact Us",
+            features: [
+              { label: "Purpose", value: "Tailored", active: true },
+              { label: "Pages", value: "Unlimited", active: true },
+              { label: "Admin Panel", value: "Enterprise", active: true },
+              { label: "Content Edit", value: "Owner", active: true },
+              { label: "Payments", value: "Custom", active: true },
+              { label: "Cart", value: "Custom", active: true },
+              { label: "Orders", value: "Custom", active: true },
+              { label: "Inventory", value: "Custom", active: true },
+              { label: "Best For", value: "Enterprise", active: true },
+              { label: "Bot", value: "Yes", active: true },
+            ],
+          },
         ].map((p, idx) => (
           <Reveal key={p.name} delay={idx * 0.1} direction="up">
-            <div className="flex flex-col h-full rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5">
-              <h3 className="text-2xl font-bold font-display text-foreground mb-8 text-center">{p.name}</h3>
+            <div className="flex flex-col h-full rounded-xl border border-border bg-card p-4 transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-lg font-bold font-display text-foreground">{p.name}</h3>
+                {p.tag && (
+                  <span className="px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider bg-purple-500/10 text-purple-500 rounded-full border border-purple-500/20">
+                    {p.tag}
+                  </span>
+                )}
+              </div>
               
-              <div className="mb-10 rounded-2xl bg-muted/30 border border-primary/20 py-8 text-center">
-                <span className="text-4xl font-bold text-foreground">₹{p.price}</span>
+              <div className={`mb-4 rounded-lg border py-3 text-center ${p.name === 'Custom' ? 'bg-primary/5 border-primary/20' : 'bg-muted/20 border-border/50'}`}>
+                <span className={`${p.name === 'Custom' ? 'text-lg' : 'text-xl'} font-bold text-foreground tracking-tight`}>
+                  {/^\d/.test(p.price) ? `₹${p.price}` : p.price}
+                </span>
               </div>
 
-              <div className="flex-1 space-y-5">
+              <div className="flex-1 space-y-2">
                 {p.features.map((f, fIdx) => (
-                  <div key={fIdx} className="flex items-center justify-between text-sm">
-                    <div className="flex items-center gap-3">
-                      <div className={`flex h-5 w-5 items-center justify-center rounded-full ${f.active ? 'bg-primary/20 text-primary' : 'bg-muted text-muted-foreground/50'}`}>
-                        {f.active ? <Check className="h-3 w-3 stroke-[3]" /> : <X className="h-3 w-3" />}
+                  <div key={fIdx} className="flex items-center justify-between text-[11px]">
+                    <div className="flex items-center gap-2">
+                      <div className={`flex h-4 w-4 items-center justify-center rounded-full ${f.active ? 'bg-primary/10 text-primary' : 'bg-muted text-muted-foreground/30'}`}>
+                        {f.active ? <Check className="h-2 w-2 stroke-[3]" /> : <X className="h-2 w-2" />}
                       </div>
                       <span className="text-muted-foreground font-medium">{f.label}:</span>
                     </div>
@@ -156,21 +182,34 @@ export default function Pricing() {
                 ))}
               </div>
 
-              <Link 
-                href="/contact" 
-                className={`mt-10 block w-full py-4 text-center font-bold rounded-2xl transition-all duration-300 border-2 ${
+              <a 
+                href={`https://wa.me/919284470352?text=${encodeURIComponent(
+                  p.name === 'Custom' 
+                  ? "Hi BuildNest, I'm interested in a Custom/Enterprise project. Let's discuss requirements!" 
+                  : `Hi BuildNest, I'm interested in the ${p.name} plan (₹${p.price}). Please tell me more about it.`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`mt-4 block w-full py-2 text-center text-xs font-bold rounded-lg transition-all duration-300 border-2 ${
                   p.name === 'Business' 
                   ? 'bg-primary border-primary text-white hover:bg-primary/90' 
-                  : 'border-primary/30 text-primary hover:bg-primary hover:text-white'
+                  : 'border-primary/20 text-primary hover:bg-primary hover:text-white hover:border-primary'
                 }`}
               >
-                Choose {p.name}
-              </Link>
+                {p.name === 'Custom' ? 'Contact Us' : `Choose ${p.name}`}
+              </a>
             </div>
           </Reveal>
         ))}
       </div>
+      
+      <Reveal direction="up" delay={0.4}>
+        <p className="mt-8 text-center text-xs text-muted-foreground">
+          <span className="text-primary font-bold">Note:</span> All prices are <span className="underline decoration-primary/30 underline-offset-4 font-medium">negotiable</span> based on your specific requirements.
+        </p>
+      </Reveal>
     </section>
+
 
    {/* FAQ SECTION */}
    <section className="py-20 bg-hero border-t border-border">
