@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import Reveal from "@/components/site/Reveal";
-import { Check, Info } from "lucide-react";
+import { Check, Info, X } from "lucide-react";
 
 export const metadata: Metadata = {
  title: "Website Development Prices in Bhiwandi & Mumbai | BuildNest Technologies",
@@ -81,75 +81,135 @@ export default function Pricing() {
     </div>
    </section>
 
-   {/* PRICING TABLE (ACCESSIBLE & SEO FRIENDLY) */}
-   <section className="container-px mx-auto max-w-7xl py-12 md:py-20">
-    <Reveal direction="up">
-     <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
-      <table className="w-full text-left border-collapse">
-       <thead>
-        <tr className="bg-secondary/50 border-b border-border">
-         <th className="p-6 font-display font-bold">Plan Name</th>
-         <th className="p-6 font-display font-bold">Price (INR)</th>
-         <th className="p-6 font-display font-bold">Pages</th>
-         <th className="p-6 font-display font-bold">SEO</th>
-         <th className="p-6 font-display font-bold">Best For</th>
-         <th className="p-6"></th>
-        </tr>
-       </thead>
-       <tbody className="divide-y divide-border">
+    {/* REDESIGNED PRICING SECTION */}
+    <section className="container-px mx-auto max-w-7xl py-12 md:py-16">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {[
-         { name: "Starter", price: "₹7,999", pages: "5 Pages", seo: "Basic", for: "Small shops Bhiwandi", href: "/contact" },
-         { name: "Business", price: "₹12,999", pages: "10 Pages", seo: "Advanced", for: "Growing companies Mumbai", href: "/contact" },
-         { name: "E-Commerce", price: "₹18,999", pages: "Unlimited", seo: "Full", for: "Online stores India", href: "/contact" },
-         { name: "Enterprise", price: "Custom", pages: "Unlimited", seo: "Full + Ongoing", for: "SaaS / Large Business", href: "/contact" }
-        ].map((row, i) => (
-         <tr key={i} className="hover:bg-accent/5 transition-colors">
-          <td className="p-6 font-bold">{row.name}</td>
-          <td className="p-6 text-primary font-bold">{row.price}</td>
-          <td className="p-6 text-sm text-muted-foreground">{row.pages}</td>
-          <td className="p-6 text-sm text-muted-foreground">{row.seo}</td>
-          <td className="p-6 text-sm text-muted-foreground">{row.for}</td>
-          <td className="p-6">
-           <Link href={row.href} className="inline-flex px-4 py-2 bg-primary text-white text-xs font-bold rounded-lg hover:scale-105 transition-transform">Get Quote</Link>
-          </td>
-         </tr>
-        ))}
-       </tbody>
-      </table>
-     </div>
-    </Reveal>
-   </section>
+          {
+            name: "Starter",
+            price: "7,999",
+            features: [
+              { label: "Purpose", value: "Information", active: true },
+              { label: "Pages", value: "Fixed", active: true },
+              { label: "Admin Panel", value: "No", active: false },
+              { label: "Content Edit", value: "Developer", active: true },
+              { label: "Payments", value: "No", active: false },
+              { label: "Cart", value: "No", active: false },
+              { label: "Orders", value: "No", active: false },
+              { label: "Inventory", value: "No", active: false },
+              { label: "Best For", value: "Small Business", active: true },
+              { label: "Bot", value: "Yes", active: true },
+            ],
+          },
+          {
+            name: "Business",
+            price: "15,999",
+            features: [
+              { label: "Purpose", value: "Enquiries", active: true },
+              { label: "Pages", value: "Dynamic", active: true },
+              { label: "Admin Panel", value: "Yes", active: true },
+              { label: "Content Edit", value: "Owner", active: true },
+              { label: "Payments", value: "No", active: false },
+              { label: "Cart", value: "No", active: false },
+              { label: "Orders", value: "No", active: false },
+              { label: "Inventory", value: "No", active: false },
+              { label: "Best For", value: "Services", active: true },
+              { label: "Bot", value: "Yes", active: true },
+            ],
+          },
+          {
+            name: "E-Commerce",
+            price: "23,999",
+            features: [
+              { label: "Purpose", value: "Selling", active: true },
+              { label: "Pages", value: "Products", active: true },
+              { label: "Admin Panel", value: "Full", active: true },
+              { label: "Content Edit", value: "Owner", active: true },
+              { label: "Payments", value: "Yes", active: true },
+              { label: "Cart", value: "Yes", active: true },
+              { label: "Orders", value: "Yes", active: true },
+              { label: "Inventory", value: "Yes", active: true },
+              { label: "Best For", value: "Online Store", active: true },
+              { label: "Bot", value: "Yes", active: true },
+            ],
+          },
+          {
+            name: "Custom",
+            tag: "Enterprise",
+            price: "Contact Us",
+            features: [
+              { label: "Purpose", value: "Tailored", active: true },
+              { label: "Pages", value: "Unlimited", active: true },
+              { label: "Admin Panel", value: "Enterprise", active: true },
+              { label: "Content Edit", value: "Owner", active: true },
+              { label: "Payments", value: "Custom", active: true },
+              { label: "Cart", value: "Custom", active: true },
+              { label: "Orders", value: "Custom", active: true },
+              { label: "Inventory", value: "Custom", active: true },
+              { label: "Best For", value: "Enterprise", active: true },
+              { label: "Bot", value: "Yes", active: true },
+            ],
+          },
+        ].map((p, idx) => (
+          <Reveal key={p.name} delay={idx * 0.1} direction="up">
+            <div className="flex flex-col h-full rounded-xl border border-border bg-card p-4 transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-lg font-bold font-display text-foreground">{p.name}</h3>
+                {p.tag && (
+                  <span className="px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider bg-purple-500/10 text-purple-500 rounded-full border border-purple-500/20">
+                    {p.tag}
+                  </span>
+                )}
+              </div>
+              
+              <div className={`mb-4 rounded-lg border py-3 text-center ${p.name === 'Custom' ? 'bg-primary/5 border-primary/20' : 'bg-muted/20 border-border/50'}`}>
+                <span className={`${p.name === 'Custom' ? 'text-lg' : 'text-xl'} font-bold text-foreground tracking-tight`}>
+                  {/^\d/.test(p.price) ? `₹${p.price}` : p.price}
+                </span>
+              </div>
 
-   {/* PLAN COMPARISON CARDS */}
-   <section className="container-px mx-auto max-w-7xl py-12">
-    <div className="grid gap-8 md:grid-cols-3">
-     {[
-      { plan: "Starter", price: "7,999", features: ["5-page business website", "Mobile responsive design", "Basic SEO setup", "Contact form", "3 months support"] },
-      { plan: "Business", price: "12,999", features: ["10-page business website", "Google Business optimization", "Custom lead-gen form", "Advanced SEO markup", "6 months support"] },
-      { plan: "E-Commerce", price: "18,999", features: ["Full online store", "Payment gateway integration", "Inventory management", "Full product SEO", "12 months support"] },
-     ].map((p, idx) => (
-      <Reveal key={idx} delay={idx * 0.1} direction="up">
-       <div className="flex flex-col h-full rounded-2xl border border-border bg-card p-8 hover:shadow-lg transition-shadow">
-        <h3 className="text-xl font-bold">{p.plan} Website</h3>
-        <div className="mt-4 mb-8">
-         <span className="text-4xl font-bold text-foreground">₹{p.price}</span>
-         <span className="text-muted-foreground text-sm">/flat-fee</span>
-        </div>
-        <ul className="space-y-4 mb-10 flex-1">
-         {p.features.map(f => (
-          <li key={f} className="flex items-center gap-3 text-sm text-muted-foreground">
-           <Check className="h-4 w-4 text-primary" /> {f}
-          </li>
-         ))}
-        </ul>
-        <Link href="/contact" className="block w-full py-3 bg-secondary text-foreground text-center font-bold rounded-xl hover:bg-primary hover:text-white transition-colors">
-         Select {p.plan}
-        </Link>
-       </div>
+              <div className="flex-1 space-y-2">
+                {p.features.map((f, fIdx) => (
+                  <div key={fIdx} className="flex items-center justify-between text-[11px]">
+                    <div className="flex items-center gap-2">
+                      <div className={`flex h-4 w-4 items-center justify-center rounded-full ${f.active ? 'bg-primary/10 text-primary' : 'bg-muted text-muted-foreground/30'}`}>
+                        {f.active ? <Check className="h-2 w-2 stroke-[3]" /> : <X className="h-2 w-2" />}
+                      </div>
+                      <span className="text-muted-foreground font-medium">{f.label}:</span>
+                    </div>
+                    <span className={`font-bold ${f.active ? 'text-foreground' : 'text-muted-foreground/60'}`}>{f.value}</span>
+                  </div>
+                ))}
+              </div>
+
+              <a 
+                href={`https://wa.me/919284470352?text=${encodeURIComponent(
+                  p.name === 'Custom' 
+                  ? "Hi BuildNest, I'm interested in a Custom/Enterprise project. Let's discuss requirements!" 
+                  : `Hi BuildNest, I'm interested in the ${p.name} plan (₹${p.price}). Please tell me more about it.`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`mt-4 block w-full py-2 text-center text-xs font-bold rounded-lg transition-all duration-300 border-2 ${
+                  p.name === 'Business' 
+                  ? 'bg-primary border-primary text-white hover:bg-primary/90' 
+                  : 'border-primary/20 text-primary hover:bg-primary hover:text-white hover:border-primary'
+                }`}
+              >
+                {p.name === 'Custom' ? 'Contact Us' : `Choose ${p.name}`}
+              </a>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+      
+      <Reveal direction="up" delay={0.4}>
+        <p className="mt-8 text-center text-xs text-muted-foreground">
+          <span className="text-primary font-bold">Note:</span> All prices are <span className="underline decoration-primary/30 underline-offset-4 font-medium">negotiable</span> based on your specific requirements.
+        </p>
       </Reveal>
-     ))}
-    </div>
-   </section>
+    </section>
+
 
    {/* FAQ SECTION */}
    <section className="py-20 bg-hero border-t border-border">
