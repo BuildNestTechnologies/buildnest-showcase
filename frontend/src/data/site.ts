@@ -148,7 +148,7 @@ export const PORTFOLIO = [
     category: "Learning Management",
     desc: "A comprehensive role-based Learning Management System that enables course creation, student tracking, and seamless content delivery for educators and institutions.",
     tech: ["React", "Node.js", "MongoDB", "Express"],
-    videoLink: "https://drive.google.com/file/d/1qvPDDLiiIyelbemzLILsv4_5IpctHzu8/view",
+    videoLink: "https://drive.google.com/file/d/1U0qmLdNdqz7AYd5InrOz7RrysFPk9AVo/view?usp=sharing",
     image: "/projects/lms.jpg",
   },
   {
