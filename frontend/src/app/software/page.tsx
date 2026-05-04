@@ -1,150 +1,72 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Script from "next/script";
-import SectionTitle from "@/components/site/SectionTitle";
-import Reveal from "@/components/site/Reveal";
-import { CheckCircle2, MessageSquare, Package, Users, Receipt, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { ArrowRight, MessageSquare, Package, Receipt, Users } from "lucide-react";
 
 export const metadata: Metadata = {
  title: "Custom Software Development for Indian Businesses | BuildNest Technologies",
- description: "We build custom ERPs, CRMs, and internal tools. Best software agency in Mumbai & Bhiwandi.",
+ description: "Custom ERPs, CRMs, dashboards, inventory systems, and workflow software for businesses in Bhiwandi, Mumbai, and across India.",
 };
 
-const SOFTWARE_FEATURES = [
- {
-  icon: Users,
-  title: "Manage your customers (CRM)",
-  desc: "Keep track of every conversation, lead, and sale in one simple dashboard. Never lose a customer's phone number again."
- },
- {
-  icon: Package,
-  title: "Track stock automatically (Inventory)",
-  desc: "Know exactly what's on your shelves without counting. Get alerts when you are running low on popular items."
- },
- {
-  icon: Receipt,
-  title: "Handle bills, GST, accounts (ERP)",
-  desc: "Generate professional invoices in seconds, track expenses, and have your tax reports ready with a single click."
- },
- {
-  icon: MessageSquare,
-  title: "Chatbot that answers questions (AI)",
-  desc: "An intelligent assistant on your website or WhatsApp that answers customer queries 24/7, even while you sleep."
- }
+const systems = [
+ [Users, "CRM", "Every lead, follow-up, and customer note in one dependable system.", "var(--tone-blue)"],
+ [Package, "Inventory", "Stock movement, alerts, and reporting without spreadsheet drift.", "var(--tone-teal)"],
+ [Receipt, "ERP", "Invoices, GST, accounts, and internal workflows shaped around the real team.", "var(--tone-orange)"],
+ [MessageSquare, "AI assistant", "Useful automation where it actually saves time, not where it simply sounds modern.", "var(--tone-purple)"],
 ];
 
 export default function Software() {
- const softwareSchema = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Custom Business Software",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "All"
- };
-
  return (
-  <>
-   <script id="software-schema" type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
-   
-   <section className="bg-hero pt-32 pb-20 md:pt-40 md:pb-28 border-b border-border">
-    <div className="container-px mx-auto max-w-4xl text-center">
-     <Reveal>
-      <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
-       Custom Software
-      </span>
-     </Reveal>
-     <Reveal delay={0.1}>
-      <h1 className="mt-6 font-display text-4xl font-bold text-foreground sm:text-5xl md:text-[56px]">
-       Software that solves your daily problems – <span className="text-primary">no tech degree required.</span>
-      </h1>
-     </Reveal>
-     <Reveal delay={0.2}>
-      <p className="mx-auto mt-6 text-lg leading-relaxed text-muted-foreground md:text-xl">
-       We build custom internal tools designed specifically for how your team works. Say goodbye to messy spreadsheets and expensive subscriptions that don't quite fit your needs.
-      </p>
-     </Reveal>
+  <main className="crafted-page">
+   <script id="software-schema" type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", name: "Custom Business Software", applicationCategory: "BusinessApplication", operatingSystem: "All" }) }} />
+   <section className="container-px mx-auto max-w-7xl py-10 md:py-16">
+    <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+     <div>
+      <p className="section-label">Software systems</p>
+      <h1 className="section-title mt-4 max-w-2xl">Internal tools that feel sharp, calm, and genuinely usable by the team that depends on them.</h1>
+     </div>
+     <p className="max-w-2xl text-base leading-7 text-muted-foreground md:text-lg">
+      We replace paper, scattered spreadsheets, and improvised follow-ups with software that makes the workflow visibly lighter.
+     </p>
     </div>
    </section>
 
-   {/* The "How it connects" Diagram */}
-   <section className="container-px mx-auto max-w-7xl py-20">
-    <Reveal>
-     <div className="rounded-2xl border border-border bg-card p-8 shadow-card-soft md:p-12">
-      <div className="text-center">
-       <h2 className="font-display text-2xl font-bold text-foreground">Everything connected in one place</h2>
-       <p className="mt-2 text-muted-foreground">Your entire business operations, streamlined.</p>
-      </div>
-      <div className="mt-10 overflow-hidden rounded-xl border border-border">
-       <Image 
-        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" 
-        alt="Dashboard showing connected business tools" 
-        width={1200}
-        height={600}
-        className="w-full object-cover"
-        style={{ height: 'auto' }}
-       />
+   <section className="container-px mx-auto max-w-7xl py-8">
+    <div className="grid gap-5 lg:grid-cols-[1.12fr_0.88fr]">
+     <div className="relative min-h-[28rem] overflow-hidden rounded-[2.4rem]">
+      <Image src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Connected business dashboard" fill className="object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/54 via-black/12 to-transparent" />
+      <div className="absolute bottom-0 p-6 text-white">
+       <p className="eyebrow-metric text-white/60">Software with operational intent</p>
       </div>
      </div>
-    </Reveal>
-   </section>
-
-   {/* Features List */}
-   <section className="bg-hero py-20 border-y border-border">
-    <div className="container-px mx-auto max-w-7xl">
-     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-      {SOFTWARE_FEATURES.map((feature, index) => (
-       <Reveal key={index} delay={index * 0.1}>
-        <div className="rounded-xl bg-card p-6 shadow-sm border border-border">
-         <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-          <feature.icon className="h-6 w-6" />
-         </div>
-         <h3 className="mt-4 font-display text-lg font-bold text-foreground">{feature.title}</h3>
-         <p className="mt-2 text-muted-foreground">{feature.desc}</p>
-        </div>
-       </Reveal>
-      ))}
+     <div className="grid gap-4">
+      {systems.map(([Icon, title, copy, tone], index) => {
+       const SystemIcon = Icon as typeof Users;
+       return (
+        <article key={title as string} className={`rounded-[1.8rem] border border-border p-5 ${index % 2 ? "md:mr-8" : "md:ml-8"}`}>
+         <SystemIcon className="h-5 w-5" style={{ color: tone as string }} />
+         <h2 className="mt-8 text-xl font-semibold">{title as string}</h2>
+         <p className="mt-3 text-sm leading-7 text-muted-foreground">{copy as string}</p>
+        </article>
+       );
+      })}
      </div>
     </div>
    </section>
 
-   {/* Case Study Highlight */}
-   <section className="container-px mx-auto max-w-5xl py-20 md:py-28">
-    <Reveal>
-     <div className="overflow-hidden rounded-2xl bg-[#111214] text-white shadow-2xl">
-      <div className="grid md:grid-cols-2">
-       <div className="p-10 md:p-16 flex flex-col justify-center">
-        <span className="text-xs font-bold uppercase tracking-wider text-primary">Client Success Story</span>
-        <h2 className="mt-4 font-display text-3xl font-bold">Local Grocery Store Automation</h2>
-        <p className="mt-6 text-gray-400 leading-relaxed">
-         "We built a stock management app for a local grocery store. Before us, they used pen and paper, losing thousands of rupees to expired goods."
-        </p>
-        <div className="mt-8 flex items-center gap-4 border-l-4 border-primary pl-4">
-         <div className="font-display text-4xl font-bold text-white">40%</div>
-         <div className="text-sm font-medium text-gray-400">Reduction in<br/>food waste</div>
-        </div>
-       </div>
-       <div className="relative min-h-[300px]">
-        <Image 
-         src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80" 
-         alt="Grocery store owner using an iPad" 
-         width={800}
-         height={600}
-         className="absolute inset-0 h-full w-full object-cover opacity-80"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#111214] to-transparent md:block hidden" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#111214] to-transparent md:hidden block" />
-       </div>
-      </div>
-     </div>
-    </Reveal>
-
-    <div className="mt-16 text-center">
-     <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-semibold text-white shadow-soft transition hover:scale-105">
-      Let's build your software <ArrowRight className="h-4 w-4" />
+   <section className="container-px mx-auto max-w-5xl py-16 md:py-24">
+    <div className="rounded-[2.4rem] bg-[#111111] p-8 text-[#f6f1ea] md:p-10">
+     <p className="section-label text-white/45">Example outcome</p>
+     <h2 className="mt-4 text-3xl font-semibold leading-tight">A grocery workflow moved from manual logs to live stock visibility and clearer purchasing decisions.</h2>
+     <p className="mt-5 max-w-2xl text-sm leading-7 text-white/65">
+      The useful result was not just a dashboard. It was fewer missed items, better buying visibility, and calmer operations on ordinary days.
+     </p>
+     <Link href="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[#111111]">
+      Discuss your workflow <ArrowRight className="h-4 w-4" />
      </Link>
     </div>
    </section>
-  </>
+  </main>
  );
 }

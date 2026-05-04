@@ -11,7 +11,8 @@ const CursorDot = () => {
   if (typeof window === "undefined") return;
   const isTouch = window.matchMedia("(pointer: coarse)").matches;
   if (isTouch) return;
-  setEnabled(true);
+  setEnabled(false);
+  return;
   const onMove = (e: MouseEvent) => setPos({ x: e.clientX, y: e.clientY });
   window.addEventListener("mousemove", onMove);
   return () => window.removeEventListener("mousemove", onMove);

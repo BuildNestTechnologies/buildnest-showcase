@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 type Direction = "up" | "down" | "left" | "right" | "diagonal-left" | "diagonal-right" | "none";
 
@@ -12,8 +12,15 @@ interface RevealProps {
 }
 
 const Reveal = ({ children, delay = 0, direction = "up" }: RevealProps) => {
- // Mobile fallback for complex animations (disable diagonal/horizontal on mobile)
- const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+ const [isMobile, setIsMobile] = useState(false);
+
+ useEffect(() => {
+  const query = window.matchMedia("(max-width: 767px)");
+  const update = () => setIsMobile(query.matches);
+  update();
+  query.addEventListener("change", update);
+  return () => query.removeEventListener("change", update);
+ }, []);
  
  const getVariants = () => {
   let x = 0;

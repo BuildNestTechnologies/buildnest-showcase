@@ -9,12 +9,15 @@ import { Toaster } from "@/components/ui/toaster";
 import { NoSSR } from "@/components/site/NoSSR";
 import Script from "next/script";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const inter = Inter({
+ subsets: ["latin"],
+ variable: "--font-inter",
+});
 
 const siteConfig = {
  name: "BuildNest Technologies",
  url: "https://buildnest.world",
- description: "Bhiwandi's #1 Website & Software Development Agency. Professional SEO and high-performance digital solutions for businesses in Mumbai, Thane & Kalyan.",
+ description: "BuildNest Technologies crafts premium websites, software systems, mobile products, and search-ready digital experiences for ambitious businesses in Bhiwandi, Mumbai, and beyond.",
  keywords: ["website development bhiwandi", "software company mumbai", "web agency kalyan", "next.js developer india", "flutter app development mumbai", "seo services bhiwandi"],
 };
 
@@ -64,14 +67,14 @@ export const metadata: Metadata = {
   googleBot: {
    index: true,
    follow: true,
-   'max-video-preview': -1,
-   'max-image-preview': 'large',
-   'max-snippet': -1,
+   "max-video-preview": -1,
+   "max-image-preview": "large",
+   "max-snippet": -1,
   },
  },
  verification: {
-  google: '84c67e27f56554f5',
-  other: { 'msvalidate.01': '6FA7C110DDBF31E2515A02C9F0D99F51' },
+  google: "84c67e27f56554f5",
+  other: { "msvalidate.01": "6FA7C110DDBF31E2515A02C9F0D99F51" },
  },
 };
 
@@ -79,29 +82,24 @@ const orgSchema = {
  "@context": "https://schema.org",
  "@type": "Organization",
  "@id": "https://buildnest.world/#organization",
- "name": "BuildNest Technologies",
- "alternateName": ["BuildNest", "BuildNest Tech"],
- "url": "https://buildnest.world",
- "logo": { "@type": "ImageObject", "url": "https://buildnest.world/buildnest-logo.png" },
- "description": "BuildNest Technologies is a leading website development company and software agency based in Bhiwandi, Maharashtra serving Mumbai, Kalyan, Thane, and Navi Mumbai.",
- "foundingDate": "2022",
- "address": {
+ name: "BuildNest Technologies",
+ alternateName: ["BuildNest", "BuildNest Tech"],
+ url: "https://buildnest.world",
+ logo: { "@type": "ImageObject", url: "https://buildnest.world/buildnest-logo.png" },
+ description: "BuildNest Technologies is a creative engineering studio based in Bhiwandi, building websites, software systems, and mobile products for brands across Mumbai and India.",
+ foundingDate: "2022",
+ address: {
   "@type": "PostalAddress",
-  "streetAddress": "Near Shagun Chowk",
-  "addressLocality": "Bhiwandi",
-  "addressRegion": "Maharashtra",
-  "postalCode": "421302",
-  "addressCountry": "IN"
+  streetAddress: "Near Shagun Chowk",
+  addressLocality: "Bhiwandi",
+  addressRegion: "Maharashtra",
+  postalCode: "421302",
+  addressCountry: "IN",
  },
- "geo": { "@type": "GeoCoordinates", "latitude": "19.3002", "longitude": "73.0580" },
- "telephone": "+91-9284470352",
- "email": "buildnest.co.team@gmail.com",
-  "sameAs": [
-   "https://www.instagram.com/buildnest_technologies/",
-   "https://facebook.com/buildnestworld"
-   // "https://www.linkedin.com/company/buildnest-technologies",
-   // "https://twitter.com/buildnestworld"
-  ]
+ geo: { "@type": "GeoCoordinates", latitude: "19.3002", longitude: "73.0580" },
+ telephone: "+91-9284470352",
+ email: "buildnest.co.team@gmail.com",
+ sameAs: ["https://www.instagram.com/buildnest_technologies/", "https://facebook.com/buildnestworld"],
 };
 
 export default function RootLayout({
@@ -112,21 +110,15 @@ export default function RootLayout({
  return (
   <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
    <head>
-    {/* Pre-hydration cleanup: strip browser extension attributes before React sees them */}
     <script
      suppressHydrationWarning
      dangerouslySetInnerHTML={{
       __html: `(function(){var a=["bis_skin_checked","bis_use","data-bis-config","data-dynamic-id"];function c(e){a.forEach(function(n){e.removeAttribute(n)})}function s(){document.querySelectorAll("[bis_skin_checked]").forEach(c)}s();if(typeof MutationObserver!=="undefined"){new MutationObserver(function(m){m.forEach(function(r){if(r.type==="attributes"&&a.indexOf(r.attributeName)>-1)r.target.removeAttribute(r.attributeName);if(r.type==="childList")r.addedNodes.forEach(function(n){if(n.nodeType===1){c(n);(n.querySelectorAll?n.querySelectorAll("[bis_skin_checked]"):[]).forEach(c)}})})}).observe(document.documentElement,{attributes:true,attributeFilter:a,childList:true,subtree:true})}})();`,
      }}
     />
-    <script 
-     id="org-schema" 
-     type="application/ld+json" 
-     suppressHydrationWarning
-     dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} 
-    />
+    <script id="org-schema" type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
    </head>
-   <body className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning>
+   <body className={`${inter.variable} min-h-screen font-body text-foreground`} suppressHydrationWarning>
     <Providers>
      <NoSSR>
       <Toaster />

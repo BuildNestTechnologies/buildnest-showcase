@@ -132,7 +132,7 @@ export const PORTFOLIO = [
     desc: "A modern, child-friendly website designed to showcase school programs, admissions, and activities with engaging visuals and smooth navigation. Built to create trust with parents while maintaining a playful yet professional feel.",
     tech: ["React", "Tailwind CSS", "Framer Motion"],
     demoLink: "https://www.renaissanceschools.in/",
-    image: "/projects/renaissance_logo.png",
+    image: "/Projects/renaissance_logo.png",
   },
   {
     title: "ChainCred",
@@ -141,7 +141,7 @@ export const PORTFOLIO = [
     tech: ["Solidity", "opBNB", "React", "MongoDB"],
     demoLink: "https://chaincred-frontend.onrender.com/",
     videoLink: "https://youtu.be/yDQA6xOlVpQ",
-    image: "/projects/chaincred.jpg",
+    image: "/Projects/chaincred.jpg",
   },
   {
     title: "LMS.PRO",
@@ -149,7 +149,7 @@ export const PORTFOLIO = [
     desc: "A comprehensive role-based Learning Management System that enables course creation, student tracking, and seamless content delivery for educators and institutions.",
     tech: ["React", "Node.js", "MongoDB", "Express"],
     videoLink: "https://drive.google.com/file/d/1U0qmLdNdqz7AYd5InrOz7RrysFPk9AVo/view?usp=sharing",
-    image: "/projects/lms.jpg",
+    image: "/Projects/lms.jpg",
   },
   {
     title: "DevNex UI",
@@ -157,7 +157,7 @@ export const PORTFOLIO = [
     desc: "An interactive UI playground that allows users to experiment with themes, colors, fonts, and layouts in real time, helping designers and developers rapidly prototype UI ideas.",
     tech: ["DaisyUI", "React", "Theme Controller"],
     demoLink: "https://daizy-ui-team.vercel.app/",
-    image: "/projects/devnex_ui.jpg",
+    image: "/Projects/devnex_ui.jpg",
   },
   {
     title: "Heart Disease Risk Classifier",
@@ -165,7 +165,7 @@ export const PORTFOLIO = [
     desc: "A machine learning-powered medical application that predicts the likelihood of heart disease using clinical data, delivering high accuracy and assisting early diagnosis.",
     tech: ["Python", "XGBoost", "Scikit-learn", "Streamlit"],
     demoLink: "https://yashpatil045-heart-disease-classifier.streamlit.app/",
-    image: "/projects/heart_disease.jpg",
+    image: "/Projects/heart_disease.jpg",
   },
   {
     title: "CliniScan",
@@ -174,7 +174,7 @@ export const PORTFOLIO = [
     tech: ["PyTorch", "EfficientNet", "YOLOv8", "Streamlit"],
     demoLink: "https://yashpatil045-cliniscan.streamlit.app/",
     githubLink: "https://lnkd.in/d9-SUmST",
-    image: "/projects/cliniscan.jpg",
+    image: "/Projects/cliniscan.jpg",
   },
   {
     title: "GateSmart",
@@ -182,7 +182,7 @@ export const PORTFOLIO = [
     desc: "A full-stack AI-powered learning platform for GATE CS preparation, featuring an AI tutor, adaptive revision planning, and secure authentication for personalized learning experiences.",
     tech: ["Next.js", "FastAPI", "PostgreSQL", "LLaMA-3.3", "Random Forest"],
     demoLink: "https://gate-smart-five.vercel.app/",
-    image: "/projects/gatesmart.jpg",
+    image: "/Projects/gatesmart.jpg",
   },
   {
     title: "StudyGenie",
@@ -190,7 +190,7 @@ export const PORTFOLIO = [
     desc: "An intelligent study assistant that helps students plan schedules, resolve doubts using AI, generate quizzes automatically, and integrate with calendars for efficient learning.",
     tech: ["React", "Gemini API", "Firebase", "Node.js"],
     videoLink: "https://drive.google.com/file/d/1_uqKrzMfySO8i8ScGuIPSrG1CIl2XJJP/view",
-    image: "/projects/studygenie.jpg",
+    image: "/Projects/studygenie.jpg",
   },
   {
     title: "LingualSense",
@@ -198,7 +198,7 @@ export const PORTFOLIO = [
     desc: "A deep learning NLP system designed for real-time multilingual text detection, enabling accurate language identification across diverse inputs using GRU-based models.",
     tech: ["Python", "GRU", "NLP", "Flask", "Streamlit"],
     demoLink: "https://lingualsense7.streamlit.app/",
-    image: "/projects/lingualsense.jpg",
+    image: "/Projects/lingualsense.jpg",
   },
   {
     title: "Monday",
@@ -206,7 +206,7 @@ export const PORTFOLIO = [
     desc: "An AI-powered conversational assistant that analyzes user responses to uncover personality traits, providing engaging and insightful results through natural interactions.",
     tech: ["AI", "NLP", "React"],
     demoLink: "https://monday-nxgz.onrender.com/",
-    image: "/projects/monday.jpg",
+    image: "/Projects/monday.jpg",
   },
 ];
 
