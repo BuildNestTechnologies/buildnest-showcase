@@ -36,6 +36,14 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'buildnest.world',
+      },
+      {
+        protocol: 'http',
+        hostname: 'img.b2bpic.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'webuild-dev.s3.eu-north-1.amazonaws.com',
       }
     ],
   },

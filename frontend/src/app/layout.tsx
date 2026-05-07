@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Halant } from "next/font/google";
 import "../index.css";
 import Providers from "./providers";
 import SiteLayout from "@/components/site/SiteLayout";
@@ -10,6 +10,7 @@ import { NoSSR } from "@/components/site/NoSSR";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const halant = Halant({ weight: ["300", "400", "500", "600", "700"], subsets: ["latin"], variable: "--font-halant" });
 
 const siteConfig = {
  name: "BuildNest Technologies",
@@ -126,7 +127,7 @@ export default function RootLayout({
      dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} 
     />
    </head>
-   <body className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning>
+   <body className={`${halant.variable} ${inter.variable} antialiased`} suppressHydrationWarning>
     <Providers>
      <NoSSR>
       <Toaster />

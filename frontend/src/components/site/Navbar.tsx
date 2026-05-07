@@ -23,17 +23,14 @@ const Navbar = () => {
 
  return (
   <header
-   className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 ${
-    scrolled ? "border-b border-border bg-background/90 backdrop-blur-xl shadow-sm" : "bg-transparent"
-   }`}
+   className={`fixed inset-x-0 top-4 z-40 transition-all duration-300 px-4 md:px-8`}
    suppressHydrationWarning
   >
-   <nav className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between md:h-20">
-    <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-     <Image src="/buildnest-logo.png" alt="BuildNest Technologies" width={140} height={48} className="h-10 w-auto object-contain" priority />
-     <span className="font-display text-lg font-bold tracking-tight text-foreground">
-      Build<span className="text-primary">Nest</span> <span className="hidden sm:inline text-muted-foreground font-medium text-sm">Technologies</span>
-     </span>
+   <nav className={`mx-auto flex h-16 max-w-7xl items-center justify-between px-6 rounded-full transition-all duration-300 ${
+    scrolled ? "border border-border/40 bg-background/90 backdrop-blur-xl shadow-md" : "bg-transparent"
+   }`}>
+    <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+     <Image src="/buildnest-logo.png" alt="BuildNest Technologies" width={180} height={48} className="h-10 w-auto object-contain" priority />
     </Link>
 
     <ul className="hidden items-center gap-8 md:flex">
@@ -79,38 +76,31 @@ const Navbar = () => {
    <AnimatePresence>
     {open && (
      <motion.div
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -10 }}
-      transition={{ duration: 0.25 }}
-      className="border-b border-border bg-background shadow-lg md:hidden"
+      initial={{ opacity: 0, scale: 0.95, transformOrigin: "top right" }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      transition={{ duration: 0.2 }}
+      className="absolute top-0 right-4 w-[280px] rounded-[2rem] bg-primary text-primary-foreground shadow-2xl md:hidden z-50 overflow-hidden border border-primary-foreground/10"
      >
-      <ul className="container-px mx-auto flex max-w-7xl flex-col gap-1 py-4">
-       {NAV_LINKS.map((l) => {
-        const isActive = l.to === "/" ? pathname === "/" : pathname.startsWith(l.to);
-        return (
-         <li key={l.to}>
-          <Link
-           href={l.to}
-           onClick={() => setOpen(false)}
-           className={`block rounded-lg px-3 py-3 text-base font-medium transition ${
-            isActive ? "bg-secondary text-foreground" : "text-muted-foreground hover:bg-secondary hover:text-foreground"
-           }`}
-          >
-           {l.label}
-          </Link>
-         </li>
-        );
-       })}
-       <li>
-        <Link
-         href="/contact"
-         onClick={() => setOpen(false)}
-         className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white hover-button-advanced"
-        >
-         Start Project
-        </Link>
-       </li>
+      <div className="flex items-center justify-between p-6 pb-2">
+       <span className="font-medium text-xl">Menu</span>
+       <button onClick={() => setOpen(false)} aria-label="Close menu" className="text-primary-foreground/80 hover:text-white transition-colors">
+        <X className="h-5 w-5" strokeWidth={1.5} />
+       </button>
+      </div>
+      <ul className="flex flex-col p-4 pt-2 pb-6">
+       {NAV_LINKS.map((l) => (
+        <li key={l.to}>
+         <Link
+          href={l.to}
+          onClick={() => setOpen(false)}
+          className="flex items-center justify-between rounded-xl px-4 py-3 text-lg font-medium text-primary-foreground/90 hover:bg-white/10 hover:text-white transition-colors"
+         >
+          {l.label}
+          <div className="h-1.5 w-1.5 rounded-full bg-white/80"></div>
+         </Link>
+        </li>
+       ))}
       </ul>
      </motion.div>
     )}

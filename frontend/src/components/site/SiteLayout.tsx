@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
-import Navbar from "./Navbar";
+import Navigation from "./Navigation";
 import Footer from "./Footer";
 import FloatingScrollTracker from "./FloatingScrollTracker";
 
 const SiteLayout = ({ children }: { children: ReactNode }) => (
- <div className="relative min-h-screen bg-background bg-noise" suppressHydrationWarning>
-  <Navbar />
+ <div className="relative min-h-screen bg-background" suppressHydrationWarning>
+  <Navigation />
   <FloatingScrollTracker />
-  <div className="relative pt-16 md:pt-20">{children}</div>
+  <div className="relative w-full">{children}</div>
   <Footer />
  </div>
 );
