@@ -50,6 +50,7 @@ export default function PulseGrid() {
     const gap = 4;      // tight grid spacing
     const initSquares = (w: number, h: number) => {
       const squares: Square[] = [];
+      const gap = 4; // Standardized gap for both
       const cols = Math.ceil(w / gap);
       const rows = Math.ceil(h / gap);
       for (let r = 0; r < rows; r++) {
@@ -58,7 +59,7 @@ export default function PulseGrid() {
             x: c * gap + gap * 0.3,
             y: r * gap + gap * 0.3,
             phase: Math.random() * Math.PI * 2,
-            speed: 1 + Math.random() * 7,   // 1-8 speed — wide variance
+            speed: 1 + Math.random() * 7,
             opacity: 0,
           });
         }
@@ -80,21 +81,24 @@ export default function PulseGrid() {
       const h = canvas.height / (window.devicePixelRatio || 1);
       ctx.clearRect(0, 0, w, h);
 
-      const dark = isDarkRef.current;
-      const color = dark ? "255, 60, 100" : "184, 43, 64"; // Brighter pink for dark (#FF3C64)
-      const maxOpacity = dark ? 0.97 : 0.42; // Peak at 100% for dark, 45% for light
+        const dark = isDarkRef.current;
+        const color = dark ? "255, 112, 150" : "184, 43, 64"; // Luminous Pink for dark (#FF7096)
+        const maxOpacity = dark ? 0.47 : 0.42; // Dark 50% (45+5), Light 45%
+        const sqSize = 0.8; // Standardized to light theme size
 
-      const squares = squaresRef.current;
-      for (let i = 0; i < squares.length; i++) {
-        const sq = squares[i];
-        sq.phase += dt * sq.speed;
-        // Pulse with sharper peaks for snappy random flicker
-        const raw = (Math.sin(sq.phase) + 1) / 2;
-        sq.opacity = 0.03 + maxOpacity * (raw * raw); // quadratic for sharper pulse
+        const squares = squaresRef.current;
+        for (let i = 0; i < squares.length; i++) {
+          const sq = squares[i];
+          sq.phase += dt * sq.speed;
+          
+          const raw = (Math.sin(sq.phase) + 1) / 2;
+          // Standardized quadratic pulse for both
+          const pulseCurve = (raw * raw); 
+          sq.opacity = 0.03 + maxOpacity * pulseCurve;
 
-        ctx.fillStyle = `rgba(${color}, ${sq.opacity})`;
-        ctx.fillRect(sq.x, sq.y, 0.8, 0.8);
-      }
+          ctx.fillStyle = `rgba(${color}, ${sq.opacity})`;
+          ctx.fillRect(sq.x, sq.y, sqSize, sqSize);
+        }
 
       animRef.current = requestAnimationFrame(animate);
     };

@@ -22,8 +22,8 @@ export default function HeroSection() {
       {/* ═══ Pulse Grid — top 15%, fade 30% left → 95% right ═══ */}
       <div className="absolute top-0 left-0 right-0 pointer-events-none z-0" style={{ height: "15%" }}>
         <div className="absolute inset-0" style={{
-          maskImage: "linear-gradient(to right, transparent 0%, transparent 30%, black 40%, black 85%, transparent 95%), linear-gradient(to bottom, black 0%, black 60%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to right, transparent 0%, transparent 30%, black 40%, black 85%, transparent 95%), linear-gradient(to bottom, black 0%, black 60%, transparent 100%)",
+          maskImage: "linear-gradient(to right, transparent 0%, transparent 30%, black 45%, black 90%, transparent 95%), linear-gradient(to bottom, black 0%, black 60%, transparent 100%)",
+          WebkitMaskImage: "linear-gradient(to right, transparent 0%, transparent 30%, black 45%, black 90%, transparent 95%), linear-gradient(to bottom, black 0%, black 60%, transparent 100%)",
           maskComposite: "intersect",
           WebkitMaskComposite: "source-in"
         }}>
