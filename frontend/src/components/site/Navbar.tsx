@@ -39,13 +39,19 @@ const Navbar = () => {
     <ul className="hidden items-center gap-8 md:flex">
      {NAV_LINKS.map((l) => {
       const isActive = l.to === "/" ? pathname === "/" : pathname.startsWith(l.to);
+      const isLabs = l.label === "Labs";
       return (
        <li key={l.to}>
         <Link
          href={l.to}
-         className={`nav-underline text-sm font-medium transition-colors ${
-          isActive ? "active text-foreground" : "text-muted-foreground hover:text-foreground"
-         }`}
+         className={
+          isLabs
+           ? "text-[#9f85ff] hover:text-[#b49fff] text-sm font-semibold transition-colors flex items-center gap-1.5"
+           : `nav-underline text-sm font-medium transition-colors ${
+              isActive ? "active text-foreground" : "text-muted-foreground hover:text-foreground"
+             }`
+         }
+         style={isLabs ? { textShadow: "0 0 8px rgba(159, 133, 255, 0.5)" } : undefined}
         >
          {l.label}
         </Link>
@@ -88,16 +94,22 @@ const Navbar = () => {
       <ul className="container-px mx-auto flex max-w-7xl flex-col gap-1 py-4">
        {NAV_LINKS.map((l) => {
         const isActive = l.to === "/" ? pathname === "/" : pathname.startsWith(l.to);
+        const isLabs = l.label === "Labs";
         return (
          <li key={l.to}>
           <Link
            href={l.to}
            onClick={() => setOpen(false)}
            className={`block rounded-lg px-3 py-3 text-base font-medium transition ${
-            isActive ? "bg-secondary text-foreground" : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+            isLabs
+             ? "text-[#9f85ff] font-semibold hover:bg-secondary flex items-center justify-between"
+             : isActive
+               ? "bg-secondary text-foreground"
+               : "text-muted-foreground hover:bg-secondary hover:text-foreground"
            }`}
+           style={isLabs ? { textShadow: "0 0 8px rgba(159, 133, 255, 0.4)" } : undefined}
           >
-           {l.label}
+           <span>{l.label}</span>
           </Link>
          </li>
         );

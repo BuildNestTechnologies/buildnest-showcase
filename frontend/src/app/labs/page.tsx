@@ -1,52 +1,13 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import SectionTitle from "@/components/site/SectionTitle";
 import Reveal from "@/components/site/Reveal";
-import { Beaker, Brain, Cpu, Sparkles, Terminal, ArrowRight, FlaskConical, Globe, Zap } from "lucide-react";
-import Link from "next/link";
+import { Sparkles, FlaskConical, ExternalLink, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
- title: "BuildNest Labs | Experimental Technology & Prototypes",
- description: "Explore BuildNest Labs, where we craft future-ready solutions, AI experiments, high-performance web prototypes, and next-gen interfaces.",
+ title: "BuildNest Labs | Our Products & Experiments",
+ description: "Explore BuildNest Labs, where we build our own innovative standalone products like TubeHive.",
 };
-
-const LAB_PROJECTS = [
- {
-  icon: Brain,
-  badge: "AI & NLP",
-  title: "CognitiveAgent Workspace",
-  desc: "An experimental agentic workflow engine that automates multi-step business analysis using localized LLMs. Runs completely offline with zero-data leak.",
-  status: "Beta Active",
-  tech: ["Ollama", "React Flow", "WebSockets"],
-  color: "from-purple-500/20 to-indigo-500/20 text-purple-400 border-purple-500/30"
- },
- {
-  icon: Cpu,
-  badge: "WebAssembly",
-  title: "VaporScale Image Engine",
-  desc: "Ultra-fast in-browser image optimization powered by Rust and WebAssembly. Compresses and formats massive image galleries in milliseconds prior to upload.",
-  status: "Alpha",
-  tech: ["Rust", "Wasm-Bindgen", "Web Workers"],
-  color: "from-amber-500/20 to-orange-500/20 text-amber-400 border-amber-500/30"
- },
- {
-  icon: Globe,
-  badge: "Spatial Web",
-  title: "BuildNest 3D Space",
-  desc: "A lightweight, hardware-accelerated 3D environment for showcasing residential and commercial layouts right inside the browser without third-party plugins.",
-  status: "Concept",
-  tech: ["Three.js", "WebGPU", "Framer Motion"],
-  color: "from-cyan-500/20 to-blue-500/20 text-cyan-400 border-cyan-500/30"
- },
- {
-  icon: Zap,
-  badge: "Edge Compute",
-  title: "InstaCache Analytics",
-  desc: "Zero-latency real-time analytics tracker running entirely on Edge workers, rendering live activity streams with virtually no database overhead.",
-  status: "Internal Testing",
-  tech: ["Cloudflare Workers", "Redis", "SSE"],
-  color: "from-emerald-500/20 to-teal-500/20 text-emerald-400 border-emerald-500/30"
- }
-];
 
 export default function Labs() {
  return (
@@ -55,102 +16,113 @@ export default function Labs() {
    <div className="pointer-events-none absolute -left-1/4 -top-1/4 h-[800px] w-[800px] rounded-full bg-gradient-to-br from-primary/10 to-transparent blur-[120px]" />
    <div className="pointer-events-none absolute -right-1/4 top-1/2 h-[800px] w-[800px] rounded-full bg-gradient-to-br from-indigo-500/10 to-transparent blur-[120px]" />
 
-   {/* Hero Header */}
+   {/* Hero Header: What is BuildNest Labs */}
    <section className="bg-hero pt-32 pb-16 md:pt-40 md:pb-24 border-b border-border">
     <div className="container-px mx-auto max-w-4xl text-center">
      <Reveal>
-      <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
+      <span className="inline-flex items-center gap-2 rounded-full border border-[#9f85ff]/30 bg-[#9f85ff]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#9f85ff]">
        <FlaskConical className="h-3.5 w-3.5 animate-pulse" />
-       BuildNest Labs
+       BuildNest Technologies Labs
       </span>
      </Reveal>
      <Reveal delay={0.1}>
       <h1 className="mt-6 font-display text-4xl font-bold text-foreground sm:text-5xl md:text-[56px] tracking-tight">
-       Where the future is <span className="text-primary font-extrabold bg-gradient-to-r from-primary to-indigo-400 bg-clip-text text-transparent">prototyped.</span>
+       Innovating, prototyping, and building <span className="text-[#9f85ff] font-extrabold bg-gradient-to-r from-[#9f85ff] to-indigo-400 bg-clip-text text-transparent">our own products.</span>
       </h1>
      </Reveal>
      <Reveal delay={0.2}>
-      <p className="mx-auto mt-6 text-lg leading-relaxed text-muted-foreground md:text-xl max-w-2xl">
-       Step into our experimental sandbox. Here, we build, break, and refine cutting-edge technology solutions before they make their way into our mainstream projects.
+      <p className="mx-auto mt-6 text-lg leading-relaxed text-muted-foreground md:text-xl max-w-3xl">
+       Welcome to the sandbox of **BuildNest Technologies**. While we specialize in shipping premium software for our clients, **Labs** is our internal product incubator—where we design, engineer, and launch our own standalone products and research next-gen web technology.
       </p>
      </Reveal>
     </div>
    </section>
 
-   {/* Experiments Showcase */}
-   <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
-    <div className="mb-12">
-     <SectionTitle 
-      title="Active Experiments" 
-      subtitle="Take a look at the innovative research prototypes and conceptual builds currently cooked up by our development laboratory."
-      align="left"
-     />
-    </div>
+   {/* Featured Products Section */}
+   <section className="container-px mx-auto max-w-7xl py-20 pb-32">
+    <Reveal>
+     <div className="mb-12">
+      <SectionTitle 
+       title="Our Products" 
+       subtitle="Explore our homegrown, standalone products designed to solve real-world problems."
+       align="center"
+      />
+     </div>
+    </Reveal>
 
-    <div className="grid gap-8 sm:grid-cols-2">
-     {LAB_PROJECTS.map((proj, idx) => (
-      <Reveal key={idx} delay={idx * 0.15}>
-       <div className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-        {/* Subtle hover gradient background */}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-transparent to-muted/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+    <div className="grid gap-12 md:grid-cols-12 items-center">
+     {/* TubeHive Product Card */}
+     <div className="md:col-span-7">
+      <Reveal>
+       <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-8 md:p-12 shadow-card-soft">
+        <div className="absolute top-0 right-0 h-40 w-40 bg-gradient-to-br from-[#9f85ff]/10 to-transparent blur-2xl" />
         
-        <div className="flex items-start justify-between">
-         <div className="rounded-xl bg-primary/10 p-3 text-primary group-hover:scale-110 transition-transform duration-300">
-          <proj.icon className="h-6 w-6" />
+        <div className="flex items-center gap-4">
+         <div className="relative h-16 w-16 overflow-hidden rounded-2xl bg-secondary p-1 border border-border shadow-sm">
+          <Image 
+           src="/tubehive-logo.png" 
+           alt="TubeHive Logo" 
+           fill 
+           className="object-contain"
+          />
          </div>
-         <span className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold bg-gradient-to-r ${proj.color}`}>
-          {proj.status}
-         </span>
+         <div>
+          <span className="inline-flex items-center rounded-full bg-[#9f85ff]/10 border border-[#9f85ff]/30 px-3 py-1 text-xs font-semibold text-[#9f85ff]">
+           Beta Live
+          </span>
+          <h3 className="font-display text-2xl font-bold text-foreground mt-1">TubeHive</h3>
+         </div>
         </div>
 
-        <span className="mt-6 inline-block text-xs font-bold uppercase tracking-wider text-muted-foreground">
-         {proj.badge}
-        </span>
-
-        <h3 className="mt-2 font-display text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
-         {proj.title}
-        </h3>
-
-        <p className="mt-3 text-muted-foreground leading-relaxed">
-         {proj.desc}
+        <p className="mt-6 text-base text-muted-foreground leading-relaxed">
+         Tired of YouTube distractions pulling you away from work or studies? **TubeHive** is a productivity Chrome extension that gives you complete control over your YouTube workspace. Group subscribed channels into focused **Chambers**, save important references in a **Vault**, build customized viewing **Decks**, and detoxify your feed by blocking Shorts, comments, and recommendations.
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-2">
-         {proj.tech.map((t, i) => (
-          <span key={i} className="rounded-md border border-border bg-muted/30 px-2.5 py-1 text-xs font-mono text-muted-foreground">
-           {t}
-          </span>
-         ))}
+        <div className="mt-8 flex flex-wrap gap-3">
+         <a 
+          href="https://tubehive.site/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-soft transition-transform hover:scale-105"
+         >
+          Visit Website <ExternalLink className="h-4 w-4" />
+         </a>
+         <a 
+          href="https://chromewebstore.google.com/detail/tubehive-organize-youtube/amdfljfnmgnpkphgeakbdkfgepkcjmeo" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
+         >
+          Get Chrome Extension
+         </a>
+        </div>
+
+        <div className="mt-8 pt-6 border-t border-border flex items-center gap-2 text-xs text-muted-foreground">
+         <ShieldCheck className="h-4 w-4 text-emerald-500" />
+         <span>Privacy first: Most data stays locally in your browser.</span>
         </div>
        </div>
       </Reveal>
-     ))}
-    </div>
-   </section>
-
-   {/* Labs Call To Action */}
-   <section className="container-px mx-auto max-w-5xl pb-24">
-    <Reveal>
-     <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-r from-card to-background p-10 text-center shadow-xl md:p-16">
-      <div className="pointer-events-none absolute -left-1/3 -top-1/3 h-[400px] w-[400px] rounded-full bg-primary/5 blur-[80px]" />
-      
-      <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-       <Sparkles className="h-6 w-6" />
-      </span>
-      <h2 className="mt-6 font-display text-3xl font-bold text-foreground">Have a complex R&D challenge?</h2>
-      <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-       We partner with forward-thinking enterprises to design custom proofs-of-concept, test high-risk assumptions, and pilot emerging tech architectures.
-      </p>
-      <div className="mt-8 flex justify-center">
-       <Link 
-        href="/contact" 
-        className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-semibold text-white shadow-soft transition-transform hover:scale-105"
-       >
-        Partner with our Lab <ArrowRight className="h-4 w-4" />
-       </Link>
-      </div>
      </div>
-    </Reveal>
+
+     {/* Coming Soon Card */}
+     <div className="md:col-span-5 flex flex-col justify-center h-full">
+      <Reveal delay={0.2}>
+       <div className="relative overflow-hidden rounded-3xl border border-dashed border-border bg-muted/20 p-8 md:p-12 text-center flex flex-col items-center justify-center min-h-[350px]">
+        <div className="rounded-full bg-primary/10 p-4 text-primary animate-pulse">
+         <Sparkles className="h-8 w-8" />
+        </div>
+        <h4 className="mt-6 font-display text-xl font-bold text-foreground">More Products in the Oven</h4>
+        <p className="mt-3 text-sm text-muted-foreground max-w-sm">
+         We are continuously experimenting and prototyping new developer utility suites, AI workflow automations, and spatial tools. Stay tuned for our next launch!
+        </p>
+        <span className="mt-6 text-xs font-mono tracking-widest text-[#9f85ff] uppercase font-semibold">
+         Many more to come
+        </span>
+       </div>
+      </Reveal>
+     </div>
+    </div>
    </section>
   </div>
  );
