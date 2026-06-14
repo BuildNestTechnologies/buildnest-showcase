@@ -58,12 +58,12 @@ export default function Labs() {
         <div className="absolute top-0 right-0 h-40 w-40 bg-gradient-to-br from-[#9f85ff]/10 to-transparent blur-2xl" />
         
         <div className="flex items-center gap-4">
-         <div className="relative h-16 w-16 overflow-hidden rounded-2xl bg-secondary p-1 border border-border shadow-sm">
+         <div className="relative h-16 w-16 overflow-hidden rounded-2xl">
           <Image 
            src="/tubehive-logo.png" 
            alt="TubeHive Logo" 
            fill 
-           className="object-contain"
+           className="object-cover"
           />
          </div>
          <div>
@@ -75,25 +75,25 @@ export default function Labs() {
         </div>
 
         <p className="mt-6 text-base text-muted-foreground leading-relaxed">
-         Tired of YouTube distractions pulling you away from work or studies? **TubeHive** is a productivity Chrome extension that gives you complete control over your YouTube workspace. Group subscribed channels into focused **Chambers**, save important references in a **Vault**, build customized viewing **Decks**, and detoxify your feed by blocking Shorts, comments, and recommendations.
+         Tired of YouTube distractions pulling you away from work or studies? <strong className="font-semibold text-foreground">TubeHive</strong> is a productivity Chrome extension that gives you complete control over your YouTube workspace. Group subscribed channels into focused <strong className="font-semibold text-foreground">Chambers</strong>, save important references in a <strong className="font-semibold text-foreground">Vault</strong>, build customized viewing <strong className="font-semibold text-foreground">Decks</strong>, and detoxify your feed by blocking Shorts, comments, and recommendations.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
          <a 
-          href="https://tubehive.site/" 
+          href="https://chromewebstore.google.com/detail/tubehive-organize-youtube/amdfljfnmgnpkphgeakbdkfgepkcjmeo" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-soft transition-transform hover:scale-105"
          >
-          Visit Website <ExternalLink className="h-4 w-4" />
+          Get Chrome Extension
          </a>
          <a 
-          href="https://chromewebstore.google.com/detail/tubehive-organize-youtube/amdfljfnmgnpkphgeakbdkfgepkcjmeo" 
+          href="https://tubehive.site/" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
          >
-          Get Chrome Extension
+          Visit Website <ExternalLink className="h-4 w-4" />
          </a>
         </div>
 
