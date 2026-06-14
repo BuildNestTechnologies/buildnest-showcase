@@ -17,8 +17,8 @@ export default function Labs() {
    <div className="pointer-events-none absolute -right-1/4 top-1/2 h-[800px] w-[800px] rounded-full bg-gradient-to-br from-indigo-500/10 to-transparent blur-[120px]" />
 
    {/* Hero Header: What is BuildNest Labs */}
-   <section className="bg-hero pt-32 pb-16 md:pt-40 md:pb-24 border-b border-border">
-    <div className="container-px mx-auto max-w-4xl text-center">
+   <section className="bg-hero min-h-[50vh] flex flex-col items-center justify-center border-b border-border py-12 md:py-16">
+    <div className="container-px mx-auto max-w-4xl flex flex-col items-center justify-center text-center">
      <Reveal>
       <span className="inline-flex items-center gap-2 rounded-full border border-[#9f85ff]/30 bg-[#9f85ff]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#9f85ff]">
        <FlaskConical className="h-3.5 w-3.5 animate-pulse" />
@@ -31,17 +31,17 @@ export default function Labs() {
       </h1>
      </Reveal>
      <Reveal delay={0.2}>
-      <p className="mx-auto mt-6 text-lg leading-relaxed text-muted-foreground md:text-xl max-w-3xl">
-       Welcome to the sandbox of **BuildNest Technologies**. While we specialize in shipping premium software for our clients, **Labs** is our internal product incubator—where we design, engineer, and launch our own standalone products and research next-gen web technology.
+      <p className="mx-auto mt-6 text-base leading-relaxed text-muted-foreground md:text-lg max-w-3xl">
+       Welcome to the sandbox of <strong className="font-semibold text-foreground">BuildNest Technologies</strong>. While we specialize in shipping premium software for our clients, <strong className="font-semibold text-foreground">Labs</strong> is our internal product incubator—where we design, engineer, and launch our own standalone products and research next-gen web technology.
       </p>
      </Reveal>
     </div>
    </section>
 
    {/* Featured Products Section */}
-   <section className="container-px mx-auto max-w-7xl py-20 pb-32">
+   <section className="container-px mx-auto max-w-7xl py-16 md:py-20">
     <Reveal>
-     <div className="mb-12">
+     <div className="mb-8">
       <SectionTitle 
        title="Our Products" 
        subtitle="Explore our homegrown, standalone products designed to solve real-world problems."
@@ -66,11 +66,11 @@ export default function Labs() {
            className="object-cover"
           />
          </div>
-         <div>
+         <div className="flex items-center gap-3 flex-wrap">
+          <h3 className="font-display text-2xl font-bold text-foreground">TubeHive</h3>
           <span className="inline-flex items-center rounded-full bg-[#9f85ff]/10 border border-[#9f85ff]/30 px-3 py-1 text-xs font-semibold text-[#9f85ff]">
            Beta Live
           </span>
-          <h3 className="font-display text-2xl font-bold text-foreground mt-1">TubeHive</h3>
          </div>
         </div>
 
