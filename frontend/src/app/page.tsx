@@ -122,20 +122,24 @@ export default function Home() {
    {/* 2. TRUST BAR */}
    <section className="border-y border-border bg-card py-10">
     <div className="container-px mx-auto max-w-7xl text-center md:text-left">
-     <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
-      <div className="flex items-center gap-4">
-       <div className="flex -space-x-3">
-        {[1, 2, 3].map(i => (
-         <Image key={i} src={`https://i.pravatar.cc/150?u=${i}`} alt="Client" width={48} height={48} className="h-12 w-12 rounded-full border-2 border-card object-cover" />
-        ))}
-       </div>
-       <div>
-        <div className="flex items-center gap-1 text-primary">
-         {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
+     <div className="flex flex-col lg:flex-row items-center justify-between gap-8 w-full">
+      {/* Social Proof Group */}
+      <div className="flex flex-col sm:flex-row items-center gap-6 justify-center flex-wrap">
+       <div className="flex items-center gap-4">
+        <div className="flex -space-x-3">
+         {[1, 2, 3].map(i => (
+          <Image key={i} src={`https://i.pravatar.cc/150?u=${i}`} alt="Client" width={48} height={48} className="h-12 w-12 rounded-full border-2 border-card object-cover" />
+         ))}
         </div>
-        <p className="text-sm font-medium">4.9/5 Rating from 500+ Clients</p>
+        <div>
+         <div className="flex items-center gap-1 text-primary">
+          {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
+         </div>
+         <p className="text-sm font-medium">4.9/5 Rating from 500+ Clients</p>
+        </div>
        </div>
-       <div className="flex flex-wrap items-center justify-center gap-8 opacity-30 grayscale invert dark:invert-0">
+       
+       <div className="flex flex-wrap items-center justify-center gap-6 opacity-30 grayscale invert dark:invert-0">
         {[
           { name: "Google", logo: "google" },
           { name: "Amazon", logo: "amazon" },
@@ -146,26 +150,29 @@ export default function Home() {
             key={brand.name}
             src={`https://cdn.simpleicons.org/${brand.logo}/ffffff`}
             alt={brand.name}
-            className="h-6 w-auto"
+            className="h-5 w-auto"
           />
         ))}
        </div>
+      </div>
 
-       <div className="text-center md:text-left">
+      {/* Stats Grid Group */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 w-full lg:w-auto text-center border-t lg:border-t-0 border-border pt-6 lg:pt-0">
+       <div className="text-center">
         <p className="text-2xl font-bold text-foreground">500+</p>
-        <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Websites Built</p>
+        <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">Websites Built</p>
        </div>
-       <div className="text-center md:text-left">
+       <div className="text-center">
         <p className="text-2xl font-bold text-foreground">₹7,999</p>
-        <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Starting Price</p>
+        <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">Starting Price</p>
        </div>
-       <div className="text-center md:text-left">
+       <div className="text-center">
         <p className="text-2xl font-bold text-foreground">Best</p>
-        <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Quality Service</p>
+        <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">Quality Service</p>
        </div>
-       <div className="text-center md:text-left">
+       <div className="text-center">
         <p className="text-2xl font-bold text-foreground">2022</p>
-        <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Serving Since</p>
+        <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">Serving Since</p>
        </div>
       </div>
      </div>
