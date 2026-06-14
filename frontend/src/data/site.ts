@@ -4,6 +4,7 @@ export const NAV_LINKS = [
  { to: "/software", label: "Software" },
  { to: "/pricing", label: "Pricing" },
  { to: "/portfolio", label: "Portfolio" },
+ { to: "/labs", label: "Labs" },
  { to: "/about", label: "About" },
  { to: "/contact", label: "Contact" },
 ];
